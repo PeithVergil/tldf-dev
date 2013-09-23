@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<item name="messenger" img="/images/menu/icons/im_messenger.gif" href="/admin/webmessenger/connlist.php">
+	<subitem name="upm_connections" img="/images/menu/icons/im_connections.gif" href="/admin/webmessenger/connlist.php" onclick="" />
+	<subitem name="upm_quickmessages" img="/images/menu/icons/im_quick_messages.gif" href="/admin/webmessenger/qmeslist.php" onclick="" />
+	<subitem name="upm_settings" img="/images/menu/icons/im_settings.gif" href="/admin/webmessenger/settings.php" onclick="" />
+</item>

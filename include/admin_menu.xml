@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<menu>
+    <section name="user_management">
+        <item name="users" img="/images/menu/icons/users.gif" href="/admin/admin_users.php">
+            <subitem name="users_list" img="/images/menu/icons/users_list.gif" href="/admin/admin_users.php" onclick=""></subitem>
+            <subitem name="users_signup_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=signup_guy" onclick=""></subitem>
+            <subitem name="users_signup_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=signup_lady" onclick=""></subitem>
+            <subitem name="users_trial_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=trial_guy" onclick=""></subitem>
+            <subitem name="users_trial_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=trial_lady" onclick=""></subitem>
+            <subitem name="users_regular_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=reg_guy" onclick=""></subitem>
+            <subitem name="users_regular_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=reg_lady" onclick=""></subitem>
+            <subitem name="users_applied_platinum_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=applied_platinum_guy" onclick=""></subitem>
+            <subitem name="users_platinum_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=plat_guy" onclick=""></subitem>
+            <subitem name="users_applied_platinum_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=applied_platinum_lady" onclick=""></subitem>
+            <subitem name="users_first_installment_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=first_installment" onclick=""></subitem>
+            <subitem name="users_second_installment_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=second_installment" onclick=""></subitem>          
+            <subitem name="users_platinum_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=plat_lady" onclick=""></subitem>
+			<subitem name="users_platinum_pending_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=platinum_pending" onclick=""></subitem>
+            <subitem name="users_elite_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=elite_guy" onclick=""></subitem>
+            <subitem name="users_terminated_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=terminated_guy" onclick=""></subitem>
+            <subitem name="users_terminated_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=terminated_lady" onclick=""></subitem>
+			<!--
+         			<subitem name="users_pending_trial_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=pen_trial_guy" onclick=""></subitem>
+         			<subitem name="users_pending_trial_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=pen_trial_lady" onclick=""></subitem>
+         			<subitem name="users_pending_regular_guy" img="/images/menu/icons/users_guy.gif" href="/admin/admin_users.php?sel=pen_reg_guy" onclick=""></subitem>
+         			<subitem name="users_pending_regular_lady" img="/images/menu/icons/users_lady.gif" href="/admin/admin_users.php?sel=pen_reg_lady" onclick=""></subitem>
+         			<subitem name="users_inact_trial_guy" img="/images/menu/icons/users_guy_freeze.gif" href="/admin/admin_users.php?sel=inact_trial_guy" onclick=""></subitem>
+         			<subitem name="users_inact_trial_lady" img="/images/menu/icons/users_lady_freeze.gif" href="/admin/admin_users.php?sel=inact_trial_lady" onclick=""></subitem>
+         			<subitem name="users_inact_regular_guy" img="/images/menu/icons/users_guy_freeze.gif" href="/admin/admin_users.php?sel=inact_reg_guy" onclick=""></subitem>
+         			<subitem name="users_inact_regular_lady" img="/images/menu/icons/users_lady_freeze.gif" href="/admin/admin_users.php?sel=inact_reg_lady" onclick=""></subitem>
+         			<subitem name="users_inact_platinum_guy" img="/images/menu/icons/users_guy_freeze.gif" href="/admin/admin_users.php?sel=inact_plat_guy" onclick=""></subitem>
+         			<subitem name="users_inact_platinum_lady" img="/images/menu/icons/users_lady_freeze.gif" href="/admin/admin_users.php?sel=inact_plat_lady" onclick=""></subitem>
+         			<subitem name="users_inact_elite_guy" img="/images/menu/icons/users_guy_freeze.gif" href="/admin/admin_users.php?sel=inact_elite_guy" onclick=""></subitem>
+         	-->
+        </item>
+        <!--<item name="user_match" img="/images/menu/icons/user_match.gif" href="/admin/admin_user_match.php"></item>-->
+        <item name="groups" img="/images/menu/icons/groups.gif" href="/admin/admin_groups.php">
+            <subitem name="groups_list" img="/images/menu/icons/groups_list.gif" href="/admin/admin_groups.php" onclick=""></subitem>
+            <subitem name="groups_add" img="/images/menu/icons/groups_add.gif" href="/admin/admin_groups.php?sel=add" onclick=""></subitem>
+            <subitem name="groups_perm" img="/images/menu/icons/groups_list.gif" href="/admin/admin_groups.php?sel=groupsperm" onclick=""></subitem>
+            <subitem name="billing_group_cost" img="/images/menu/icons/billing_group_cost.gif" href="/admin/admin_pays.php?sel=groups" onclick=""></subitem>
+        </item>
+        <item name="billing" img="/images/menu/icons/billing.gif" href="/admin/admin_pays.php">
+            <subitem name="billing_users" img="/images/menu/icons/billing_users.gif" href="/admin/admin_pays.php" onclick=""></subitem>
+            <subitem name="billing_requests" img="/images/menu/icons/billing_users.gif" href="/admin/admin_pays.php?sel=billing_requests" onclick=""></subitem>
+        </item>
+        <item name="uploads" img="/images/menu/icons/uploads.gif" href="/admin/admin_upload.php">
+            <subitem name="uploads_approve" img="/images/menu/icons/users_approve.gif" href="/admin/admin_upload.php" onclick=""></subitem>
+            <subitem name="uploads_settings" img="/images/menu/icons/upload_settings.gif" href="/admin/admin_settings.php?section=4" onclick=""></subitem>
+        </item>
+    </section>
+    <section name="content_management">
+        <item name="news" img="/images/menu/icons/news.gif" href="/admin/admin_news.php">
+            <subitem name="news_list" img="/images/menu/icons/news_list.gif" href="/admin/admin_news.php" onclick=""></subitem>
+            <subitem name="news_add" img="/images/menu/icons/news_add.gif" href="/admin/admin_news.php?sel=add" onclick=""></subitem>
+            <subitem name="rss_feed_list" img="/images/menu/icons/rss_feed_list.gif" href="/admin/admin_news.php" onclick=""></subitem>
+            <subitem name="rss_feed_add" img="/images/menu/icons/rss_feed_add.gif" href="/admin/admin_news.php?sel=add_f" onclick=""></subitem>
+        </item>
+        <item name="reference" img="/images/menu/icons/reference.gif" href="/admin/admin_reference.php?ref=1">
+            <subitem name="ref_description" img="/images/menu/icons/ref_description.gif" href="/admin/admin_reference.php?ref=1" onclick=""></subitem>
+            <subitem name="ref_countries" img="/images/menu/icons/ref_countries.gif" href="/admin/admin_countries.php" onclick=""></subitem>
+            <subitem name="ref_languages" img="/images/menu/icons/ref_languages.gif" href="/admin/admin_reference.php?ref=4" onclick=""></subitem>
+            <subitem name="ref_nationalities" img="/images/menu/icons/ref_nationalities.gif" href="/admin/admin_reference.php?ref=5" onclick=""></subitem>
+            <subitem name="ref_personal_data" img="/images/menu/icons/ref_personal_data.gif" href="/admin/admin_reference.php?ref=6" onclick=""></subitem>
+            <subitem name="ref_my_portrait" img="/images/menu/icons/ref_my_portrait.gif" href="/admin/admin_reference.php?ref=8" onclick=""></subitem>
+            <subitem name="ref_interests" img="/images/menu/icons/ref_interests.gif" href="/admin/admin_reference.php?ref=3" onclick=""></subitem>
+            <subitem name="ref_relationship" img="/images/menu/icons/ref_relationship.gif" href="/admin/admin_reference.php?ref=14" onclick=""></subitem>
+            <subitem name="ref_kiss_types" img="/images/menu/icons/ref_kiss_types.gif" href="/admin/admin_kisses.php" onclick=""></subitem>
+            <subitem name="ref_hotlist_types" img="/images/menu/icons/ref_hotlist_types.gif" href="/admin/admin_reference.php?ref=16" onclick=""></subitem>
+            <subitem name="ref_weight" img="/images/menu/icons/ref_weight.gif" href="/admin/admin_reference.php?ref=12" onclick=""></subitem>
+            <subitem name="ref_height" img="/images/menu/icons/ref_height.gif" href="/admin/admin_reference.php?ref=13" onclick=""></subitem>
+            <subitem name="ref_distances" img="/images/menu/icons/ref_distances.gif" href="/admin/admin_distance.php" onclick=""></subitem>
+            <subitem name="uploads_gallery_categories" img="/images/menu/icons/upload_gallery.gif" href="/admin/admin_reference.php?ref=22" onclick=""></subitem>
+        </item>
+        <item name="banners" img="/images/menu/icons/banners.gif" href="/admin/admin_banners.php">
+            <subitem name="banners_list" img="/images/menu/icons/banners_list.gif" href="/admin/admin_banners.php" onclick=""></subitem>
+            <subitem name="banners_add" img="/images/menu/icons/banners_add.gif" href="/admin/admin_banners.php?sel=add" onclick=""></subitem>
+            <subitem name="user_banners" img="/images/menu/icons/banners_users.gif" href="/admin/admin_banners.php?sel=user_banners" onclick=""></subitem>
+            <subitem name="banners_settings" img="/images/menu/icons/banners_settings.gif" href="/admin/admin_banners.php?sel=settings" onclick=""></subitem>
+        </item>
+        <item name="shoutbox" img="/images/menu/icons/shoutbox_management.gif" href="/admin/admin_shoutbox.php"></item>
+        <item name="bad_words" img="/images/menu/icons/bad_words.gif" href="/admin/admin_badwords.php">
+            <subitem name="bad_words_alert" img="/images/menu/icons/bad_words_alert.gif" href="/admin/admin_badwords.php" onclick=""></subitem>
+            <subitem name="bad_words_file" img="/images/menu/icons/bad_words_file.gif" href="/admin/admin_badwords.php?sel=fileform" onclick=""></subitem>
+        </item>
+        <item name="area_editor" img="/images/menu/icons/area_editor.gif" href="/admin/admin_addition_info.php">
+            <subitem name="area_info" img="/images/menu/icons/area_info.gif" href="/admin/admin_addition_info.php" onclick=""></subitem>
+            <subitem name="area_help" img="/images/menu/icons/area_help.gif" href="/admin/admin_advice.php?par=faq" onclick=""></subitem>
+            <subitem name="area_how_works" img="/images/menu/icons/area_info.gif" href="/admin/admin_how_works.php" onclick=""></subitem>
+            <subitem name="area_take_tour" img="/images/menu/icons/area_take_tour.gif" href="/admin/admin_taketour.php" onclick=""></subitem>
+            <subitem name="area_advices" img="/images/menu/icons/area_advices.gif" href="/admin/admin_advice.php?par=advice" onclick=""></subitem>
+            <subitem name="area_stories" img="/images/menu/icons/area_stories.gif" href="/admin/admin_success_stories.php" onclick=""></subitem>
+        </item>
+        <item name="ecards" img="/images/menu/icons/cards_main.gif" href="/admin/admin_cards.php">
+            <subitem name="ecards_catalog" img="/images/menu/icons/cards_catalog.gif" href="/admin/admin_cards.php?sel=catalog" onclick=""></subitem>
+            <subitem name="ecards_orders" img="/images/menu/icons/cards_orders.gif" href="/admin/admin_cards.php?sel=orders" onclick=""></subitem>
+            <subitem name="ecards_songs" img="/images/menu/icons/cards_songs.gif" href="/admin/admin_cards.php?sel=settings_songs" onclick=""></subitem>
+        </item>
+        <item name="answers" img="/images/menu/icons/qa_adminmenu_icon.gif" href="/admin/admin_answers.php"></item>
+    </section>
+    <section name="settings_management">
+        <item name="settings" img="/images/menu/icons/settings.gif" href="/admin/admin_settings.php">
+            <subitem name="settings_general" img="/images/menu/icons/general_settings.gif" href="/admin/admin_settings.php?section=6" onclick=""></subitem>
+            <subitem name="settings_admin" img="/images/menu/icons/admin_settings.gif" href="/admin/admin_settings.php?section=1" onclick=""></subitem>
+            <subitem name="billing_settings" img="/images/menu/icons/billing_settings.gif" href="/admin/admin_pays.php?sel=settings" onclick=""></subitem>
+            <subitem name="settings_language" img="/images/menu/icons/languages.gif" href="/admin/admin_settings.php?section=3" onclick=""></subitem>
+        </item>
+    </section>
+    <section name="modules_management">
+        <item name="voip" img="/images/menu/icons/voip.gif" href="/admin/admin_voip_settings.php">
+            <subitem name="voip_settings" img="/images/menu/icons/voip_settings.gif" href="/admin/admin_voip_settings.php"></subitem>
+            <subitem name="voip_statistics" img="/images/menu/icons/voip_statistics.gif" href="/admin/admin_voip_statistics.php"></subitem>
+        </item>
+        <item name="chat" img="/images/menu/icons/chat.gif" href="/flash_chat/admin/msglist.php">
+            <subitem name="chat_messages" img="/images/menu/icons/chat_messages.gif" href="/flash_chat/admin/msglist.php" onclick=""></subitem>
+            <subitem name="chat_rooms" img="/images/menu/icons/chat_rooms.gif" href="/flash_chat/admin/roomlist.php" onclick=""></subitem>
+            <subitem name="chat_connections" img="/images/menu/icons/chat_connections.gif" href="/flash_chat/admin/connlist.php" onclick=""></subitem>
+            <subitem name="chat_bans" img="/images/menu/icons/chat_bans.gif" href="/flash_chat/admin/banlist.php" onclick=""></subitem>
+            <subitem name="chat_ignoring" img="/images/menu/icons/chat_ignoring.gif" href="/flash_chat/admin/ignorelist.php" onclick=""></subitem>
+            <subitem name="chat_bots" img="/images/menu/icons/chat_bots.gif" href="/flash_chat/admin/botlist.php" onclick=""></subitem>
+            <subitem name="chat_moderators" img="/images/menu/icons/chat_moderators.gif" href="/flash_chat/admin/modlist.php" onclick=""></subitem>
+            <subitem name="chat_modules" img="/images/menu/icons/chat_modules.gif" href="/flash_chat/admin/modules.php" onclick=""></subitem>
+            <subitem name="chat_login" img="/images/menu/icons/chat_login.gif" href="/flash_chat/flashchat.php" onclick="window.open('[href]','chat','menubar=0,resizable=1,scrollbars=0,status=0,toolbar=0,width=800,height=600');"></subitem>
+        </item>
+        <item name="newsletter" img="/images/menu/icons/newsletter.gif" href="/admin/admin_newsletter.php"></item>
+        <item name="blog" img="/images/menu/icons/blog.gif" href="/admin/admin_blog.php">
+            <subitem name="all_blogs" img="/images/menu/icons/all_blogs.gif" href="/admin/admin_blog.php" onclick=""></subitem>
+            <subitem name="categories" img="/images/menu/icons/blogs_categories.gif" href="/admin/admin_blog.php?sel=categories" onclick=""></subitem>
+        </item>
+        <item name="events" img="/images/menu/icons/events.gif" href="/admin/admin_events.php">
+            <subitem name="events_list" img="/images/menu/icons/events_list.gif" href="/admin/admin_events.php" onclick=""></subitem>
+            <subitem name="events_add" img="/images/menu/icons/events_add.gif" href="/admin/admin_events.php?sel=add" onclick=""></subitem>
+        </item>
+        <item name="clubs" img="/images/menu/icons/clubs.gif" href="/admin/admin_club.php">
+            <subitem name="clubs_categories_list" img="/images/menu/icons/club_categories_list.gif" href="/admin/admin_club.php?sel=categories" onclick=""></subitem>
+            <subitem name="clubs_categories_add" img="/images/menu/icons/add_club_category.gif" href="/admin/admin_club.php?sel=add_category" onclick=""></subitem>
+            <subitem name="my_clubs" img="/images/menu/icons/my_clubs.gif" href="/admin/admin_club.php?sel=my_club" onclick=""></subitem>
+            <subitem name="add_club" img="/images/menu/icons/add_club.gif" href="/admin/admin_club.php?sel=create" onclick=""></subitem>
+        </item>
+        <item name="forum" img="/images/menu/icons/forum.gif" href="">
+            <subitem name="forum_index" img="/images/menu/icons/forum_index.gif" href="/admin/admin_forum.php" onclick=""></subitem>
+            <subitem name="forum_bans" img="/images/menu/icons/forum_stop.gif" href="/admin/admin_forum.php?sel=banned" onclick=""></subitem>
+        </item>
+        <item name="giftshop" img="/images/menu/icons/giftshop.gif" href="/admin/admin_giftshop.php">
+            <subitem name="giftshop_catalog" img="/images/menu/icons/giftshop_catalog.gif" href="/admin/admin_giftshop.php" onclick=""></subitem>
+            <subitem name="giftshop_orders" img="/images/menu/icons/giftshop_orders.gif" href="/admin/admin_giftshop.php?sel=orders" onclick=""></subitem>
+        </item>
+        <item name="location" img="/images/menu/icons/reference.gif" href="/admin/admin_citylocation.php">
+            <subitem name="location_catalog" img="/images/menu/icons/giftshop_catalog.gif" href="/admin/admin_citylocation.php" onclick=""></subitem>
+        </item>
+        <item name="poll" img="/images/menu/icons/poll.gif" href="/admin/admin_poll.php">
+            <subitem name="poll_list" img="/images/menu/icons/poll_list.gif" href="/admin/admin_poll.php" onclick=""></subitem>
+            <subitem name="poll_create" img="/images/menu/icons/poll_create.gif" href="/admin/admin_poll.php?action=new" onclick=""></subitem>
+            <subitem name="poll_settings" img="/images/menu/icons/poll_settings.gif" href="/admin/admin_poll.php?sel=settings" onclick=""></subitem>
+            <subitem name="poll_templates" img="/images/menu/icons/poll_templates.gif" href="/admin/admin_poll.php?sel=templates" onclick=""></subitem>
+        </item>
+    </section>
+    <section name="promotions">
+        <item name="featured_users" img="/images/menu/icons/featured_users.gif" href="/admin/admin_featured_users.php"></item>
+        <item name="promo_templates" img="/images/menu/icons/promo_template.gif" href="/admin/admin_promotions.php"></item>
+        <item name="promo_mails" img="/images/menu/icons/promo_mail.gif" href="/admin/admin_promotions_mail.php"></item>
+    </section>
+    <section name="activity_mails">
+        <item name="activity_mails" img="/images/menu/icons/promo_mail.gif" href="/admin/admin_site_activity_mail.php"></item>
+    </section>
+    <section name="solve360">
+        <item name="export_members" img="/images/menu/icons/users_list.gif" href="/admin/admin_solve360.php?sel=export_members"></item>
+        <item name="load_contacts" img="/images/menu/icons/users_list.gif" href="/admin/admin_solve360.php?sel=load_contacts"></item>
+    </section>
+</menu>

@@ -1,0 +1,18 @@
+<UpdateMember1 xmlns="http://www.jajah.com/">
+	<userName>[username]</userName>
+	<password>[password]</password>
+	<updateEmail>[updateemail]</updateEmail>
+	<newEmail>[newemail]</newEmail>
+	<updateFirstName>[updatefirstname]</updateFirstName>
+	<newFirstName>[newfirstname]</newFirstName>
+	<updateLastName>[updatelastname]</updateLastName>
+	<newLastName>[newlastname]</newLastName>
+	<updatePassword>[updatepassword]</updatePassword>
+	<newPassword>[newpassword]</newPassword>
+	<updateLandLine>[updatelandline]</updateLandLine>
+	<newLandLine>[newlandline]</newLandLine>
+	<updateOfficeNumber>[updateofficenumber]</updateOfficeNumber>
+	<newOfficeNumber>[newofficenumber]</newOfficeNumber>
+	<updateMobileNumber>[updatemobilenumber]</updateMobileNumber>
+	<newMobileNumber>[newmobilenumber]</newMobileNumber>
+</UpdateMember1>

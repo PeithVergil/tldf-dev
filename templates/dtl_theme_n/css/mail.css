@@ -1,0 +1,22 @@
+/* CSS styles for externail mails */
+{literal}
+body		 { font-family: Tahoma; font-size: 12px; background-color:#e3e2e2; }
+a			 { font-family: Tahoma; font-size: 12px; text-decoration:none; }
+a img		 { border: none; }
+.text		 { font-family: Tahoma; font-size: 12px; color: #000000; text-decoration: none; }
+.wrapper	 { width: 640px; margin: 0px auto; background-color: #ffffff; margin-bottom: 10px; }
+.mail_content{ margin: 8px 0px; padding: 10px; background-color: #f4f4f4; font-size: 12px; }
+.delimiter	 { background-color: #EBEBEB; height: 1px; margin: 12px 0px; }
+.list_item	 { background-color: #fbeffb; font-size: 12px; }
+.justify	 { text-align: justify; }
+.htext		 { font-family: Tahoma; font-size: 12px; color: #29578c; font-weight: bold; }
+.mtext		 { font-family: Tahoma; font-size: 12px; color: #000000; text-decoration: none; }
+.mlink		 { font-family: Tahoma; font-size: 12px; color: #0066cc; text-decoration: underline; }
+.text_head	 { font-family: Tahoma; font-size: 12px; color: #000000; font-weight: bold; text-decoration: none; }
+.text_hidden { font-family: Tahoma; font-size: 12px; color: #000000; font-style: italic; }
+.icon		 { border: #EAEAEA 2px solid; }
+
+.promo_mail	 { font-family: Tahoma; font-size: 12px; margin: 20px 0px; padding: 10px; background-color: #e1c7da; }
+.promo_mail table { margin-bottom: 2px; padding: 5px; }
+.promo_mail table td { background-color: #fbeffb; font-size: 12px; }
+{/literal}

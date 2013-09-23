@@ -1,0 +1,2961 @@
+<?php
+
+$SITE_NAME				= "Thai Lady Date Finder&trade;";
+$SITE_NAME_SUBJECT		= "Thai Lady Date Finder™";
+$TLDE_SITE_NAME			= "Thai Lady Dating Events&trade;";
+$TLDE_SITE_NAME_SUBJECT	= "Thai Lady Dating Events™";
+
+$site_url				= $config['server'].$config['site_root'];
+$contact_url			= $config['server'].$config['site_root'].'/contact.php';
+$login_url				= $config['server'].$config['site_root'].'/index.php?sel=login';
+$dating_events_url		= $config['server'].$config['site_root'].'/dating_events.php';
+$get_credit_url			= $config['server'].$config['site_root'].'/payment.php?sel=buy_connection';
+$platinum_matching_url	= $config['server'].$config['site_root'].'/platinum_match.php';
+$dtl_newsletter_url		= 'http://www.datethailadies.com';
+$mfm_newsletter_url		= 'http://www.meetfarangmen.com';
+
+## $url_coupon_regular_lady			= 'http://www.meetfarangmen.com/wp-content/uploads/2012/11/Coupon-Regular.pdf';
+// modified 03/06/2013
+$url_coupon_regular_lady			= 'http://www.meetfarangmen.com/wp-content/uploads/2013/02/Coupon_Regular_1191-2013.pdf';
+
+// not in use
+$url_coupon_platinum_lady			= 'http://www.meetfarangmen.com/wp-content/uploads/2013/02/Coupon_Platinum_3333-20131.pdf';
+
+## $url_coupon_platinum_lady_extend	= 'http://www.meetfarangmen.com/wp-content/uploads/2012/11/Coupon-Platinum-Extend.pdf';
+// modified 03/06/2013
+$url_coupon_platinum_lady_extend	= 'http://www.meetfarangmen.com/wp-content/uploads/2013/02/Coupon_PlatinumExtend_3333-2013.pdf';
+
+//Platinum Life Url
+
+$platinum_life_url = 'http://www.meetfarangmen.com/wp-content/uploads/2013/04/platinum-live.pdf';
+
+//Benifit For Regualr Lady
+$benifit_for_regular_lady = 'http://www.meetfarangmen.com/wp-content/uploads/2013/04/benefit-for-regular-lady.pdf';
+
+/**
+ * Generic Items
+ **/
+
+$lang_mail['generic_e']['hello']			= 'Hi';
+$lang_mail['generic_e']['admin_name']		= 'Admin';
+$lang_mail['generic_e']['admin_regards']	= 'Best wishes,<br>Nathamon';
+$lang_mail['generic_e']['company_info']		=
+	'© Meet Me Now Bangkok Co.Ltd<br>
+	33/7-9 Soi Pipat 2<br>
+	Convent Road, Silom, Bangkok, Thailand, 10500<br>
+	Phone +66 2 667 0068, Fax + 66 2 667 0069';
+
+$lang_mail['generic_e']['site_regards']		= 'Regards,<br>TLDF Server';
+
+/**
+ * General Thai
+ **/
+
+$lang_mail['generic_t']['hello']			= 'สวัสดีค่ะ';
+$lang_mail['generic_t']['admin_name']		= 'ณฐมน';
+$lang_mail['generic_t']['admin_regards']	= 'ขอให้คุณโชคดีค่ะ,<br>ณฐมน';
+$lang_mail['generic_t']['admin_regards']	= 'ขอให้คุณโชคดีคะ<br>ณฐมน แมนดิสัน';
+$lang_mail['generic_t']['company_info']		=
+	'บริษัทมีทมีนาวแบงค๊อกจำกัด.<br>
+	33/7-9 ซอยพิพัฒน 2<br>
+	ถนนคอนแวนต์<br>
+	แขวงสีลม เขตบางรัก<br>
+	กรุงเพทพฯ 10500<br>
+	สำนักงาน: 026670068<br>
+	แฟ็กอัตโนมัติ: 026670069';
+
+
+// Common Items
+$lang_mail['generic_e']['ans']			= 'years old';
+$lang_mail['generic_e']['subject']		= 'Subject';
+$lang_mail['generic_e']['viewprofile']	= 'View Profile';
+
+$lang_mail['generic_t']['ans']			= 'years old';			// THAI_TRANSLATION_PENDING
+$lang_mail['generic_t']['subject']		= 'Subject';			// THAI_TRANSLATION_PENDING
+$lang_mail['generic_t']['viewprofile']	= 'View profile';		// THAI_TRANSLATION_PENDING
+
+/**
+ * PROMOTIONS AND CRON JOBS GENERIC ITEMS
+ **/
+
+// Mail Header Promotions
+$lang_mail['admin_promo']['hello']				= 'Hello';
+$lang_mail['admin_promo']['regards']			= 'Kind Regards,<br /> The <b>ThaiLadyDateFinder&#8482;</b> Team';
+
+// Mail Regards Cron Jobs (not in use, we use the generic regards)
+$lang_mail['cron_job_e']['regards']				= 'Here\'s to your future success and nothing less.<br><br> The Meet Me Now Bangkok Team<br>';
+$lang_mail['cron_job_t']['regards']				= 'ขอให้คุณโชคดีและประสบความสำเร็จดั่งใจหวัง.<br><br>จากใจทีมงานMeet Me Now Bangkok<br>';
+
+// Mail Unsubscribe Cron Reminders
+$lang_mail['generic_e']['unsubscribe']			= 'You can block the reminder mails by clicking here:';
+$lang_mail['generic_t']['unsubscribe']			= 'คุณสามารถป้ องต้ังการแจ้งเตือนรับอีเมล์จดหมายเข้าได้ที่นี้:';
+$lang_mail['generic_e']['unsubscribe_confirm']	= 'Are you sure to block the reminder mails from '.$SITE_NAME.' site?';
+$lang_mail['generic_t']['unsubscribe_confirm']	= 'คุณแน่ใจหรื่อว่าคุณป้องกันการแจ้งเตือนรับอีเมล์จดหมายจาก '.$SITE_NAME.' เว็บไซด์ของเรา?';
+
+
+/**
+ * (01) User Registration - Message to ADMIN - mail_registration_admin.tpl
+ **/
+
+$lang_mail["registration_admin"]["subject"]			= "[login] - New User Registration";
+$lang_mail["registration_admin"]["message"]			= "A new user registered on $SITE_NAME site";
+$lang_mail["registration_admin"]["fname"]			= "First Name";
+$lang_mail["registration_admin"]["sname"]			= "Last Name";
+$lang_mail["registration_admin"]["date_birthday"]	= "Date Of Birth";
+$lang_mail["registration_admin"]["login"]			= "Username";
+$lang_mail["registration_admin"]["password"]		= "Password";
+$lang_mail["registration_admin"]["email"]			= "Email";
+
+/**
+ * (02) User Registration - Message to USER (English) - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_e"]["subject"]			= "[name] - You’re Registration Was Successful!";
+
+$lang_mail["registration_e"]["intro"] =
+	"Good work! You just registered for a FREE trial at $SITE_NAME.";
+$lang_mail["registration_e"]["confirm_instructions"] =
+	"Here’s how to activate your FREE Membership and start connecting with the ladies at no extra cost.<br><br>
+	First thing to do is to confirm your email address by clicking this link now.";
+#$lang_mail["registration_e"]["login_instructions"] =
+#	"<b>You’ll be asked to log in to your account page:</b><br><br>
+#	Log in with your account details on<br>
+#	<a href='{$login_url}' target='_blank'>{$login_url}</a>";
+#$lang_mail["registration_e"]["login_instructions"] =
+#	"<b>You’ll be automatically signed in to your account page, using a secure token.</b><br><br><br>
+#	The token expires after 30 days. You can then still use the link above to confirm your email address,
+#	but will need to sign in yourself to finish the registration process.<br><br>
+#	Here's your registration details:";
+$lang_mail["registration_e"]["registration_details"]	= "Here's your registration details:";
+$lang_mail["registration_e"]["fname"]					= "First Name";
+$lang_mail["registration_e"]["sname"]					= "Last Name";
+$lang_mail["registration_e"]["date_birthday"]			= "Date Of Birth";
+$lang_mail["registration_e"]["login"]					= "Username";
+$lang_mail["registration_e"]["password"]				= "Password";
+$lang_mail["registration_e"]["email"]					= "Email";
+$lang_mail["registration_e"]["signup_instructions"]		=
+	"On your Registration Homepage simply<br><br>
+	1. Upload Your Photo<br>
+	2. Confirm Your Email Address (if not done already)<br>
+	3. Click The “Start My Membership” Button";
+$lang_mail["registration_e"]["finish"] =
+	"That’s it!<br><br>
+	3 steps and you’re FREE Trial Membership is ready to go.<br><br>
+	Remember you have 20 Credit Points in your account already.<br><br>
+	Use your credit points to make connections with other ladies so you can chat, email and webcam.<br><br>
+	Enjoy and “happy connections” in Member’s area.";
+
+##$lang_mail["registration_e"]["subject"]			= "[name] - Please Confirm Your Registration On $SITE_NAME_SUBJECT";
+##$lang_mail["registration_e"]["congratulations"]	= "Congratulations. You've just registered your account with $SITE_NAME";
+##$lang_mail["registration_e"]["confirm"]			= "First thing to do is to click this link to confirm your registration";
+##$lang_mail["registration_e"]["welcome"]			= "Welcome on board and congratulations on taking these first steps. We know there's someone genuine, trustworthy and irresistible, within our community, who's also ready to find someone like you.";
+##$lang_mail["registration_e"]["not_approved"]		= "Your account has not yet been approved by our administrator, please wait for the approval e-mail.";
+##$lang_mail["registration_e"]["details"]			= "Here's your registration details";
+##$lang_mail["registration_e"]["fname"]				= "First Name";
+##$lang_mail["registration_e"]["sname"]				= "Last Name";
+##$lang_mail["registration_e"]["date_birthday"]		= "Date Of Birth";
+##$lang_mail["registration_e"]["login"]				= "Username";
+##$lang_mail["registration_e"]["password"]			= "Password";
+##$lang_mail["registration_e"]["email"]				= "Email";
+##$lang_mail["registration_e"]["keep_details"]		= "Please keep these details in a safe place, as you may need to refer to them later.";
+##$lang_mail["registration_e"]["what_next"]			=
+##	"<b>What's Next?</b><br>
+##	To access the Member's Area you just need to upload your profile photo and confirm your email account. Then click the 'Start My Membership' button.<br>
+##	Once inside, you can complete your profile for better matches, upload more photos and video and connect with sensational singles.<br>
+##	Look forward to seeing you there.";
+##$lang_mail["registration_e"]["re_confirm"]		= "Here's that link again to confirm your registration";
+##$lang_mail["registration_e"]["we_look"]			= "We look forward to seeing you on the inside.";
+##$lang_mail["registration_e"]["ps"]				= "PS. Here's your FREE BONUS CD Entitled, &#8221;<b>How To Meet A Sensational, Sexy Thai Woman That's Trustworthy, Irresistible And Absolutely Crazy About You, Without Getting Conned, Ripped Off Or Worse.</b>&#8221; <br><br>Just click the link below to claim you FREE CD. Enjoy";
+
+/**
+ * (02) User Registration - Message to USER (Thai) - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_t"]["subject"]					= "หัวข้อ - [name] การลงทะเบียนสมัครหาคู่ต่างชาติยังไม่สมบูรณ์";
+
+$lang_mail["registration_t"]["intro"] =
+	"ยินดีด้วยคะคุณได้รับสิทธิทดลองใช้งาน $SITE_NAME<br><br>
+	คุณได้รับ 20 เครดิตแต้มฟรี และสามารถใช้เครดิตแต้มนี้<br>
+	เพื่อขอเชื่อมต่ออย่างรวดเร็ว (Invite To Connect)";
+$lang_mail["registration_t"]["confirm_instructions"]	= "คุณต้องกดลิ้งค์ด้านล่างนี้เพื่อยืนยันการลงทะเบียน";
+$lang_mail["registration_t"]["registration_details"]	= "<b>รายละเอียดการลงทะเบียนของคุณมีดังนี้</b>";
+$lang_mail["registration_t"]["fname"]					= "ชื่อ";
+$lang_mail["registration_t"]["sname"]					= "นามสกุล";
+$lang_mail["registration_t"]["date_birthday"]			= "วัน เดือน ปี เกิด";
+$lang_mail["registration_t"]["login"]					= "ล๊อกอิน";
+$lang_mail["registration_t"]["password"]				= "รหัสผ่าน";
+$lang_mail["registration_t"]["email"]					= "อีเมล์";
+$lang_mail["registration_t"]["signup_instructions"] =
+	"เข้าสู่บัญชี และกรอกข้อมูลส่วนตัว<br>
+	<a href='{$login_url}' target='_blank'>{$login_url}</a><br><br>
+	หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้<br>
+	กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้คุณสามารถส่งรูปนั้น<br>
+	2. มาทางอีเมล์ด้านล่างนี้ <a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	3. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	4. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”";
+$lang_mail["registration_t"]["finish"] =
+	"เพียงแค่ 3 ขั้นตอนนี้!<br><br>
+	คุณสามารถขอการเชื่อมต่ออย่างรวดเร็วได้มากเท่าที่คุณต้องการ<br><br>
+	พร้อมรับ 20 เครดิตแต้มฟรี<br><br>
+	คุณสามารถแชท อีเมล์ และพูดคุยผ่านเว็ปแคมได้ไม่จำกัด !<br>
+	หลังจากนั้นคุณจะสามารถเพิ่มเติมประวัติส่วนตัว, รูปภาพ<br>
+	เพื่อสร้างความโดดเด่นให้สมาชิกชายต่างชาติอยากรู้จักคุณมากขึ้น";
+
+##$lang_mail["registration_t"]["subject"]			= "[name] ยืนยันอีเมล์สำหรับการลงทะเบียนสมัคร $SITE_NAME_SUBJECT";
+##$lang_mail["registration_t"]["congratulations"]	= "ขอแสดงความยินดีคุณได้ลงทะเบียนบัญชีของ $SITE_NAME";
+##$lang_mail["registration_t"]["confirm"]			= "คุณต้องทำการคลิกที่ลิงก์เพื่อยืนยันการลงทะเบียนของคุณเอง";
+##$lang_mail["registration_t"]["welcome"]			= "ยินดีต้อนรับสู่ก้าวแรกที่จะทำให้คุณได้พบกับชาวต่างชาติที่จริงใจและมองหารักแท้เช่นเดียวกับคุณ.";
+##$lang_mail["registration_t"]["not_approved"]		= "การลงทะเบียนของคุณยังไม่ได้รับการอนุมัติจากทางระบบ กรุณารอรับอีเมล์อนุมัติจากทางระบบก่อน";
+##$lang_mail["registration_t"]["details"]			= "นี้คือรายละเอียดการลงทะเบียนของคุณ";
+##$lang_mail["registration_t"]["fname"]				= "ชื่อ";
+##$lang_mail["registration_t"]["sname"]				= "นามสกุล";
+##$lang_mail["registration_t"]["date_birthday"]		= "วัน เดือน ปี เกิด";
+##$lang_mail["registration_t"]["login"]				= "ล๊อกอิน";
+##$lang_mail["registration_t"]["password"]			= "รหัสเข้าใช";
+##$lang_mail["registration_t"]["email"]				= "อีเมล์";
+##$lang_mail["registration_t"]["keep_details"]		= "โปรดเก็บข้อมูลทั้งหมดนี้ในที่ปลอดภัยซึ่งคุณสามารถกลับมาดูได้ภายหลัง.";
+##$lang_mail["registration_t"]["what_next"]			=
+##	"<b>ขั้นตอนต่อไป?</b><br> อัพโหลดรูปภาพและยืนยันอีเมล์ส่วนตัวของคุณเพื่อให้การสมัครสมาชิกเสร็จสมบูรณ์.<br>
+##	คลิ๊กที่ 'Start My Membership' เริ่มต้นการใช้งานโปรไฟล์ของคุณ<br>
+##	หลังจากนั้นคุณจะสามารถเพิ่มเติมประวัติส่วนตัว,รูปภาพ,วีดีโอ<br>
+##	เพื่อสร้างความโดดเด่นให้สมาชิกชายต่างชาติอยากรู้จักคุณมากขึ้น<br>
+##	อีกทั้งทำการเชื่อมต่อกับชายต่างชาติที่คุณสนใจอย่างไม่จำกัด.";
+##$lang_mail["registration_t"]["re_confirm"]		= "คลิกที่ลิงค์นี้อีกครั้งเพื่อยืนยันการลงทะเบียนของคุณ";
+##$lang_mail["registration_t"]["we_look"]			= "หวังว่าจะพบคุณอีกเร็วๆนี้ค่ะ";
+##$lang_mail["registration_t"]["ps"]				= "";
+
+/**
+ * (03) Registration Reminder 1 - Message to USER (English) - 0.2E - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_2_e"]["subject"]			= "[name] - Your Membership Is Ready";
+
+$lang_mail["registration_2_e"]["intro"] =
+	"Don’t forget about your FREE trial at $SITE_NAME.<br><br>
+	You have 20 FREE Credits and can use them to connect with any of our ladies absolutely FREE.<br><br>
+	It’s simple to get started.";
+$lang_mail["registration_2_e"]["confirm_instructions"]	= "Confirm your email address by clicking this link now.";
+$lang_mail["registration_2_e"]["login_instructions"]	= "Log in with your account details on";
+$lang_mail["registration_2_e"]["registration_details"]	= "Here's your registration details:";
+$lang_mail["registration_2_e"]["fname"]					= "First Name";
+$lang_mail["registration_2_e"]["sname"]					= "Last Name";
+$lang_mail["registration_2_e"]["date_birthday"]			= "Date Of Birth";
+$lang_mail["registration_2_e"]["login"]					= "Username";
+$lang_mail["registration_2_e"]["password"]				= "Password";
+$lang_mail["registration_2_e"]["email"]					= "Email";
+$lang_mail["registration_2_e"]["password_lookup"]		= "Check your Registration email";
+$lang_mail["registration_2_e"]["signup_instructions"] =
+	"On your Registration Homepage page simply<br><br>
+	<span style='color:red;'>1. Upload Your Photo<br>
+	2. Confirm Your Email Address<br>
+	3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_2_e"]["signup_instructions_1"] =
+	"On your Registration Homepage page simply<br><br>
+	<span style='color:red;'>1. Upload Your Photo</span><br>
+	2. Confirm Your Email Address (already done!)<br>
+	<span style='color:red;'>3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_2_e"]["signup_instructions_2"] =
+	"On your Registration Homepage page simply<br><br>
+	1. Upload Your Photo (already done!)<br>
+	<span style='color:red;'>2. Confirm Your Email Address<br>
+	3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_2_e"]["signup_instructions_3"] =
+	"On your Registration Homepage page simply<br><br>
+	1. Upload Your Photo (already done!)<br>
+	2. Confirm Your Email Address (already done!)<br>
+	<span style='color:red;'>3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_2_e"]["finish"] =
+	"That’s it!<br><br>
+	Do that and your FREE Trial Membership is ready to go.<br><br>
+	Remember - you can use your FREE Credit Points to email, chat and webcam with other members at absolutely no extra cost.<br><br>
+	Enjoy and good luck connecting with someone very special in the Member’s area.";
+
+/**
+ * (03) Registration Reminder 1 - Message to USER (Thai) - 0.2T - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_2_t"]["subject"]				= "หัวข้อ - [name] การสมัครสมาชิกใกล้เสร็จสมบูรณ์แล้ว";
+
+$lang_mail["registration_2_t"]["intro"] =
+	"คุณได้ลงทะเบียนสมัครสมาชิกหาคู่ต่างชาติ $SITE_NAME<br><br>
+	คุณได้รับ 20 เครดิตแต้มฟรี และสามารถใช้เครดิตแต้มนี้<br>
+	เพื่อขอเชื่อมต่ออย่างรวดเร็ว (Invite To Connect)";
+$lang_mail["registration_2_t"]["confirm_instructions"]	= "เพียงกดลิงค์ด้านล่างนี้เพื่อยืนยันการลงทะเบียนเป็นขั้นตอนสุดท้าย";
+$lang_mail["registration_2_t"]["login_instructions"]	= "เข้าสู่บัญชีการใช้งานของคุณ เพื่อตรวจสอบ 3 สัญลักษณ์การสมัครใช้งาน";
+$lang_mail["registration_2_t"]["registration_details"]	= "<b>รายละเอียดการลงทะเบียนของคุณมีดังนี้</b>";
+$lang_mail["registration_2_t"]["fname"]					= "ชื่อ";
+$lang_mail["registration_2_t"]["sname"]					= "นามสกุล";
+$lang_mail["registration_2_t"]["date_birthday"]			= "วัน เดือน ปี เกิด";
+$lang_mail["registration_2_t"]["login"]					= "ล๊อกอิน";
+$lang_mail["registration_2_t"]["password"]				= "รหัสผ่าน";
+$lang_mail["registration_2_t"]["email"]					= "อีเมล์";
+$lang_mail["registration_2_t"]["password_lookup"]		= "Check your Registration email";
+$lang_mail["registration_2_t"]["signup_instructions"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	<span style='color:red;'>1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_2_t"]["signup_instructions_1"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	<span style='color:red;'>1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a></span><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	<span style='color:red;'>3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_2_t"]["signup_instructions_2"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	<span style='color:red;'>2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_2_t"]["signup_instructions_3"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	<span style='color:red;'>3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_2_t"]["finish"] =
+	"เพียงแค่ 3 ขั้นตอนนี้!<br><br>
+	คุณสามารถขอการเชื่อมต่ออย่างรวดเร็วได้มากเท่าที่คุณต้องการ<br><br>
+	พร้อมรับ 20 เครดิตแต้มฟรี<br><br>
+	คุณสามารถแชท,อีเมล์และพูดคุยผ่านเว็ปแคมได้ไม่จำกัด !<br>
+	หลังจากนั้นคุณจะสามารถเพิ่มเติมประวัติส่วนตัว,รูปภาพ<br>
+	เพื่อสร้างความโดดเด่นให้สมาชิกชายต่างชาติอยากรู้จักคุณมากขึ้น";
+
+
+/**
+ * (04) Registration Reminder 2 - Message to USER (English) - 0.3E - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_3_e"]["subject"]				= "[name] - We’re Missing You In The Members Area";
+
+$lang_mail["registration_3_e"]["intro"] =
+	"I guess you’re really busy because we haven’t seen you in the Member’s Area yet.<br><br>
+	A few days ago, you registered your account at $SITE_NAME but so far haven’t activated your account.<br><br>
+	I don’t want you to miss out on 20 FREE Credit points. You can use them to connect, email, chat and webcam with other members absolutely FREE.<br><br>
+	A few simple steps and your ready to go.";
+$lang_mail["registration_3_e"]["confirm_instructions"]	= "Confirm your email address by clicking this link now.";
+$lang_mail["registration_3_e"]["login_instructions"]	= "Log in with your account details on";
+$lang_mail["registration_3_e"]["registration_details"]	= "Here's your registration details:";
+$lang_mail["registration_3_e"]["fname"]					= "First Name";
+$lang_mail["registration_3_e"]["sname"]					= "Last Name";
+$lang_mail["registration_3_e"]["date_birthday"]			= "Date Of Birth";
+$lang_mail["registration_3_e"]["login"]					= "Username";
+$lang_mail["registration_3_e"]["password"]				= "Password";
+$lang_mail["registration_3_e"]["email"]					= "Email";
+$lang_mail["registration_3_e"]["password_lookup"]		= "Check your Registration email";
+$lang_mail["registration_3_e"]["signup_instructions"] =
+	"On your Registration Homepage page simply<br><br>
+	<span style='color:red;'>1. Upload Your Photo<br>
+	2. Confirm Your Email Address<br>
+	3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_3_e"]["signup_instructions_1"] =
+	"On your Registration Homepage page simply<br><br>
+	<span style='color:red;'>1. Upload Your Photo</span><br>
+	2. Confirm Your Email Address (already done!)<br>
+	<span style='color:red;'>3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_3_e"]["signup_instructions_2"] =
+	"On your Registration Homepage page simply<br><br>
+	1. Upload Your Photo (already done!)<br>
+	<span style='color:red;'>2. Confirm Your Email Address<br>
+	3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_3_e"]["signup_instructions_3"] =
+	"On your Registration Homepage page simply<br><br>
+	1. Upload Your Photo (already done!)<br>
+	2. Confirm Your Email Address (already done!)<br>
+	<span style='color:red;'>3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_3_e"]["finish"] =
+	"3 Steps and your FREE Trial Membership is ready to go.<br><br>
+	Remember - there’s no extra cost.<br>
+	You can enjoy connections with other ladies using your 20 FREE Credit points.
+	Connections allow you to chat, email and webcam as much as you want.<br><br>
+	Need some help?<br><br>
+	Just email me or call at the number below and we’ll help to get you started.";
+
+/**
+ * (04) Registration Reminder 2 - Message to USER (Thai) - 0.3T - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_3_t"]["subject"]				= "หัวข้อ - [name] การลงทะเบียนสมัครหาคู่ต่างชาติยังไม่สมบูรณ์";
+
+$lang_mail["registration_3_t"]["intro"] =
+	"จากการตรวจสอบระบบตอนนี้ คุณยังสร้างโปรไฟล์ไม่เสร็จสมบูรณ์<br><br>
+	เมื่อไม่นานมานี้ คุณได้สมัครสร้างบัญชีใช้งาน $SITE_NAME<br>
+	แต่คุณยังไม่ได้กดยืนยันลิงค์ เพื่อยืนยันการลงทะเบียน<br><br>
+	ทั้งนี้คุณสามารถรับฟรี 20 เครดิตแต้ม เพื่อทำการขอเชื่อมต่ออย่างรวดเร็ว<br>
+	สามารถอีเมล์,แชท,และติดต่อผ่านกล้องเว็บแคม<br>
+	โดยไม่เสียค่าใช้จ่ายใดๆทั้งสิ้น";
+$lang_mail["registration_3_t"]["confirm_instructions"]	= "กดลิงคด้านล่างนี้เพื่อเสร็จสิ้นการสมัครสมาชิก";
+$lang_mail["registration_3_t"]["login_instructions"]	= "เข้าสู่บัญชีการใช้งานของคุณ เพื่อตรวจสอบ 3 สัญลักษณ์การสมัครใช้งาน";
+$lang_mail["registration_3_t"]["registration_details"]	= "<b>รายละเอียดการลงทะเบียนของคุณมีดังนี้</b>";
+$lang_mail["registration_3_t"]["fname"]					= "ชื่อ";
+$lang_mail["registration_3_t"]["sname"]					= "นามสกุล";
+$lang_mail["registration_3_t"]["date_birthday"]			= "วัน เดือน ปี เกิด";
+$lang_mail["registration_3_t"]["login"]					= "ล๊อกอิน";
+$lang_mail["registration_3_t"]["password"]				= "รหัสผ่าน";
+$lang_mail["registration_3_t"]["email"]					= "อีเมล์";
+$lang_mail["registration_3_t"]["password_lookup"]		= "Check your Registration email";
+$lang_mail["registration_3_t"]["signup_instructions"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	<span style='color:red;'>1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_3_t"]["signup_instructions_1"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	<span style='color:red;'>1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a></span><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	<span style='color:red;'>3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_3_t"]["signup_instructions_2"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	<span style='color:red;'>2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_3_t"]["signup_instructions_3"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	<span style='color:red;'>3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_3_t"]["finish"] =
+	"เพียงแค่ 3 ขั้นตอนนี้!<br><br>
+	คุณสามารถขอการเชื่อมต่ออย่างรวดเร็วได้มากเท่าที่คุณต้องการ<br><br>
+	พร้อมรับ 20 เครดิตแต้มฟรี<br><br>
+	หากมีข้อส่งสัย หรือต้องการความช่วยเหลือโดยตรง<br>
+	เพียงแจ้งเบอร์ติดต่อกลับของท่าน<br>
+	มาที่อีเมล์ <a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a>";
+
+
+/**
+ * (05) Registration Reminder 3 - Message to USER (English) - 0.4E - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_4_e"]["subject"]			= "Anybody Seen [name] Yet?";
+
+$lang_mail["registration_4_e"]["intro"] =
+	"You’re too busy! You should take some time out for yourself and meet a nice girl!<br><br>
+	Ha ha...I’m sorry if I am sounding like you’re mother, but let’s face it, it must be true!<br><br>
+	It’s been more than a week now since you registered at $SITE_NAME and you still haven’t activated your account.<br><br>
+	I don’t want you to miss out on the 20 FREE Credit points.<br><br>
+	It’s such a good offer. You can connect, email, chat and webcam with any of our lady members absolutely FREE.<br><br>
+	Seriously, could it get any better than that?<br><br>
+	A few simple steps and your Membership is ready to go.";
+$lang_mail["registration_4_e"]["confirm_instructions"]	= "Confirm your email address by clicking this link now.";
+$lang_mail["registration_4_e"]["login_instructions"]	= "Log in with your account details on";
+$lang_mail["registration_4_e"]["registration_details"]	= "Here's your registration details:";
+$lang_mail["registration_4_e"]["fname"]					= "First Name";
+$lang_mail["registration_4_e"]["sname"]					= "Last Name";
+$lang_mail["registration_4_e"]["date_birthday"]			= "Date Of Birth";
+$lang_mail["registration_4_e"]["login"]					= "Username";
+$lang_mail["registration_4_e"]["password"]				= "Password";
+$lang_mail["registration_4_e"]["email"]					= "Email";
+$lang_mail["registration_4_e"]["password_lookup"]		= "Check your Registration email";
+$lang_mail["registration_4_e"]["signup_instructions"] =
+	"On your Registration Homepage page simply<br><br>
+	<span style='color:red;'>1. Upload Your Photo<br>
+	2. Confirm Your Email Address<br>
+	3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_4_e"]["signup_instructions_1"] =
+	"On your Registration Homepage page simply<br><br>
+	<span style='color:red;'>1. Upload Your Photo</span><br>
+	2. Confirm Your Email Address (already done!)<br>
+	<span style='color:red;'>3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_4_e"]["signup_instructions_2"] =
+	"On your Registration Homepage page simply<br><br>
+	1. Upload Your Photo (already done!)<br>
+	<span style='color:red;'>2. Confirm Your Email Address<br>
+	3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_4_e"]["signup_instructions_3"] =
+	"On your Registration Homepage page simply<br><br>
+	1. Upload Your Photo (already done!)<br>
+	2. Confirm Your Email Address (already done!)<br>
+	<span style='color:red;'>3. Click The “Start My Membership” Button</span>";
+$lang_mail["registration_4_e"]["finish"] =
+	"Remember - there’s no extra cost.<br>
+	You can enjoy connections with other ladies using your 20 FREE Credit points.
+	Connections allow you to chat, email and webcam as much as you want.<br><br>
+	Need some help or want to find out more?<br><br>
+	Just drop me a line or call at the number below and we’ll help to get you started.";
+
+/**
+ * (05) Registration Reminder 3 - Message to USER (Thai) - 0.4T - mail_registration_user.tpl
+ **/
+
+$lang_mail["registration_4_t"]["subject"]				= "หัวข้อ - [name] ติดต่อกับสมาชิกชายต่างชาติที่สนใจหรือยังคะ ?";
+
+$lang_mail["registration_4_t"]["intro"] =
+	"สิทธิรับการทดลองใช้งาน $SITE_NAME ฟรียังรอคุณอยู่<br><br>
+	พร้อมรับฟรี 20 เครดิตแต้ม เพื่อทำการขอเชื่อมต่ออย่างรวดเร็ว<br>
+	สามารถ,อีเมล์,แชท,และติดต่อผ่านกล้องเว็บแคม<br>
+	โดยไม่เสียค่าใช้จ่ายใดๆทั้งสิ้น";
+$lang_mail["registration_4_t"]["confirm_instructions"]	= "เพียงแค่คลิ๊กลิงค์สำคัญด้านล่างนี้เท่านั้น";
+$lang_mail["registration_4_t"]["login_instructions"]	= "เข้าสู่บัญชีการใช้งานของคุณ เพื่อตรวจสอบ 3 สัญลักษณ์การสมัครใช้งาน";
+$lang_mail["registration_4_t"]["registration_details"]	= "<b>รายละเอียดการลงทะเบียนของคุณมีดังนี้</b>";
+$lang_mail["registration_4_t"]["fname"]					= "ชื่อ";
+$lang_mail["registration_4_t"]["sname"]					= "นามสกุล";
+$lang_mail["registration_4_t"]["date_birthday"]			= "วัน เดือน ปี เกิด";
+$lang_mail["registration_4_t"]["login"]					= "ล๊อกอิน";
+$lang_mail["registration_4_t"]["password"]				= "รหัสผ่าน";
+$lang_mail["registration_4_t"]["email"]					= "อีเมล์";
+$lang_mail["registration_4_t"]["password_lookup"]		= "Check your Registration email";
+$lang_mail["registration_4_t"]["signup_instructions"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	<span style='color:red;'>1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_4_t"]["signup_instructions_1"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	<span style='color:red;'>1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a></span><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	<span style='color:red;'>3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_4_t"]["signup_instructions_2"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	<span style='color:red;'>2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_4_t"]["signup_instructions_3"] =
+	"หากคุณล๊อกอินแล้วแต่ไม่สามารถใช้งานได้ กรุณาตรวจสอบ 3 ข้อดังต่อไปนี้<br><br>
+	1. อัพโหลดรูปภาพ หากไม่สามารถอัพโหลดได้ ส่งรูปนั้นมาทางอีเมล์ด้านล่างนี้<br>
+	<a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br>
+	2. ยืนยันอีเมล์(ในกรณีที่ยังไม่เสร็จสิ้นสมบูรณ์)<br>
+	<span style='color:red;'>3. คลิ๊กที่แถบสีส้ม “Start My Membership” “เพื่อเริ่มต้นใช้งาน”</span>";
+$lang_mail["registration_4_t"]["finish"] =
+	"เพียงแค่ 3 ขั้นตอนนี้!<br><br>
+	คุณสามารถขอการเชื่อมต่ออย่างรวดเร็วได้มากเท่าที่คุณต้องการ<br><br>
+	พร้อมรับ 20 เครดิตแต้มฟรี<br><br>
+	หากมีข้อส่งสัย หรือต้องการความช่วยเหลือโดยตรง<br>
+	เพียงแจ้งเบอร์ติดต่อกลับของท่าน<br>
+	มาที่อีเมล์ <a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a>";
+
+/**
+ * (06) Welcome Email - Message to ADMIN - mail_application_submit_admin.tpl
+ **/
+
+$lang_mail["application_submit_admin"]["subject"]	= "[login] - New Trial Member";
+$lang_mail["application_submit_admin"]["message"]	= "A new Trial member has registered.<br> Check for appropriateness.";
+$lang_mail["application_submit_admin"]["datetime"]	= "Date Time:";
+$lang_mail["application_submit_admin"]["login"]		= "Username:";
+$lang_mail["application_submit_admin"]["fname"]		= "First Name:";
+$lang_mail["application_submit_admin"]["sname"]		= "Last Name:";
+$lang_mail["application_submit_admin"]["email"]		= "Email:";
+
+/**
+ * (07) Welcome Email - Message to USER (English) - mail_application_submit_eng.tpl
+ **/
+
+$lang_mail["application_submit_e"]["subject"]		= "[name] - Welcome To $SITE_NAME_SUBJECT";
+$lang_mail["application_submit_e"]["message_top"]	= "Congratulations & Welcome to <a href='".$site_url."' target='_blank'>".$SITE_NAME."</a>";
+$lang_mail["application_submit_e"]["message"]=
+	"You've made a wise decision in starting your FREE Trial Membership.<br><br>
+	Here's how it works:<br><br>
+	1. Send an 'Invitation To Connect With Me' to anyone who looks interesting to you.<br>
+	2. Seven points will be deducted from your account only if the other person accepts your invitation.<br><br>
+	You can send as many invites as you choose.<br><br>
+	Once connected - you're free to chat, email and webcam with the other person as much as you want - at NO additional cost!<br><br>
+	Getting more connections is simple. Just top up your credits points..or join one of our 'Unlimited Connections' programs.<br><br>
+	So make a start today and I'll see you there.";
+$lang_mail["application_submit_e"]["ps"]				= "";
+
+/**
+ * (07) Welcome Email - Message to USER (Thai) - mail_application_submit_thai.tpl
+ **/
+
+$lang_mail["application_submit_t"]["subject"]		= "[name] - ยินดีต้อนรับสู่เว็บหาคู่ต่างชาติ $SITE_NAME_SUBJECT";
+$lang_mail["application_submit_t"]["message_top"]	= "ขอแสดงความยินดีและต้อนรับสู่ $SITE_NAME.";
+$lang_mail["application_submit_t"]["message"]=
+//	"คุณได้ทำการสมัครเป็นสมาชิกระดับทดลองเสร็จสมบูรณ์แล้ว.<br><br>
+//	ขั้นตอนการติดต่อกับชายต่างชาติ:<br><br>
+//	1. คลิ๊กที่ 'Invitation To Connect With Me' บนโปรไฟล์ของสมาชิกชายที่คุณสนใจ.<br>
+//	2. รับฟรีทันที 20 เครดิตแต้มของคุณและหักสำหรับ 7 เครดิตแต้ม<br>
+//	สำหรับสมาชิกชายที่ตอบรับการเชื่อมต่อจากคุณ<br>
+//	แต่ถ้าสมาชิกชายไม่ตอบรับการเชื่อมต่อคุณจะไม่เสียเครดิตแต้ม<br>
+//	คุณสามารถส่งการขอเชื่อมต่อได้มากเท่าที่คุณต้องการ<br>
+//	หลังจากที่ทำการเชื่อมต่อเรียบร้อยแล้ว<br>
+//	คุณสามารถแชท,อีเมล์,พูดคุยผ่านเว็ปแคมได้ไม่จำกัดและฟรี!<br>
+//	เมื่อเครดิตแต้มฟรีของคุณหมดลงคุณสามารถเลือกเติมเครดิตแต้มของคุณ<br>
+//	เริ่มต้นที่ 1 เครดิตแต้มเพียง 30 บาทเท่านั้น!และจะเติมเท่าก็ได้ตามความต้องการของคุณ.<br><br>
+//	3. สมัครสมาชิกแบบรายเดือนในระดับ Regular เพียงเดือนล่ะ 397 บาทเท่านั้น!.<br><br>
+//	4. สมัครเป็นสมาชิกระดับ Platinum เพื่อพบและออกเดทกับชายต่างชาติ<br>
+//	ที่ผ่านการตรวจสอบประวัติออกเดทไม่จำกัดจำนวนและไม่เสียค่าใช้จ่ายใดๆทั้งสิ้น<br>
+//	พร้อมรับ'หนังสือ,ซีดีพบรักกับฝรั่งอย่างไรไม่โดนหลอกและประสบความสำเร็จเร็ว.<br><br>
+//	สิทธิพิเศษแนะนำชายต่างชาติให้กับคุณเป็นการส่วนตัวจ่ายเพียงปีล่ะ 9,997บาทเท่านั้น! <br>
+//	อย่ารอช้าชายต่างชาติที่ดีพร้อมและผ่านการตรวจสอบประวัติกำลังรอพบกับคุณอยู่.";
+
+"คุณได้ทำการสมัครเป็นสมาชิกระดับทดลองเสร็จสมบูรณ์แล้ว.<br/><br/>
+
+ขั้นตอนการติดต่อกับชายต่างชาติ:<br/><br/>
+
+1.รับฟรีทันที 20 เครดิตแต้มหักสำหรับ 7 เครดิตแต้มต่อ1การเชื่อมต่อ<br/>
+กับชายต่างชาติทุกระดับแต่ถ้าสมาชิกชายไม่ตอบรับการเชื่อมต่อคุณจะไม่เสียเครดิตแต้ม<br/>
+คุณสามารถแชท,อีเมล์,พูดคุยผ่านเว็ปแคมได้ไม่จำกัดและฟรี!<br/><br/>
+
+2.คลิ๊กที่ 'Invitation To Connect With Me' บนโปรไฟล์ของสมาชิกชายที่คุณสนใจ<br/>
+คุณสามารถส่งการขอเชื่อมต่อได้มากเท่าที่คุณต้องการกับชายต่างชาติทุกระดับ<br/><br/>
+
+เมื่อเครดิตแต้มฟรีของคุณหมดลง:<br/><br/>
+
+ทางเลือกที่1<br/>
+คุณสามารถเลือกเติมเครดิตแต้มของคุณ<br/>
+เริ่มต้นที่ 1 เครดิตแต้มเพียง 30 บาท<br/><br/>
+
+ทางเลือกที่2<br/>
+สมัครสมาชิกแบบรายเดือนในระดับธรรมดารายเดือน Regular<br/>
+เพียงเดือนล่ะ 397 บาทไม่จำกัดการเชื่อมต่อกับชายต่างชาติ<br/><br/>
+
+หากสมัครแบบ3เดือนขึ้นไปจ่ายเพียง 1,191บาท(จากปกติ 2,394บาท)<br/>
+รับฟรีแพ็คเกจถ่ายภาพพร้อมทำประวัติภาษาอังกฤษฟรีทันที<br/>
+โปรโมชั่นแพ็คเกจถ่ายภาพ: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+
+ทางเลือกที่3<br/>
+สมัครเป็นสมาชิกระดับแพลทินัมตลอดชีพ Platinum <br/>
+เพื่อพบและออกเดทกับชายต่างชาติที่ผ่านการตรวจสอบประวัติ<br/>
+และแนะนำชายต่างชาติให้กับคุณเป็นการส่วนตัว<br/>
+ออกเดทไม่จำกัดจำนวนและไม่เสียค่าใช้จ่ายใดๆทั้งสิ้น<br/><br/>
+
+จ่ายเพียงครั่งเดียว9,997บาทเป็นสมาชิกระดับแพลทินัมตลอดชีพ<br/>
+โปรโมชั่นพิเศษแบบผ่อนชำระ 3 เดือนจ่ายเริ่มต้นเพียงเดือนล่ะ 3,333 บาท<br/>
+สมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."'>Platinum-live.pdf</a>
+";
+
+$lang_mail["application_submit_t"]["ps"]				= "";
+
+ /**
+ * (08) User Status Approved or Suspended - Message to USER (English) - mail_status_for_user_eng.tpl
+ **/
+
+$lang_mail["status_change_on_e"]["subject"]		= "Your Profile Has Been Approved By Our Team";		// "Congratulations & Welcome"
+$lang_mail["status_change_off_e"]["subject"]	= "Your Profile Has Been Suspended By Our Team";
+
+$lang_mail["status_change_e"]["suspended"]=
+	"I'm sorry to advise that your account has been suspended on $SITE_NAME<br><br>
+	This will be due to a policy breach of our terms of agreement.<br><br>
+	As always, mistakes can happen, so if you feel this is not correct, please contact me asap.";
+
+$lang_mail["status_change_e"]["approved"]=
+	"Congratulations! Your profile has been approved by our team and I want to personally welcome you to our community and wish you every success.<br><br>
+	You see, there’s many sensational and trustworthy singles here and you can meet then online, or when you’re ready, in person, through our personalized Dating Events Program. You can read more about that from inside the Member’s Area.";
+
+$lang_mail["status_change_e"]["approved_below_video"]=
+	"But right now, go ahead and see who’s ready to connect with you by logging into the Member’s area at:<br><br>
+	<a href='$login_url' target='_blank'>$login_url</a>";
+
+$lang_mail["status_change_e"]["details"]			= "Your registration data is";
+$lang_mail["status_change_e"]["fname"]				= "First Name";
+$lang_mail["status_change_e"]["sname"]				= "Last Name";
+$lang_mail["status_change_e"]["login"]				= "Username";
+$lang_mail["status_change_e"]["email"]				= "Email";
+
+$lang_mail["status_change_e"]["approved_below_data"]=
+	"I look forward to seeing you in the Member’s Area.";
+
+$lang_mail["status_change_e"]["confirm"]=
+	"Click this link, to confirm your registration";
+
+$lang_mail["status_change_e"]["ps"]=
+	"PS. Don't forget! If you haven’t already claimed your FREE Date Thai Ladies Newsletter you can do that by visiting the link right here and filling in the box. <a href='$dtl_newsletter_url' target='_blank'>$dtl_newsletter_url</a>";
+
+$lang_mail["status_change_e"]["pps"]=
+	"PPS. Remember, we'd love to hear any questions or comments you’d like to make. Just contact me or our team at any time on this link. <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (08) User Status Approved or Suspended - Message to USER (Thai) - mail_status_for_user_thai.tpl
+ **/
+
+$lang_mail["status_change_on_t"]["subject"]		= "ขอแสดงความยินดีและยินดีต้อนรับ";
+$lang_mail["status_change_off_t"]["subject"]	= "ประวัติของคุณได้ถูกระงับจากทางระบบ";
+
+$lang_mail["status_change_t"]["suspended"]=
+	"ขอแจ้งให้คุณทราบว่าขณะนี้บัญชีสมาชิกของคุณถูกระงับการใช้งานกับ $SITE_NAME<br><br>
+	เนื่องจากคุณละเมิดนโยบาลและกฎข้อบังคับใช้ของเรา.<br><br>
+	หากคุณคิดว่าอาจมีข้อผิดพลาดที่เกิดจากความไม่เข้าใจหรื่อเกิดจากระบบของเราโปรติดต่อกลับผู้ดูแลระบบหรื่อเจ้าหน้าที่ของเรา.";
+
+$lang_mail["status_change_t"]["approved"]=
+//	"โปรไฟล์ของคุณได้รับการอนุมัติเรียบร้อยแล้ว<br><br>
+//	และยินดีต้อนรับคุณสู่หนทางใหม่ที่จะนำให้คุณได้พบกับรักแท้ชายต่างชาติ<br><br>
+//	การให้บริการของเรามีแบบ 2 ทางเลือกคือ:<br><br>
+//	1.พบแบบออนไลน์<br><br>
+//	สิ่งคุณจะได้โดยรับจากเราเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http://www.meetfarangmen.com/benefit-for-regular-lady' target='_blank'>www.meetfarangmen.com/benefit-for-regular-lady</a><br>
+//	เชิญรับคูปองสิทธิพิเศษถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+//	2.พบและออกเดทแบบส่วนตัว<br><br>
+//	บริการพบและออกเดทแบบส่วนตัวนั้นคุณสามารถอ่านข้อมูลและสิทธิพิเศษ<br>
+//	ที่คุณจะได้โดยรับจากเราเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='http://www.meetfarangmen.com/platinum-matching' target='_blank'>www.meetfarangmen.com/platinum-matching</a><br><br>
+//	ทีมงานพร้อมให้คำปรึกษา-แนะนำชายต่างชาติเห็นว่าเหมาะสมและมีคุณสมบัติตามความต้องการของคุณเป็นการส่วนตัว<br>
+//	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.<br>
+//	ตอนนี้โปร์ไฟล์ของคุณพร้อมที่ติดต่อกับสมาชิกชายต่างชาติทุกระดับได้แล้วทันที<br><br>
+//	เข้าไปในส่วนของหน้าสมาชิก<br><br>
+//	<a href='$login_url' target='_blank'>$login_url</a>";
+
+"โปรไฟล์ของคุณได้รับการอนุมัติเรียบร้อยแล้ว<br/><br/>
+
+และยินดีต้อนรับคุณสู่หนทางใหม่ที่จะนำให้คุณได้พบกับรักแท้ชายต่างชาติ<br/><br/>
+
+การให้บริการของเรามีแบบ 2 ทางเลือกคือ:<br/><br/>
+
+1.พบแบบออนไลน์<br/>
+สิ่งคุณจะได้โดยรับจากเราเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http://www.meetfarangmen.com/benefit-for-regular-lady'>www.meetfarangmen.com/benefit-for-regular-lady</a><br/>
+หากสมัครแบบ3เดือนขึ้นไปจ่ายเพียง 1,191บาท(จากปกติ 2,394บาท)<br/>
+รับฟรีแพ็คเกจถ่ายภาพพร้อมทำประวัติภาษาอังกฤษฟรีทันที<br/>
+โปรโมชั่นแพ็คเกจถ่ายภาพ: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br/><br/>
+
+2.พบและออกเดทแบบส่วนตัว<br/>
+สมัครเป็นสมาชิกระดับแพลทินัมตลอดชีพ Platinum<br/>
+เพื่อพบและออกเดทกับชายต่างชาติที่ผ่านการตรวจสอบประวัติ<br/>
+และแนะนำชายต่างชาติให้กับคุณเป็นการส่วนตัว<br/>
+ออกเดทไม่จำกัดจำนวนและไม่เสียค่าใช้จ่ายใดๆทั้งสิ้น<br/><br/>
+
+จ่ายเพียงครั่งเดียว9,997บาทเป็นสมาชิกระดับแพลทินัมตลอดชีพ<br/>
+โปรโมชั่นพิเศษแบบผ่อนชำระ 3 เดือนจ่ายเริ่มต้นเพียงเดือนล่ะ 3,333 บาท<br/>
+สมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."'>Platinum-live.pdf</a><br/><br/>
+
+สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.<br/>
+ตอนนี้โปร์ไฟล์ของคุณพร้อมที่ติดต่อกับสมาชิกชายต่างชาติทุกระดับได้แล้วทันที<br/><br/>
+
+เข้าไปในส่วนของหน้าสมาชิก<br/><br/>
+
+<a href='$login_url' target='_blank'>$login_url</a> <br/>";
+
+##$lang_mail["status_change_t"]["approved"]=
+##	"ขอแสดงความยินดี.! โปรไฟล์ของคุณได้รับการอนุมัติโดยทีมงานของเราเป็นที่เรียบร้อยแล้ว.<br><br>
+##	ดิฉันณฐมน ยินดีต้อนรับคุณสู่หนทางใหม่ที่จะนำให้คุณได้พบกับรักแท้ และประสบความสำเร็จพบคู่ชีวิตของคุณ กับชายชาวต่างชาติ<br><br>
+##	คุณจะเห็นแล้วว่าการให้บริการของเรานั้นตรงไปตรงมามีความน่าเชื่อถือและปลอดภัยที่สุด<br><br>
+##	ที่นี้คุณสามารถพบกับชายต่างชาติที่เรามี สอง ทางเลือกให้คุณคือ พบแบบออนไลน์ หรื่อ พบและออกเดทแบบส่วนตัว โดยการให้บริการพบและออกเดทแบบส่วนตัวนั้น คุณสามารถอ่านข้อมูลและขั้นตอนการทำงานการให้บริการและสิทธิพิเศษที่คุณจะได้รับ ที่จะแสดงอยู่ในส่วนของหน้าสมาชิก";
+##
+##$lang_mail["status_change_t"]["approved_below_video"]=
+##	"แต่ตอนนี้คุณก็จะได้เห็นว่าโปร์ไฟล์ของคุณพร้อมที่จะพบและทำการเชื่อมต่อกับฝ่ายชายได้แล้วทันท ให้คุณเข้าไปในส่วนของหน้าสมาชิก<br><br>
+##	<a href='$login_url' target='_blank'>$login_url</a>";
+
+$lang_mail["status_change_t"]["details"]			= "ข้อมูลการลงทะเบียนของคุณ";
+$lang_mail["status_change_t"]["fname"]				= "ชื่ิอ";
+$lang_mail["status_change_t"]["sname"]				= "นามสกุล";
+$lang_mail["status_change_t"]["login"]				= "ใส่ชื่อผู้ใช";
+$lang_mail["status_change_t"]["email"]				= "อีเมล์";
+
+$lang_mail["status_change_t"]["approved_below_data"]=
+	"หากคุณต้องการพบและออกเดทกับชายต่างชาติที่ปลอดภัยและประสบความสำเร็จ<br>
+	ขอให้คุณได้ไว้วางใจทีมงานและความเป็นมืออาชีพของเรา";
+
+$lang_mail["status_change_t"]["confirm"]=
+	"คลิกที่ลิงค์นี้เพื่อยืนยันการลงทะเบียนของคุณ";
+
+$lang_mail["status_change_t"]["ps"]=
+	"PS. โปรดอย่าลืม! หากคุณยังไม่ได้ลงชื่อในส่วนของขอรับจดหมายฟรี! คุณสามารถทำได้เลยในตอนนี้เพียงคลิ๊กที่ลิงก์ใส่ชื่อและอีเมล์ของคุณ <a href='$mfm_newsletter_url' target='_blank'>$mfm_newsletter_url</a>";
+
+$lang_mail["status_change_t"]["pps"]=
+	"PPS. อีกครั่งนะค่ะเราชอบและรักที่จะรับฟังความคิดเห็นหรื่อคำถามและข้อเสนอแนะจากคุณเป็นอย่างยิ่ง หากคุณต้องการแนะนำเราในสิ่งใดๆก็แล้วแต่ติดต่อดิฉันและทีมงานได้ทันที่ค่ะโดยคลิ๊กที่ลิงก์นี้ค่ะ. <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+###############################################
+##                                           ##
+## GENERIC NOTIFICATIONS WITH PROFILE IMAGES ##
+##                                           ##
+###############################################
+
+/**
+ * GENERIC ITEMS
+ **/
+
+$lang_mail["generic_e"]["view_profile"]		= "View Profile";
+$lang_mail["generic_t"]["view_profile"]		= "View Profile";
+
+$lang_mail["generic_e"]["wish"]				= "Here's to your future success and nothing less.";
+$lang_mail["generic_t"]["wish"]				= "ขอให้คุณโชคดีและประสบความสำเร็จดั่งใจหวัง.";
+
+$lang_mail["generic_e"]["what_next_head"]	= "What Should You Do Now?";
+$lang_mail["generic_t"]["what_next_head"]	= "ในขั้นต่อไปฉันควรทำอย่างไรด?";
+
+$lang_mail["generic_e"]["what_next_text"]	=
+	"You could show your interest by sending a kiss or an e-card back to them.<br><br>
+	Or if you'd like to really start communicating without restriction, invite them to CONNECT with you and see if they accept.<br><br>
+	You see, <em>Connected</em> Members can send email, use IM and web cam without cost or restriction to meet and find out if there's a real spark between them.<br><br>
+	Just click the link below or Log In now to get things moving.<br><br>";
+
+$lang_mail["generic_t"]["what_next_text"]	=
+	"คุณควรบอกถึงความสนใจของคุณด้วย
+	การส่งจูบหรืออีการ์ดกลับให้กับเขาได้เลย.<br><br>
+	! ! ! เริ่มต้นจากการสื่อสารถึงกันโดยไม่มีข้อจำกัดคุณสามารถส่งคำเชิญให้เขา
+	เชื่อมต่อกับคุณและรอรับการตอบรับจากเขา.<br><br>
+	! ! ! คุณจะเห็นได้ว่า,<em>Connected</em> สมาชิกสามารถส่งอีเมล์,พูดคุยพบ
+	กันได้โดยผ่านระบบเว็บแคมโดยไม่ต้องเสียค่าใช้จ่าย
+	เพื่อตอบสนองความต้องการของสมาชิก.<br><br>
+	เพียงคลิกที่ลิงค์ข้างล่าง.<br><br>";
+
+$lang_mail["generic_e"]["your_login_is"]	= "Your Log In User Id Is";
+$lang_mail["generic_t"]["your_login_is"]	= "Your Log In User Id Is";
+
+$lang_mail["generic_e"]["want_meet_head"]	= "Do You Want To Meet Sensational Ladies In Person?";
+$lang_mail["generic_t"]["want_meet_head"]	= "คุณต้องการพบชายต่างชาติและ ออกเดทกับหรืื่อไม่?";
+
+$lang_mail["generic_e"]["want_meet_text"]=
+	"If you're ready to take things to the next level and find your perfect Lady, in a way that safe, fun and fantastic, become a Platinum Plus member today.<br><br>
+	Platinum Plus Members can take advantage of our <a href='".$dating_events_url."'>Thai Lady Dating Events&trade; program.</a> It's where you can enjoy safe and fun filled personal dates with an unlimited number of ladies over an unlimited period of time.<br><br>
+	Wow, if you're a genuine guy looking for a trust worthy and sexy lady to be your life long partner, it doesn't get any better than this.<br><br>
+	Find out more about our <a href='".$dating_events_url."'>Thai Lady Dating Events&trade; program.</a>";
+
+$lang_mail["generic_t"]["want_meet_text"]=
+	"หากคุณพร้อมที่จะก้าวอีกขั้นเพื่อพบกับ
+	ชายต่างชาติมาเป็นคู่รักของคุณในบรรยากาศที่ปลอดภัย,สนุกสนาน,และทำให้คุณ
+	ประสบความสำเร็จในการพบคู่ของคุณเร็วที่สุด
+	ก้าวเข้ามาเป็นสมาชิกระดับแพลทินั่มพลัสทันทีตอนนี้ได้เลย.<br /><br />
+	! ! สมาชิกระดับแพลทินั่มพลัสจะได้รับสิทธิประโยชน์มากมายจากการเข้า
+	ร่วมโปรแกรมพบและออกเดทแบบส่วนตัว <a href='".
+	$dating_events_url."'>โปรแกรมพบและออกเดทแบบส่วนตัว.</a>เป็นการจัดให้คุณ
+	ได้พบและออกเดทแบบส่วนตัวกับชายต่างชาติโดยมีทีมงานเป็นผู้ดูแลคุณ.<br /
+	><br />
+	! ! ถ้าคุณจริงจังที่จะพบกับรักแท้และไม่อยากเสียเวลาดิฉันแนะนำ
+	โปรแกรมพบและออกเดทแบบส่วนตัวกับชายต่างชาติเป็นหนทางที่จะนำคุณไป
+	สู่การพบรักแท้และรักที่ยั่งยืนกับชายต่างชาติที่มีคุณสมบัติตรงตามความ
+	ต้องการของคุณค่ะ.<br /><br />อ่านข้อมูลของโปรแกรมพบและออกเดทส่วนตัว
+	กับชายต่างชาติได้ที่นี้ค่ะ <a href='".$dating_events_url."'>
+	ตอนนี้ชายฝรั่งใจดีแบบในฝันรอพบกับคุณอยู่.</a>";
+
+$lang_mail["generic_e"]["footer_head"]		= "Not What You're Looking For?";
+$lang_mail["generic_t"]["footer_head"]		= "ถ้านี้ไม่ใช่สิ่งที่คุณมองหา?";
+
+$lang_mail["generic_e"]["footer_text"]		=
+	"Our programs are for genuine people looking for long term, loving relationships.<br><br>
+	As we don't believe in spam, should you no longer wish to receive information from us, simply click below to be removed from all Newsletters, Member information and to terminate your on line account.";
+
+$lang_mail["generic_t"]["footer_text"]		=
+	"โปรแกรมพบและออกเดทแบบส่วนตัว
+	กับชายต่างชาติเหมาะสำหรับผู้ที่จริงจังกับความสัมพันธ์และอยากพบคนจริงใจ
+	เพื่อมาเป็นคู่ครอง.<br /><br />
+	หากคุณคิดว่าข้อมูลของเรารบกวนคุณ คุณก็สามารถที่จะไม่รับข้อมูลของเราอีก
+	ต่อไปได้ง่ายมากเพียงแค่คลิกที่ลิงค์ที่อยู่ด้านล่างนี้เพื่อไม่ขอรับจดหมายของเรา
+	ออกไปอย่างถาวรได้ค่ะ.";
+
+$lang_mail["generic_e"]["footer_text_terminate"]	= "Please Remove Me From Mailing List and Terminate My Account.";
+$lang_mail["generic_t"]["footer_text_terminate"]	= "โปรดลบฉันออกจากรายชื่อ เมล์และลบแอคเคาท์ทันท.ี ";
+
+
+/**
+ * (09) Added To Hot List - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["hotlisted_e"]["subject"]		= "Someone Thinks You're Hot";
+$lang_mail["hotlisted_e"]["subject_2"]		= "Someone Thinks You're Hot";
+
+$lang_mail["hotlisted_e"]["message"]		=
+	"Great going!<br><br>
+	<b>[SENDER_NAME]</b> was just browsing the Site and added you to her Hot List.<br><br>
+	Click the link below right now and check out <b>[SENDER_NAME]</b>'s profile and see if the feeling is mutual.<br><br>
+	On the below page you can read <b>[SENDER_NAME]</b>'s profile and show some interest of your own.";
+
+$lang_mail["hotlisted_e"]["message_sub"]	= "";
+
+/**
+ * (09) Added To Hot List - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["hotlisted_t"]["subject"]		= "มีชายหนุ่มบอกว่าคุณน่าสนใจมากที่สุด";
+$lang_mail["hotlisted_t"]["subject_2"]		= "มีชายหนุ่มบอกว่าคุณ<br>น่าสนใจมากที่สุด";
+
+$lang_mail["hotlisted_t"]["message"]		=
+	"น่าตื่นเต้นจริงๆ!<br><br>
+	<b>[SENDER_NAME]</b>' บอกว่าคุณน่าสนใจมากที่สุดเลย<br><br>
+	และเขาเป็นชายหนุ่มที่คุณให้ความสนใจด้วยเช่นกันหรื่อเปล่าคะ..?<br><br>
+	ถ้าใช่รีบเข้าไปอ่านประวัติและรูปภาพของ <b>[SENDER_NAME]</b>' ทันทีในส่วนหน้าโปรไฟล์ของคุณ<br><br>
+	เปิดโอกาสทำความรู้จักกับเข้าให้มากขึ้น ขอเชื่อมต่อทันทีโดยกด Invite To Connect With Me<br><br>
+	*แต่ถ้าเขาไม่ใช่คนที่คุณต้องการทำความรู้จักหรื่อเชื่อมต่อด้วยคุณไม่ต้องทำอะไรทั้งสิ้นคะ*";
+
+$lang_mail["hotlisted_t"]["message_sub"]	= "";
+
+/**
+ * (10) Kissed - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["kissed_e"]["subject"]		= "You've Just Been Kissed";
+$lang_mail["kissed_e"]["subject_2"]		= "You've Just Been Kissed";
+
+$lang_mail["kissed_e"]["message"]		=
+	"Congratulations!<br><br>
+	You've just been kissed by <b>[SENDER_NAME]</b>.<br><br>
+	Don't wait too long now. Click the link below and check out who think's you're well worth smooching.<br><br>
+	On the below page you can read <b>[SENDER_NAME]</b>'s profile and show some interest of your own.";
+
+$lang_mail["kissed_e"]["message_sub"]	= "";
+
+/**
+ * (10) Kissed - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["kissed_t"]["subject"]		= "มีชายหนุ่มส่งจูบให้กับคุณ";
+$lang_mail["kissed_t"]["subject_2"]		= "มีชายหนุ่มส่งจูบให้กับคุณ";
+
+$lang_mail["kissed_t"]["message"]		=
+	"น่าตื่นเต้นจริงๆ!<br><br>
+	คุณได้รับการส่งความสนใจแบบส่งจูบมาให้จาก <b>[SENDER_NAME]</b>.<br><br>
+	และเขาเป็นชายหนุ่มที่คุณให้ความสนใจด้วยเช่นกันหรื่อเปล่าคะ..?<br><br>
+	ถ้าใช่รีบเข้าไปอ่านประวัติและรูปภาพของทันทีในส่วนหน้าโปรไฟล์ของคุณ<br><br>
+	ส่งจูบกลับไปหา <b>[SENDER_NAME]</b> ทันทีเพื่อบอกให้เขารู้ว่าคุณก็สนใจเขาอยู่เช่นกัน<br><br>
+	ขอเชื่อมต่อทันทีโดยกด Invite To Connect With Me<br><br>
+	*แต่ถ้าเขาไม่ใช่คนที่คุณต้องการทำความรู้จักหรื่อเชื่อมต่อด้วยคุณไม่ต้องทำอะไรทั้งสิ้นคะ*";
+
+$lang_mail["kissed_t"]["message_sub"]	= "";
+
+/**
+ * (11) Invited to Connect - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["invited_e"]["subject"]		= "Someone Wants To Connect With You";
+$lang_mail["invited_e"]["subject_2"]	= "Someone Wants To Connect With You";
+
+$lang_mail["invited_e"]["message"]		=
+	"Great News!<br><br>
+	<b>[SENDER_NAME]</b> has just made an offer to connect with you.<br><br>
+	If you accept it means you can email, chat and webcam freely with each other.<br>
+	If you don't wish to open communications at this time, simple ignore the request or send them an e-card with a thank you message. There's no hard feelings.<br><br>
+	So just click the link below to see <b>[SENDER_NAME]</b>'s profile and you can decide for yourself.";
+
+$lang_mail["invited_e"]["message_sub"]	=
+	"To accept, log in and open the invitation in your email box. You can access your email by clicking on the \"New emails\" link in the site header.";
+
+/**
+ * (11) Invited to Connect - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["invited_t"]["subject"]		= "มีชายหนุ่มขอทำความรู้จักกับคุณ";
+$lang_mail["invited_t"]["subject_2"]	= "มีชายหนุ่มขอทำความรู้จักกับคุณ";
+
+$lang_mail["invited_t"]["message"]		=
+	"มีข่าวดีรีบเปิดให้เร็วที่สุด!<br><br>
+	<b>[SENDER_NAME]</b> ขอติดต่อกับคุณอย่างรวดเร็วและต้องรู้จักกับคุณให้มากยิ่งขึ้น.<br><br>
+	ถ้าคุณยินดีตอบรับการติดต่อจาก <b>[SENDER_NAME]</b> นั้นหมายความว่าคุณและ <b>[SENDER_NAME]</b>";
+
+$lang_mail["invited_t"]["message_sub"]	=
+	"สามารถติดต่อกันอย่างอิสระกดรับการขอติดต่ออย่างรวดเร็วให้กด Accept<br><br>
+	เข้าไปในส่วนของหน้าสมาชิกและใส่ชื่อเข้าใช้-รหัสเข้าใช้โปรไฟล์ของคุณ<br><br>
+	<a href='".$login_url."' target='_blank'>".$login_url."</a><br><br>
+	เลือกที่ They Invited Me To Connect: หมายถึงมาสมาชิกชายท่านใดบ้างที่ขอติดต่อคุณอย่างรวดเร็ว<br><br>
+	*ถ้าคุณไม่ต้องการติดต่อและเขาไม่ใช่คนที่คุณอยากทำความรู้จักสามารถกด No,Thanks ลบเขาออกจากลายชื่อ*";
+
+/**
+ * (12) Wants To Accept, But Can't Go Through - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["want_to_accept_e"]["subject"]		= "Your Invitation Has Been Accepted, But Can't Go Through";
+$lang_mail["want_to_accept_e"]["subject_2"]		= "Your Invitation Has Been Accepted, But Can't Go Through";
+
+$lang_mail["want_to_accept_e"]["message"]		=
+	"An invitation you made to connect has been accepted by <b>[SENDER_NAME]</b>.";
+
+$lang_mail["want_to_accept_e"]["message_sub"]	=
+	"The bad news is you're out of credits and the Connection can't go through.<br><br>
+	The good news is, it's so easy to fix that.<br><br>
+	<a href='".$get_credit_url."' target='_blank'>Add some more credit points by clicking here.</a><br><br>
+	Do it now - and you'll enjoy unlimited chat, email and webcam with your new connection. That's unbeatable value.";
+
+/**
+ * (12) Wants To Accept, But Can't Go Through - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["want_to_accept_t"]["subject"]		= "คุณได้รับการตอบกลับจากสมาชิกชายที่คุณสนใจแล้ว";
+$lang_mail["want_to_accept_t"]["subject_2"]		= "คุณได้รับการตอบกลับ<br>จากสมาชิกชายที่คุณสนใจแล้ว";
+
+//$lang_mail["want_to_accept_t"]["message"]		=
+//	"มีสมาชิกชายต่างชาติอยากขอติดต่อกับคุณอย่างรวดเร็ว<br>
+//	แต่ระบบไม่สามารถเชื่อมต่อคุณกับเขาได้<br>
+//	เพราะว่าเครดิตแต้มหรือจำนวนวันของคุณไม่เพียงพอ";
+//
+//$lang_mail["want_to_accept_t"]["message_sub"]	=
+//	"สมัครเป็นสมาชิกแบบรายเดือน:<br><br>
+//	สิ่งคุณจะได้โดยรับเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http://www.meetfarangmen.com/benefit-for-regular-lady' target='_blank'>www.meetfarangmen.com/benefit-for-regular-lady</a><br><br>
+//	รับคูปองสิทธิพิเศษถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+//	สมัครเป็นสมาชิกระดับแพลทินัม:<br><br>
+//	สิ่งที่คุณจะได้โดยรับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='http://www.meetfarangmen.com/platinum-matching' target='_blank'>www.meetfarangmen.com/platinum-matching</a><br><br>
+//	สำหรับสมาชิกหญิงระดับแพลทินัมต้องการต่ออายุการใช้งาน: <a href='".$url_coupon_platinum_lady_extend."' target='_blank'>Coupon-Platinum-Extend.pdf</a><br><br>
+//	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+$lang_mail["want_to_accept_t"]["message"]		=
+"เมื่อเครดิตแต้มฟรีของคุณหมดลง:<br/><br/>
+	
+ทางเลือกที่1<br/>
+คุณสามารถเลือกเติมเครดิตแต้มของคุณ<br/>
+เริ่มต้นที่ 1 เครดิตแต้มเพียง 30 บาท<br/>
+";
+
+$lang_mail["want_to_accept_t"]["message_sub"]	=
+"ทางเลือกที่2<br/>
+สมัครสมาชิกแบบรายเดือนในระดับธรรมดา Regular:<a href='". $benifit_for_regular_lady ."'>Benefit-for-regular-lady.pdf</a><br/>
+เพียงเดือนล่ะ 397 บาทไม่จำกัดการเชื่อมต่อกับชายต่างชาติ<br/>
+
+หากสมัครแบบ3เดือนขึ้นไปจ่ายเพียง 1,191บาท(จากปกติ 2,394บาท)<br/>
+รับฟรีแพ็คเกจถ่ายภาพพร้อมทำประวัติภาษาอังกฤษฟรีทันที<br/>
+โปรโมชั่นแพ็คเกจถ่ายภาพ: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+
+ทางเลือกที่3<br/>
+สมัครเป็นสมาชิกระดับแพลทินัมตลอดชีพ Platinum <br/>
+เพื่อพบและออกเดทกับชายต่างชาติที่ผ่านการตรวจสอบประวัติ<br/>
+และแนะนำชายต่างชาติให้กับคุณเป็นการส่วนตัว<br/>
+ออกเดทไม่จำกัดจำนวนและไม่เสียค่าใช้จ่ายใดๆทั้งสิ้น<br/>
+
+จ่ายเพียงครั่งเดียว9,997บาทเป็นสมาชิกระดับแพลทินัมตลอดชีพ<br/>
+โปรโมชั่นพิเศษแบบผ่อนชำระ 3 เดือนจ่ายเริ่มต้นเพียงเดือนล่ะ 3,333 บาท<br/>
+สมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."'>Platinum-live.pdf</a><br/><br/>
+
+สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.<br/>
+";
+
+
+/**
+ * (13) You Are Connected - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["accepted_e"]["subject"]				= "Congratulations! You're Connected!";
+$lang_mail["accepted_e"]["subject_2"]			= "Congratulations! You're Connected!";
+
+$lang_mail["accepted_e"]["message"]				=
+	"Great News!<br><br>
+	Your invitation to connect with <b>[SENDER_NAME]</b> was accepted!<br>
+	This means you’re able to chat, email and webcam as you wish. No restrictions and no cost.<br><br>
+	Why not click below right now and see if <b>[SENDER_NAME]</b> is online and send the first hello?";
+
+$lang_mail["accepted_e"]["message_sub"]			=
+	"Great going and best wishes as you continue to build your list of connections.";
+
+/**
+ * (13) You Are Connected - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["accepted_t"]["subject"]				= "ยินดีด้วยการขอเชื่อมต่อสำเร็จ";
+$lang_mail["accepted_t"]["subject_2"]			= "ยินดีด้วยการขอเชื่อมต่อสำเร็จ";
+
+$lang_mail["accepted_t"]["message"]				=
+	"การขอติดต่ออย่างรวดเร็วของคุณได้รับการตอบรับแล้ว<br><br>
+	 <b>[SENDER_NAME]</b> ยินดีมากที่ได้รู้ว่าคุณก็สนใจเขาเช่นกัน<br><br>
+	 นั้นหมายความว่า<br><br>
+	 คุณและเขาสามารถส่งอีการด์พร้อมข้อความ,ส่งอีเมล์,แชททางเว็บแคมกันได้อย่างอิสระ<br><br>
+	 ถ้าตอนนี้ <b>[SENDER_NAME]</b> กำลังออนไลน์อยู่คุณสามารถแชททักทายกับเขาได้เลยทันทีเพียง";
+
+$lang_mail["accepted_t"]["message_sub"]			=
+	"เข้าไปในส่วนของหน้าสมาชิกและใส่ชื่อเข้าใช้-รหัสเข้าใช้โปรไฟล์ของคุณ<br><br>
+	<a href='".$login_url."' target='_blank'>".$login_url."</a><br><br>
+	เพื่อเป็นการเริ่มต้นของมิตรภาพที่ดี:<br>
+	หากคุณสนใจและถูกใจสมาชิกชายต่างชาติท่านใดเพียง Invite To Connect With Me";
+
+/**
+ * (14) New Ecard Received - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["ecard_received_e"]["subject"]	= "New Ecard received from [SENDER_NAME] on $SITE_NAME_SUBJECT";
+$lang_mail["ecard_received_e"]["subject_2"]	= "New Ecard Received";
+
+$lang_mail["ecard_received_e"]["message"]	=
+	"You have got a new Greeting Card from <b>[SENDER_NAME]</b> in your mailbox at $SITE_NAME.";
+
+$lang_mail["ecard_received_e"]["message_sub"]	=
+	"Login into <a href='[READ_LINK]' target='_blank'>".$SITE_NAME."</a> to receive your Card!";
+
+/**
+ * (14) New Ecard Received - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["ecard_received_t"]["subject"]	= "คุณได้รับอีการ์ดที่ส่งเข้ามาใหม่ $SITE_NAME_SUBJECT";
+$lang_mail["ecard_received_t"]["subject_2"]	= "คุณได้รับอีการ์ดที่ส่งเข้ามาใหม่";
+
+$lang_mail["ecard_received_t"]["message"]	=
+	"มีสมาชิกชายต่างชาติส่งความสนใจ แบบอีการ์ดมาให้คุณ<br>
+	รีบเปิดอ่านทันทีและคุณก็จะรู้ว่าเขาคนนั้นคือใครและเขาถูกใจคุณหรื่อไม่";
+
+$lang_mail["ecard_received_t"]["message_sub"]	=
+	"เข้าไปในส่วนของหน้าสมาชิกและใส่ชื่อเข้าใช้-รหัสเข้าใช้โปรไฟล์ของคุณ<br><br>
+	<a href='[READ_LINK]' target='_blank'>".$SITE_NAME."</a>";
+
+/**
+ * (15) Ecard Viewed - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["ecard_viewed_e"]["subject"]		= "Your Ecard was viewed by [SENDER_NAME] on $SITE_NAME_SUBJECT";
+$lang_mail["ecard_viewed_e"]["subject_2"]	= "Your Ecard Was Viewed";
+$lang_mail["ecard_viewed_e"]["message"]		= "Your Ecard was viewed by <b>[SENDER_NAME]</b>.";
+$lang_mail["ecard_viewed_e"]["message_sub"]	= "";
+
+/**
+ * (15) Ecard Viewed - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["ecard_viewed_t"]["subject"]		= "อีการ์ดของคุณถูกเปิดอ่านแล้ว $SITE_NAME_SUBJECT";
+$lang_mail["ecard_viewed_t"]["subject_2"]	= "อีการ์ดของคุณถูกเปิดอ่านแล้ว";
+
+$lang_mail["ecard_viewed_t"]["message"]		=
+	"อีการ์ดของคุณถูกเปิดอ่านแล้วโดย <b>[SENDER_NAME]</b><br><br>
+	<b>[SENDER_NAME]</b> ได้รับอีการด์ที่คุณส่งไปให้กับเขาเรียบร้อยแล้ว";
+
+$lang_mail["ecard_viewed_t"]["message_sub"]	= "";
+
+/**
+ * (16) Offline Payment Submitted - Message to USER (English) - mail_offline_payment_sent_user_eng.tpl
+ **/
+
+$lang_mail["offline_payment_sent_e"]["subject"] =
+	"Your payment on $SITE_NAME_SUBJECT has been recorded!";
+
+$lang_mail["offline_payment_sent_e"]["message"]["atm_payment"] =
+	"Your payment of <b>[userpayment]</b> with ATM payment on $SITE_NAME has been recorded.<br><br>
+	Once funds are cleared, your account will be credited and we'll send you another email.<br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_sent_e"]["message"]["wire_transfer"]=
+	"Your payment of <b>[userpayment]</b> with Wire Transfer on $SITE_NAME has been recorded.<br><br>
+	Once funds are cleared, your account will be credited and we'll send you another email.<br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_sent_e"]["message"]["bank_cheque"]=
+	"Your payment of <b>[userpayment]</b> with Bank Cheque on $SITE_NAME has been recorded.<br><br>
+	Once funds are cleared, your account will be credited and we'll send you another email.<br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (16) Offline Payment Submitted - Message to USER (Thai) - mail_offline_payment_sent_user_thai.tpl
+ **/
+
+$lang_mail["offline_payment_sent_t"]["subject"] =
+	"การชำระเงินของคุณให้กับ $SITE_NAME_SUBJECT ได้รับการบันทึกเป็นที่เรียบร้อยแล้ว!";
+
+$lang_mail["offline_payment_sent_t"]["message"]["atm_payment"]	= 
+	"การชำระเงินของคุณจำนวน <b>[userpayment]</b> แบบผ่านตู้ ATM ให้กับ $SITE_NAME ได้รับการบันทึกเป็นที่เรียบร้อยแล้ว และจำเป็นต้องได้รับการตรวจสอบและอนุมัติโดยแผนกการเงินของเรา<br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_sent_t"]["message"]["wire_transfer"] =
+	"การชำระเงินของคุณจำนวน <b>[userpayment]</b> ผ่านระบบโอนผ่านธนาคารสาขาให้กับ $SITE_NAME ได้รับการบันทึกเป็นทีเรียบร้อย แล้ว และจำเป็นต้องได้รับการตรวจสอบและอนุมัติโดยแผนกการเงินของเรา.<br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_sent_t"]["message"]["bank_cheque"]	=
+	"การชำระเงินของคุณจำนวน <b>[userpayment]</b> ด้วยเช็คธนาคารให้กับ $SITE_NAME ได้รับการบันทึกเป็นที่เรียบร้อยแล้ว และจำเป็นต้องได้รับการตรวจสอบและอนุมัติโดยแผนกการเงินของเรา.<br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (17) Offline Payment Submitted - Message to ADMIN - mail_offline_payment_sent_admin.tpl
+ **/
+
+$lang_mail["offline_payment_sent_admin"]["subject"]					= "Offline payment by user [login]";
+$lang_mail["offline_payment_sent_admin"]["message"]["atm_payment"]	= "ATM Payment on $SITE_NAME of <b>[userpayment]</b> has been recorded and needs to be approved.";
+$lang_mail["offline_payment_sent_admin"]["message"]["wire_transfer"]= "Wire Transfer on $SITE_NAME of <b>[userpayment]</b> has been recorded and needs to be approved.";
+$lang_mail["offline_payment_sent_admin"]["message"]["bank_cheque"]	= "Bank Cheque on $SITE_NAME of <b>[userpayment]</b> has been recorded and needs to be approved.";
+$lang_mail["offline_payment_sent_admin"]["login"]					= "Username:";
+$lang_mail["offline_payment_sent_admin"]["fname"]					= "First Name:";
+$lang_mail["offline_payment_sent_admin"]["sname"]					= "Last Name:";
+$lang_mail["offline_payment_sent_admin"]["email"]					= "Email:";
+
+/**
+ * (18) Offline Payment Approval - Message to USER (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["offline_payment_approval_e"]["subject"]=
+	"Your payment on $SITE_NAME_SUBJECT has been approved!";
+
+$lang_mail["offline_payment_approval_e"]["message"]["atm_payment"]=
+	"Good news.<br><br>
+	Your payment of <b>[userpayment]</b> with ATM Transfer on $SITE_NAME has been approved by our financial department.<br><br>
+	It's been credited to your account.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[username]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_approval_e"]["message"]["wire_transfer"]=
+	"Good news.<br><br>
+	Your payment of <b>[userpayment]</b> with Wire Transfer on $SITE_NAME has been approved by our financial department.<br><br>
+	It's been credited to your account.<br><br> Your log in details again are:<br><br>
+	Username: <b>[username]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_approval_e"]["message"]["bank_cheque"]=
+	"Good news.<br><br>
+	Your payment of <b>[userpayment]</b> with Bank Cheque on $SITE_NAME has been approved by our financial department.<br><br>
+	It's been credited to your account.<br><br>
+	Your log in details again are:<br><br>Username: <b>[username]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (18) Offline Payment Approval - Message to USER (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["offline_payment_approval_t"]["subject"]=
+	"การชำระเงินของคุณให้กับ $SITE_NAME_SUBJECT ได้รับการอนุมัติเป็นที่เรียบร้อยแล้ว!";
+
+$lang_mail["offline_payment_approval_t"]["message"]["atm_payment"]=
+	"แจ้งข่าวดี <br><br> การชำระเงินของคุณจำนวน <b>[userpayment]</b> แบบผ่านตู้ ATM ให้กับ $SITE_NAME ได้รับการ อนุมัติเป็นที่เรียบร้อยแล้ว โดยแผนกการเงินของเรา<br><br>
+	คุณสามารถเข้าสู่ระบบของคุณ<br><br>
+	ได้ทันที ข้อมูลการสมัครของคุณคือชื่อเข้าใช้<br><br>
+	Username: <b>[username]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_approval_t"]["message"]["wire_transfer"]=
+	"แจ้งข่าวดี <br><br>
+	การชำระเงินของคุณจำนวน <b>[userpayment]</b> ผ่านระบบโอนผ่านธนาคารสาขาให้กับ $SITE_NAME ได้รับการอนุมัติเป็นที่เรียบร้อยแล้ว โดยแผนกการเงินของเรา<br><br>
+	คุณสามารถเข้าสู่ระบบของคุณ <br><br>
+	ได้ทันทีข้อมูลการสมัครของคุณคือชื่อเข้าใช้<br><br>
+	Username: <b>[username]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["offline_payment_approval_t"]["message"]["bank_cheque"]=
+	"แจ้งข่าวดี<br><br>
+	การชำระเงินของคุณจำนวน <b>[userpayment]</b> ด้วยเช็คธนาคารให้กับ $SITE_NAME ได้รับการ อนุมัติเป็นที่เรียบร้อยแล้ว โดยแผนกการเงินของเรา <br><br>
+	คุณสามารถเข้าสู่ระบบของคุณ<br><br>
+	ได้ทันทีข้อมูลการสมัครของคุณคือชื่อเข้าใช้<br><br>
+	Username: <b>[username]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (19) Applied for Platinum - Message to USER (English) - mail_platinum_applied_user_eng.tpl
+ **/
+
+$lang_mail["apply_platinum_e"]["subject"]		= "You Applied For Platinum Verification On $SITE_NAME_SUBJECT";
+$lang_mail["apply_platinum_e"]["message"]		= "You have applied for Platinum Verification. Please wait for admin to approve.";
+$lang_mail["apply_platinum_e"]["details"]		= "Submitted details are";
+$lang_mail["apply_platinum_e"]["username"]		= "Username";
+$lang_mail["apply_platinum_e"]["fname"]			= "First Name";
+$lang_mail["apply_platinum_e"]["sname"]			= "Last Name";
+$lang_mail["apply_platinum_e"]["email"]			= "User E-Mail";
+$lang_mail["apply_platinum_e"]["id_num"]		= "Identification Number";
+$lang_mail["apply_platinum_e"]["id_type"]		= "Identification Type";
+$lang_mail["apply_platinum_e"]["phone"]			= "Home Phone";
+$lang_mail["apply_platinum_e"]["mobile"]		= "Mobile Phone";
+$lang_mail["apply_platinum_e"]["comments"]		= "Comments";
+
+/**
+ * (19) Applied for Platinum - Message to USER (Thai) - mail_platinum_applied_user_thai.tpl
+ **/
+
+$lang_mail["apply_platinum_t"]["subject"]		= "แจ้งความต้องการเป็นสมาชิกระดับแพลทินัม";
+##$lang_mail["apply_platinum_t"]["subject"]		= "การแจ้งความประสงค์ขอเป็ นสมาชิกระดับแพลตินั่ม";
+$lang_mail["apply_platinum_t"]["message"]		= 
+	"คุณได้แจ้งความต้องการที่จะเป็นสมาชิกระดับแพลทินัม<br><br>
+	โปรดรอการตรวจสอบจากผู้ดูแลระบบ<br><br>
+	สิ่งที่คุณจะได้โดยรับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='http://www.meetfarangmen.com/platinum-matching' target='_blank'>www.meetfarangmen.com/platinum-matching</a><br><br>
+	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+##$lang_mail["apply_platinum_t"]["message"]		= "คุณได้ท ำการแจ้งความประสงค์ขอเป็ นสมาชิกระดับแพลติน่ัมโปรดรอการตรวจสอบจากผู้ดูแลระบบ";
+$lang_mail["apply_platinum_t"]["details"]		= "รายละเอียดที่ส่งมา";
+$lang_mail["apply_platinum_t"]["username"]		= "ชื่อเข้าใช (Username)";
+$lang_mail["apply_platinum_t"]["fname"]			= "ชื่อจริง";
+$lang_mail["apply_platinum_t"]["sname"]			= "นามสกุลจริง";
+$lang_mail["apply_platinum_t"]["email"]			= "อีเมล์ที่ใช้";
+$lang_mail["apply_platinum_t"]["id_num"]		= "หมายเลขบัตรประชาชน";
+$lang_mail["apply_platinum_t"]["id_type"]		= "ประเภทบัตรประจำตัวประชาชน";
+$lang_mail["apply_platinum_t"]["phone"]			= "หมายเลขโทรศัพท์บ้าน";
+$lang_mail["apply_platinum_t"]["mobile"]		= "หมายเลขโทรศัพท์มือถือ";
+$lang_mail["apply_platinum_t"]["comments"]		= "ข้อความ";
+
+/**
+ * (20) Applied for Platinum - Message to ADMIN - mail_platinum_applied_admin.tpl
+ **/
+
+$lang_mail["apply_platinum_admin"]["subject"]	= "User Applied For Platinum Verification On $SITE_NAME_SUBJECT";
+$lang_mail["apply_platinum_admin"]["message"]	= "User applied for Platinum Verification";
+$lang_mail["apply_platinum_admin"]["details"]	= "Submitted details are";
+$lang_mail["apply_platinum_admin"]["username"]	= "Username";
+$lang_mail["apply_platinum_admin"]["fname"]		= "First Name";
+$lang_mail["apply_platinum_admin"]["sname"]		= "Last Name";
+$lang_mail["apply_platinum_admin"]["email"]		= "User E-Mail";
+$lang_mail["apply_platinum_admin"]["id_num"]	= "Identification Number";
+$lang_mail["apply_platinum_admin"]["id_type"]	= "Identification Type";
+$lang_mail["apply_platinum_admin"]["phone"]		= "Home Phone";
+$lang_mail["apply_platinum_admin"]["mobile"]	= "Mobile Phone";
+$lang_mail["apply_platinum_admin"]["comments"]	= "Comments";
+
+/**
+ * (21) Platinum Matching Application - Message to USER (English) - mail_platinum_match_application_user_eng.tpl
+ **/
+
+$lang_mail["platinum_match_application_e"]["subject"]	= "You Applied For Platinum Matching On $SITE_NAME_SUBJECT";
+$lang_mail["platinum_match_application_e"]["message"]	=
+	"Your interest in the Platinum Matching&trade; service has been received.<br><br>
+	Congratulations. We'll be in touch shortly and look forward to giving you every advantage in finding your perfect partner.";
+
+/**
+ * (21) Platinum Matching Application - Message to USER (Thai) - mail_platinum_match_application_user_thai.tpl
+ **/
+
+$lang_mail["platinum_match_application_t"]["subject"]	= "สมาชิกระดับแพลทินัมการดูและแบบสุดพิเศษ";
+$lang_mail["platinum_match_application_t"]["message"]	=
+//	"เรามุ่งเน้นให้คุณได้พบและออกเดทกับชายชาติ<br>
+//	ที่ผ่านการตรวจสอบประวัติชายต่างชาติที่ต้องการพบรักแท้กับหญิงไทย<br>
+//	เพื่อเป็นคู่ชีวิตและแต่งงานเท่านั้น<br><br>
+//	ทีมงานจะจัดทำเวลานัดหมายเพื่อพบและสัมภาษณ์เป็นการส่วนตัวแบบสบายๆ<br>
+//	เราจะสอบถามถึงชายต่างชาติแบบใดที่คุณต้องการมาเป็นคู่ชีวิต<br>
+//	เพื่อเก็บเป็นข้อมูลเราจะจัดให้ท่านได้รู้จักและพบกับชายต่างชาติ<br>
+//	ที่เหมาะสมและคู่ควรกับคุณเท่านั้น<br><br>
+//	พร้อมถ่ายรูป+ทำวีดีโอแนะนำตัวเองเป็นภาษาอังกฤษเพื่อจัดทำโปรไฟล์ให้เป็นที่สะดุดตา<br><br>
+//	สิ่งที่คุณจะได้โดยรับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='http://www.meetfarangmen.com/platinum-matching' target='_blank'>www.meetfarangmen.com/platinum-matching</a><br>
+//	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+
+"เรามุ่งเน้นให้คุณได้พบและออกเดทกับชายชาติ<br/>
+ที่ผ่านการตรวจสอบประวัติชายต่างชาติที่ต้องการพบรักแท้กับหญิงไทย<br/>
+เพื่อเป็นคู่ชีวิตและแต่งงานเท่านั้น<br/><br/>
+
+ทีมงานจะจัดทำเวลานัดหมายเพื่อพบและสัมภาษณ์เป็นการส่วนตัวแบบสบายๆ<br/>
+เราจะสอบถามถึงชายต่างชาติแบบใดที่คุณต้องการมาเป็นคู่ชีวิต<br/>
+เพื่อเก็บเป็นข้อมูลเราจะจัดให้ท่านได้รู้จักและพบกับชายต่างชาติ<br/>
+ที่เหมาะสมและคู่ควรกับคุณเท่านั้น<br/><br/>
+
+พร้อมถ่ายรูป+ทำวีดีโอแนะนำตัวเองเป็นภาษาอังกฤษเพื่อจัดทำโปรไฟล์ให้เป็นที่สะดุดตา<br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."'>platinum-live.pdf</a><br/>
+สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.
+";
+
+/**
+ * (22) Platinum Matching Application - Message to ADMIN - mail_platinum_match_application_admin.tpl
+ **/
+
+$lang_mail["platinum_match_application_admin"]["subject"]	= "Platinum Matching Application Received From $SITE_NAME_SUBJECT";
+$lang_mail["platinum_match_application_admin"]["message"]	= "New Platinum Matching Application received from $SITE_NAME.";
+$lang_mail["platinum_match_application_admin"]["details"]	= "Submitted Details Are";
+$lang_mail["platinum_match_application_admin"]["fname"]		= "First Name";
+$lang_mail["platinum_match_application_admin"]["sname"]		= "Last Name";
+$lang_mail["platinum_match_application_admin"]["city"]		= "City";
+$lang_mail["platinum_match_application_admin"]["country"]	= "Country";
+$lang_mail["platinum_match_application_admin"]["phone"]		= "Phone";
+$lang_mail["platinum_match_application_admin"]["email"]		= "Email";
+$lang_mail["platinum_match_application_admin"]["calltime"]	= "Best Time(s) To Call Me";
+$lang_mail["platinum_match_application_admin"]["comments"]	= "I Have A Question";
+
+/**
+ * (23) Platinum Approved - Message to USER (English) - mail_platinum_approved_eng.tpl
+ **/
+
+$lang_mail["platinum_approved_e"]["subject"]		= "Your Application On $SITE_NAME_SUBJECT For Platinum Verification Has Been Approved";
+$lang_mail["platinum_approved_e"]["message"]		= "Your application on $SITE_NAME for Platinum Verification has been approved and you are moved to Platinum group.";
+$lang_mail["platinum_approved_e"]["details"]		= "Your details are";
+$lang_mail["platinum_approved_e"]["login"]			= "Username";
+$lang_mail["platinum_approved_e"]["fname"]			= "First Name";
+$lang_mail["platinum_approved_e"]["sname"]			= "Last Name";
+
+/**
+ * (23) Platinum Approved - Message to USER (Thai) - mail_platinum_approved_thai.tpl
+ **/
+
+$lang_mail["platinum_approved_t"]["subject"]		= "คุณได้รับการอนุมัติเป็นสมาชิกระดับสูงสุด";
+##$lang_mail["platinum_approved_t"]["subject"]		= "คุณได้แจ้งความต้องการเป็นสมาชิกระดับแพลทินัมใน $SITE_NAME_SUBJECT ตอนนี้คุณได้รับการอนุมัติเรียบร้อยแล้ว";
+$lang_mail["platinum_approved_t"]["message"]		=
+//	"ขอแสดงความยินดีตอนนี้คุณได้รับการอนุมัติเป็นสมาชิกระดับสูงสุด<br><br>
+//	สมาชิกระดับแพลทินัมซึ่งเป็นระดับเรียบร้อยแล้ว.<br><br>
+//	สมาชิกหญิงระดับแพลทินัมทีมงานพร้อมดูแลให้คำปรึกษาเป็นการส่วนตัว<br>
+//	ตรวจสอบชายต่างชาติที่คุณให้ความสนใจอย่างเจาะลึก<br>
+//	เราจัดให้คุณได้พบและออกเดทโดยไม่เสียค่าใช้จ่ายใดๆทั้งสิ้นตลอดอายุของการเป็นสมาชิก<br>
+//	และที่สำคัญเรารับรองความปลอดภัยร้อยเปอร์เซนต์.<br><br>
+//	สิ่งที่คุณจะได้โดยรับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='http://www.meetfarangmen.com/platinum-matching' target='_blank'>www.meetfarangmen.com/platinum-matching</a><br>
+//	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+
+"ขอแสดงความยินดีตอนนี้คุณได้รับการอนุมัติเป็นสมาชิกระดับสูงสุด<br/><br/>
+
+สมาชิกระดับแพลทินัมเรียบร้อยแล้ว.<br/><br/>
+
+สมาชิกหญิงระดับแพลทินัมทีมงานพร้อมดูแลให้คำปรึกษาเป็นการส่วนตัว<br/>
+ตรวจสอบชายต่างชาติที่คุณให้ความสนใจอย่างเจาะลึก<br/>
+เราจัดให้คุณได้พบและออกเดทโดยไม่เสียค่าใช้จ่ายใดๆทั้งสิ้นตลอดอายุของการเป็นสมาชิก<br/>
+และที่สำคัญเรารับรองความปลอดภัยร้อยเปอร์เซนต์.<br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."'>platinum-live.pdf</a><br/><br/>
+สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.
+
+รายละเอียดของคุณ:
+";
+
+$lang_mail["platinum_approved_t"]["details"]		= "รายละเอียดของคุณ";
+$lang_mail["platinum_approved_t"]["login"]			= "ชื่อเข้าใช";
+$lang_mail["platinum_approved_t"]["fname"]			= "ชื่อจริง";
+$lang_mail["platinum_approved_t"]["sname"]			= "นามสกุลจริง";
+
+/**
+ * (24) Password Changed - Message to USER (English) - mail_password_changed_user.tpl
+ **/
+
+$lang_mail["password_changed_e"]["subject"]			= "Your password on $SITE_NAME_SUBJECT has been changed";
+$lang_mail["password_changed_e"]["message"]			= "Just a quick note to let you know that your password has been changed on the $SITE_NAME site.";
+$lang_mail["password_changed_e"]["details"]			= "Your new details are below";
+$lang_mail["password_changed_e"]["login"]			= "Username";
+$lang_mail["password_changed_e"]["password"]		= "Password";
+$lang_mail["password_changed_e"]["email"]			= "Registration E-Mail";
+$lang_mail["password_changed_e"]["admin_contact"]	= "If that wasn't you and you didn't change your password recently, please let me know at";
+
+/**
+ * (24) Password Changed - Message to USER (Thai) - mail_password_changed_user.tpl
+ **/
+
+$lang_mail["password_changed_t"]["subject"]			= "รหัสผ่านของคุณ $SITE_NAME_SUBJECT มีการเปลี่ยนแปลง";
+$lang_mail["password_changed_t"]["message"]			= "รหัสผ่านของคุณมีการเปลี่ยนแปลง";
+$lang_mail["password_changed_t"]["details"]			= "ข้อมูลการลงทะเบียนของคุณคือ";
+$lang_mail["password_changed_t"]["login"]			= "ชื่อเข้าใช";
+$lang_mail["password_changed_t"]["password"]		= "รหัส";
+$lang_mail["password_changed_t"]["email"]			= "อีเมล์ที่คุณใช้ในการลงทะเบียน";
+$lang_mail["password_changed_t"]["admin_contact"]	= "ถ้าคุณไม่ได้แจ้งความต้องการเปลี่ยนรหัสผ่านโปรดติดต่อเราทันที่ที่";
+
+/**
+ * (25) User Registration Changed by Administrator - Message to USER (English) - mail_admin_data_changed_for_user_eng.tpl
+ **/
+
+$lang_mail["admin_data_changed_e"]["subject"]	= "Your registration data on $SITE_NAME_SUBJECT has been changed";
+$lang_mail["admin_data_changed_e"]["message"]	= "Your registration data was changed by the administrator on $SITE_NAME site.";
+$lang_mail["admin_data_changed_e"]["details"]	= "Your new registration information is";
+$lang_mail["admin_data_changed_e"]["fname"]		= "First Name";
+$lang_mail["admin_data_changed_e"]["sname"]		= "Last Name";
+$lang_mail["admin_data_changed_e"]["login"]		= "Username";
+$lang_mail["admin_data_changed_e"]["password"]	= "Password";
+$lang_mail["admin_data_changed_e"]["email"]		= "Registration E-Mail";
+
+/**
+ * (25) User Registration Changed by Administrator - Message to USER (Thai) - mail_admin_data_changed_for_user_thai.tpl
+ **/
+
+$lang_mail["admin_data_changed_t"]["subject"]	= "ข้อมูลการลงทะเบียนในระบบของ $SITE_NAME_SUBJECT ของคุณมีการเปลี่ยนแปลง";
+$lang_mail["admin_data_changed_t"]["message"]	= "ข้อมูลการลงทะเบียนของคุณมีการเปลี่ยนแปลงโดยผู้ดูแล $SITE_NAME site";
+$lang_mail["admin_data_changed_t"]["details"]	= "ข้อมูลการลงทะเบียนใหม่ของคุณเป็น";
+$lang_mail["admin_data_changed_t"]["fname"]		= "ชื่อ";
+$lang_mail["admin_data_changed_t"]["sname"]		= "นามสกุล";
+$lang_mail["admin_data_changed_t"]["login"]		= "ชื่อเข้าใช";
+$lang_mail["admin_data_changed_t"]["password"]	= "รหัสเข้าใช";
+$lang_mail["admin_data_changed_t"]["email"]		= "อีเมล์ที่คุณใช้ในการลงทะเบียน";
+
+/**
+ * (26) Dating Events FAQ - Message to USER (English) - mail_dating_events_faq_user.tpl
+ **/
+
+$lang_mail["dating_events_faq_e"]["subject"]		= "Your Dating Events Question On $SITE_NAME_SUBJECT";
+$lang_mail["dating_events_faq_e"]["message"]		= "We received your following Dating Events Question";
+$lang_mail["dating_events_faq_e"]["fname"]			= "First Name";
+$lang_mail["dating_events_faq_e"]["sname"]			= "Last Name";
+$lang_mail["dating_events_faq_e"]["email"]			= "Email";
+$lang_mail["dating_events_faq_e"]["question"]		= "Question";
+$lang_mail["dating_events_faq_e"]["admin_contact"]	= "If that wasn't you and you didn't send this question, please let me know at <a href='mailto:".EMAIL_DATING_EVENTS_ADMIN."'>".EMAIL_DATING_EVENTS_ADMIN."</a>";
+
+/**
+ * (26) Dating Events FAQ - Message to USER (Thai) - mail_dating_events_faq_user.tpl
+ **/
+
+$lang_mail["dating_events_faq_t"]["subject"]		= "พบและออกเดทแบบส่วนตัวมีขั้นตอนอย่างไร";
+$lang_mail["dating_events_faq_t"]["message"]		= 
+	"ทีมงานยินดีตอบทุกคำถามและทุกข้อสงสัย<br>
+	เราจะรีบดำเนินการตอบกลับคุณให้เร็วที่สุดคะ";
+$lang_mail["dating_events_faq_t"]["fname"]			= "ชื่อ";
+$lang_mail["dating_events_faq_t"]["sname"]			= "นามสกุล";
+$lang_mail["dating_events_faq_t"]["email"]			= "อีเมล์";
+$lang_mail["dating_events_faq_t"]["question"]		= "คำถามของฉัน";
+$lang_mail["dating_events_faq_t"]["admin_contact"]	= "สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448";
+
+/**
+ * (27) Dating Events FAQ - Message to ADMIN - mail_dating_events_faq_admin.tpl
+ **/
+
+$lang_mail["dating_events_faq_admin"]["subject"]	= "Dating Events Question Received From $SITE_NAME_SUBJECT";
+$lang_mail["dating_events_faq_admin"]["message"]	= "New Dating Events Question Asked By Following User";
+$lang_mail["dating_events_faq_admin"]["fname"]		= "First Name";
+$lang_mail["dating_events_faq_admin"]["sname"]		= "Last Name";
+$lang_mail["dating_events_faq_admin"]["email"]		= "Email";
+$lang_mail["dating_events_faq_admin"]["question"]	= "Question";
+
+/**
+ * (28) Dating Events Video Comment - Message to USER (English) - mail_dating_video_comment_user.tpl
+ **/
+
+$lang_mail["dating_video_comment_e"]["subject"]			= "Your Comment On Our Dating Events Video From $SITE_NAME_SUBJECT";
+$lang_mail["dating_video_comment_e"]["message"]			= "We received your comment on our dating event video with following details";
+$lang_mail["dating_video_comment_e"]["video"]			= "Video Title";
+$lang_mail["dating_video_comment_e"]["fname"]			= "First Name";
+$lang_mail["dating_video_comment_e"]["sname"]			= "Last Name";
+$lang_mail["dating_video_comment_e"]["email"]			= "Email";
+$lang_mail["dating_video_comment_e"]["comment"]			= "Comment";
+$lang_mail["dating_video_comment_e"]["admin_contact"]	= "If that wasn't you and you didn't send this comment, please let me know at <a href='mailto:".EMAIL_DATING_EVENTS_ADMIN."'>".EMAIL_DATING_EVENTS_ADMIN."</a>";
+
+/**
+ * (28) Dating Events Video Comment - Message to USER (Thai) - mail_dating_video_comment_user.tpl
+ **/
+
+$lang_mail["dating_video_comment_t"]["subject"]			= "คำถามและข้อสงสัยในวีดีโอที่ได้ชม";
+$lang_mail["dating_video_comment_t"]["message"]			= 
+	"ทีมงานยินดีตอบทุกคำถามและทุกข้อสงสัยในวีดีโอที่คุณได้ชม<br>
+	เราจะรีบดำเนินการตอบกลับคุณให้เร็วที่สุดคะ";
+$lang_mail["dating_video_comment_t"]["video"]			= "ชื่อวิดีโอ";
+$lang_mail["dating_video_comment_t"]["fname"]			= "ชื่อ";
+$lang_mail["dating_video_comment_t"]["sname"]			= "นามสกุล";
+$lang_mail["dating_video_comment_t"]["email"]			= "อีเมล์";
+$lang_mail["dating_video_comment_t"]["comment"]			= "ความเห็น";
+$lang_mail["dating_video_comment_t"]["admin_contact"]	= "สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448";
+
+/**
+ * (29) Dating Events Video Comment - Message to ADMIN - mail_dating_video_comment_admin.tpl
+ **/
+
+$lang_mail["dating_video_comment_admin"]["subject"]		= "New Comment Received On Dating Events Video From $SITE_NAME_SUBJECT";
+$lang_mail["dating_video_comment_admin"]["message"]		= "New comment received on dating events video with following details";
+$lang_mail["dating_video_comment_admin"]["video"]		= "Video Title";
+$lang_mail["dating_video_comment_admin"]["fname"]		= "First Name";
+$lang_mail["dating_video_comment_admin"]["sname"]		= "Last Name";
+$lang_mail["dating_video_comment_admin"]["email"]		= "Email";
+$lang_mail["dating_video_comment_admin"]["comment"]		= "Comment";
+
+/**
+ * (30) Express Interest in TLDE Received - Message to USER (English) - mail_express_interest_user_eng.tpl
+ **/
+
+$lang_mail["express_interest_e"]["subject"]					= "Express Interest In $TLDE_SITE_NAME_SUBJECT";
+$lang_mail["express_interest_e"]["message"]					= "Thank you very much for expressing interest in $TLDE_SITE_NAME.";
+$lang_mail["express_interest_e"]["details"]					= "Submitted Details Are";
+$lang_mail["express_interest_e"]["best_time_to_call"]		= "The Best Time To Call Me Is";
+$lang_mail["express_interest_e"]["best_time_weekdays"]		= "Weekdays";
+$lang_mail["express_interest_e"]["best_time_saturdays"]		= "Saturdays";
+$lang_mail["express_interest_e"]["best_time_sundays"]		= "Sundays";
+$lang_mail["express_interest_e"]["fname"]					= "First Name";
+$lang_mail["express_interest_e"]["sname"]					= "Last Name";
+$lang_mail["express_interest_e"]["email"]					= "Email";
+$lang_mail["express_interest_e"]["date_of_birth"]			= "Date Of Birth";
+$lang_mail["express_interest_e"]["place_of_birth"]			= "Place Of Birth";
+$lang_mail["express_interest_e"]["identification_number"]	= "Identification Number";
+$lang_mail["express_interest_e"]["identification_type"]		= "Identification Type";
+$lang_mail["express_interest_e"]["home_phone"]				= "Home Phone";
+$lang_mail["express_interest_e"]["mobile_phone"]			= "Mobile Phone";
+$lang_mail["express_interest_e"]["country"]					= "Country";
+$lang_mail["express_interest_e"]["region"]					= "Region";
+$lang_mail["express_interest_e"]["city"]					= "City";
+$lang_mail["express_interest_e"]["zip_code"]				= "Zip Code";
+$lang_mail["express_interest_e"]["address"]					= "Address";
+$lang_mail["express_interest_e"]["comments"]				= "My Question or Comments";
+$lang_mail["express_interest_e"]["contact_soon"]			= "We will contact you soon.";
+$lang_mail["express_interest_e"]["admin_contact"]			= "If that wasn't you and you didn't express your interest, please let me know at <a href='mailto:".EMAIL_DATING_EVENTS_ADMIN."'>".EMAIL_DATING_EVENTS_ADMIN."</a>";
+
+/**
+ * (30) Express Interest in TLDE Received - Message to USER (Thai) - mail_express_interest_user.tpl
+ **/
+
+$lang_mail["express_interest_t"]["subject"]					= "ต้องการพบและออกเดทแบบส่วนตัวกับชาวต่างชาติ";
+$lang_mail["express_interest_t"]["message"]					=
+	"หากคุณต้องการพบและออกเดทแบบส่วนตัวกับชาวต่างชาติ<br>
+	โดยให้บริษัทและทีมงานเป็นผู้ดูแลและแนะนำคุณเป็นการส่วนตัว<br>
+	พร้อมจัดให้คุณได้พบกับชาวต่างชาติที่เหมาะสมตามความต้องการของคุณ<br>
+	กรุณากรอกข้อมูลและรายละเอียดของคุณให้ครบทุกช่อง";
+$lang_mail["express_interest_t"]["details"]					= "รายละเอียดของคุณจะถูกเก็บเป็นความลับ";
+$lang_mail["express_interest_t"]["best_time_to_call"]		= "ช่วงเวลาที่ติดต่อกลับ";
+$lang_mail["express_interest_t"]["best_time_weekdays"]		= "ในวันทำงาน";
+$lang_mail["express_interest_t"]["best_time_saturdays"]		= "วันเสาร์";
+$lang_mail["express_interest_t"]["best_time_sundays"]		= "วันอาทิตย์";
+$lang_mail["express_interest_t"]["fname"]					= "ชื่อ";
+$lang_mail["express_interest_t"]["sname"]					= "นามสกุล";
+$lang_mail["express_interest_t"]["email"]					= "อีเมล์";
+$lang_mail["express_interest_t"]["date_of_birth"]			= "วัน เดือน ปี เกิด";
+$lang_mail["express_interest_t"]["place_of_birth"]			= "สถานที่เกิด";
+$lang_mail["express_interest_t"]["identification_number"]	= "หมายเลขบัตรประจำตัวประชาชน";
+$lang_mail["express_interest_t"]["identification_type"]		= "ประเภทบัตรประจำตัวประชาชน";
+$lang_mail["express_interest_t"]["home_phone"]				= "หมายเลขโทรศัพท์บ้าน";
+$lang_mail["express_interest_t"]["mobile_phone"]			= "หมายเลขโทรศัพท์มือถือ";
+$lang_mail["express_interest_t"]["country"]					= "บ้านเมือง";
+$lang_mail["express_interest_t"]["region"]					= "เป็นคนจังหวัด";
+$lang_mail["express_interest_t"]["city"]					= "อำเภออะไร";
+$lang_mail["express_interest_t"]["zip_code"]				= "รหัสไปรษณีย์";
+$lang_mail["express_interest_t"]["address"]					= "ที่อยู่ของคุณสำหรับส่งจดหมาย-เอกสารสำคัญ";
+$lang_mail["express_interest_t"]["comments"]				= "คำถามของฉัน";
+$lang_mail["express_interest_t"]["contact_soon"]			= "ทีมงานจะรีบดำเนินการตอบกลับคุณให้เร็วที่สุดคะ.";
+$lang_mail["express_interest_t"]["admin_contact"]			= "สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448";
+
+/**
+ * (31) Express Interest in TLDE Received - Message to ADMIN - mail_express_interest_admin.tpl
+ **/
+
+$lang_mail["express_interest_admin"]["subject"]				= "Express Interest Received From $SITE_NAME_SUBJECT";
+$lang_mail["express_interest_admin"]["message"]				= "New express interest in TLDE received from the $SITE_NAME site.";
+$lang_mail["express_interest_admin"]["details"]				= "Submitted Details Are";
+$lang_mail["express_interest_admin"]["best_time_to_call"]	= "The Best Time To Call Me Is";
+$lang_mail["express_interest_admin"]["best_time_weekdays"]	= "Weekdays";
+$lang_mail["express_interest_admin"]["best_time_saturdays"]	= "Saturdays";
+$lang_mail["express_interest_admin"]["best_time_sundays"]	= "Sundays";
+$lang_mail["express_interest_admin"]["fname"]				= "First Name";
+$lang_mail["express_interest_admin"]["sname"]				= "Last Name";
+$lang_mail["express_interest_admin"]["email"]				= "Email";
+$lang_mail["express_interest_admin"]["date_of_birth"]		= "Date Of Birth";
+$lang_mail["express_interest_admin"]["place_of_birth"]		= "Place Of Birth";
+$lang_mail["express_interest_admin"]["identification_number"]	= "Identification Number";
+$lang_mail["express_interest_admin"]["identification_type"]		= "Identification Type";
+$lang_mail["express_interest_admin"]["home_phone"]			= "Home Phone";
+$lang_mail["express_interest_admin"]["mobile_phone"]		= "Mobile Phone";
+$lang_mail["express_interest_admin"]["country"]				= "Country";
+$lang_mail["express_interest_admin"]["region"]				= "Region";
+$lang_mail["express_interest_admin"]["city"]				= "City";
+$lang_mail["express_interest_admin"]["zip_code"]			= "Zip Code";
+$lang_mail["express_interest_admin"]["address_1"]			= "Address 1";
+$lang_mail["express_interest_admin"]["address_2"]			= "Address 2";
+$lang_mail["express_interest_admin"]["address_3"]			= "Address 3";
+$lang_mail["express_interest_admin"]["comments"]			= "My Question or Comments";
+
+/**
+ * (32) Contact Us - Message to ADMIN - mail_contact_us_admin.tpl
+ **/
+
+// there is no language item for "subject", the subject from the contact us form is used instead
+$lang_mail["contact_us_admin"]["details"]	= "New Contact Us Request On $SITE_NAME";
+$lang_mail["contact_us_admin"]["name"]		= "Sender Name";
+$lang_mail["contact_us_admin"]["email"]		= "Email";
+$lang_mail["contact_us_admin"]["subject"]	= "Subject";
+$lang_mail["contact_us_admin"]["message"]	= "Message";
+
+/**
+ * (33) Report A Bug - Message to ADMIN - mail_report_bug_admin.tpl
+ **/
+
+$lang_mail["report_bug_admin"]["subject"]		= "New Bug Reported";
+$lang_mail["report_bug_admin"]["message"]		= "New bug reported on the $SITE_NAME site.";
+$lang_mail["report_bug_admin"]["name"]			= "Name";
+$lang_mail["report_bug_admin"]["email"]			= "Email";
+$lang_mail["report_bug_admin"]["phone"]			= "Phone Number";
+$lang_mail["report_bug_admin"]["description"]	= "Bug Description";
+
+/**
+ * (34) Request Call Back - Message to ADMIN - mail_request_call_back_admin.tpl
+ **/
+
+$lang_mail["request_call_back_admin"]["subject"]	= "Call Back Request";
+$lang_mail["request_call_back_admin"]["message"]	= "New request received for Call Back:";
+$lang_mail["request_call_back_admin"]["name"]		= "Name";
+$lang_mail["request_call_back_admin"]["email"]		= "Email";
+$lang_mail["request_call_back_admin"]["city"]		= "City or Town";
+$lang_mail["request_call_back_admin"]["country"]	= "Country";
+$lang_mail["request_call_back_admin"]["phone"]		= "Phone Number";
+$lang_mail["request_call_back_admin"]["best_times"]	= "Best Times To Call";
+$lang_mail["request_call_back_admin"]["interest"]	= "I Am Interested In";
+$lang_mail["request_call_back_admin"]["marital"]	= "Marital Status";
+$lang_mail["request_call_back_admin"]["main_thing"]	= "The Main Thing I Would Like To Know Is";
+$lang_mail["request_call_back_admin"]["about_me"]	= "About Me And Why I Am Interested In These Programs";
+
+/**
+ * (35) Feedback Received - Message to ADMIN - mail_send_feedback_admin.tpl
+ **/
+
+$lang_mail["send_feedback_admin"]["subject"]		= "New Feedback Received";
+$lang_mail["send_feedback_admin"]["message"]		= "New feedback received from the $SITE_NAME site";
+$lang_mail["send_feedback_admin"]["name"]			= "Name";
+$lang_mail["send_feedback_admin"]["email"]			= "Email";
+$lang_mail["send_feedback_admin"]["rating"]			= "User rated the site as following";
+$lang_mail["send_feedback_admin"]["question_1"]		= "How Would You Rate The Site Design?";
+$lang_mail["send_feedback_admin"]["question_2"]		= "How Would You Rate The Site Features?";
+$lang_mail["send_feedback_admin"]["question_3"]		= "How Do You Rate The Value For Money Of Membership At This Site?";
+$lang_mail["send_feedback_admin"]["question_4"]		= "How Do You Rate The Quality Of Members On This Site?";
+$lang_mail["send_feedback_admin"]["question_5"]		= "Are You An Active Member Of Any Other Dating Sites?";
+$lang_mail["send_feedback_admin"]["comments"]		= "How Can We Improve?";
+
+/**
+ * (36) Send Testimonial - Message to ADMIN - mail_send_testimonial_admin.tpl
+ **/
+
+$lang_mail["send_testimonial_admin"]["subject"]		= "New Testimonial Received";
+$lang_mail["send_testimonial_admin"]["message"]		= "New Testimonial received from the $SITE_NAME site:";
+$lang_mail["send_testimonial_admin"]["name"]		= "Name";
+$lang_mail["send_testimonial_admin"]["email"]		= "Email";
+$lang_mail["send_testimonial_admin"]["date"]		= "Date";
+$lang_mail["send_testimonial_admin"]["testimonial"]	= "Testimonial";
+
+/**
+ * (37) Report A Violation - Message to USER (English) - mail_report_violation_user.tpl
+ **/
+
+$lang_mail["report_violation_e"]["subject"]			= "You Have Reported A Violation On $SITE_NAME_SUBJECT Site!";
+$lang_mail["report_violation_e"]["message"]			= "Thanks for submitting the Report A Violation mail to us.";
+$lang_mail["report_violation_e"]["details"]			= "Submitted details are:";
+$lang_mail["report_violation_e"]["name"]			= "Name";
+$lang_mail["report_violation_e"]["email"]			= "Email";
+$lang_mail["report_violation_e"]["phone"]			= "Phone Number";
+$lang_mail["report_violation_e"]["description"] 	= "Violation Description";
+$lang_mail["report_violation_e"]["admin_contact"] 	= "If that wasn't you and you don't have a violation to report, please let me know at <a href='mailto:".EMAIL_DATING_EVENTS_ADMIN."'>".EMAIL_DATING_EVENTS_ADMIN."</a>";
+
+/**
+ * (37) Report A Violation - Message to USER (Thai) - mail_report_violation_user.tpl
+ **/
+
+$lang_mail["report_violation_t"]["subject"]			= "แจ้งข้อมูลชายต่างชาติที่ต้องสงสัย";
+$lang_mail["report_violation_t"]["message"]			=
+	"ขอบคุณสำหรับการแจ้งข้อมูลชายต่างชาติที่ต้องสงสัย<br>
+	ว่าเป็นมิจฉาชีพหรื่อรบกวนความเป็นส่วนตัวของคุณ.";
+$lang_mail["report_violation_t"]["details"]			= "รายละเอียดที่ส่งมา";
+$lang_mail["report_violation_t"]["name"]			= "ชื่อ";
+$lang_mail["report_violation_t"]["email"]			= "อีเมล์";
+$lang_mail["report_violation_t"]["phone"]			= "หมายเลขโทรศัพท์";
+$lang_mail["report_violation_t"]["description"] 	= "ข้อมูลที่คุณต้องการแจ้ง";
+$lang_mail["report_violation_t"]["admin_contact"] 	= "สามารถสอบข้อมูลที่หมายเลข 02 667 0068 มือถือ 083 099 2448";
+
+/**
+ * (38) Report A Violation - Message to ADMIN - mail_report_violation_admin.tpl
+ **/
+
+$lang_mail["report_violation_admin"]["subject"]		= "New Violation Reported";
+$lang_mail["report_violation_admin"]["message"]		= "New violation reported on the TLDF $SITE_NAME site:";
+$lang_mail["report_violation_admin"]["name"]		= "Name";
+$lang_mail["report_violation_admin"]["email"]		= "Email";
+$lang_mail["report_violation_admin"]["phone"]		= "Phone Number";
+$lang_mail["report_violation_admin"]["description"]	= "Violation Description";
+
+/***********
+ * MYSTORE
+ **********/
+
+/**
+ * (39) My Store Wish List - Message to USER (English) - mail_mystore_wish_user.tpl
+ **/
+
+$lang_mail["mystore_wish_e"]["subject"]			= "You Submitted A My Store Wish On $SITE_NAME_SUBJECT";
+$lang_mail["mystore_wish_e"]["message"]			= "Thank You For Submitting A My Store Product Wish On $SITE_NAME.";
+$lang_mail["mystore_wish_e"]["details"]			= "Submitted Details Are:";
+$lang_mail["mystore_wish_e"]["login"]			= "Username";
+$lang_mail["mystore_wish_e"]["fname"]			= "First Name";
+$lang_mail["mystore_wish_e"]["sname"]			= "Last Name";
+$lang_mail["mystore_wish_e"]["email"]			= "Email";
+$lang_mail["mystore_wish_e"]["product_name"]	= "Product Name";
+$lang_mail["mystore_wish_e"]["description"]		= "Description";
+$lang_mail["mystore_wish_e"]["notes"]			= "Notes";
+
+/**
+ * (39) My Store Wish List - Message to USER (Thai) - mail_mystore_wish_user.tpl
+ **/
+
+$lang_mail["mystore_wish_t"]["subject"]			= "You Submitted A My Store Wish On $SITE_NAME_SUBJECT";
+$lang_mail["mystore_wish_t"]["message"]			= "Thank You For Submitting A My Store Product Wish On $SITE_NAME.";
+$lang_mail["mystore_wish_t"]["details"]			= "Submitted Details Are:";
+$lang_mail["mystore_wish_t"]["login"]			= "ใส่ชื่อผู้ใช";
+$lang_mail["mystore_wish_t"]["fname"]			= "ชื่ิอ";
+$lang_mail["mystore_wish_t"]["sname"]			= "นามสกุล";
+$lang_mail["mystore_wish_t"]["email"]			= "อีเมล์";
+$lang_mail["mystore_wish_t"]["product_name"]	= "Product Name";
+$lang_mail["mystore_wish_t"]["description"]		= "Description";
+$lang_mail["mystore_wish_t"]["notes"]			= "Notes";
+
+/**
+ * (40) My Store Wish List - Message to ADMIN - mail_mystore_wish_admin.tpl
+ **/
+
+$lang_mail["mystore_wish_admin"]["subject"]			= "New My Store Wish List from [login]";
+$lang_mail["mystore_wish_admin"]["message"]			= "New My Store Product Wish on $SITE_NAME.";
+$lang_mail["mystore_wish_admin"]["login"]			= "Username";
+$lang_mail["mystore_wish_admin"]["fname"]			= "First Name";
+$lang_mail["mystore_wish_admin"]["sname"]			= "Last Name";
+$lang_mail["mystore_wish_admin"]["email"]			= "Email";
+$lang_mail["mystore_wish_admin"]["product_name"]	= "Product Name";
+$lang_mail["mystore_wish_admin"]["description"]		= "Description";
+$lang_mail["mystore_wish_admin"]["notes"]			= "Notes";
+
+/**
+ * (41) My Store Credits Payment - Message to USER (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_credits_payment_e"]["subject"]=
+	"My Store Order #[ORDER_ID] has been paid with Credits on $SITE_NAME_SUBJECT";
+
+$lang_mail["mystore_credits_payment_e"]["message"]=
+	"Thank you for paying your My Store Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> of <b>[AMOUNT]</b> with Credits.<br><br>
+	Your order will be deliverd as soon as possible and we will inform you about the order status.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (41) My Store Credits Payment - Message to USER (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_credits_payment_t"]["subject"]=
+	"ใบสั่งซื้อสินค้าของฉัน #[ORDER_ID] ได้รับการชำระเงินโดยบัตรเครดิต $SITE_NAME_SUBJECT";
+
+$lang_mail["mystore_credits_payment_t"]["message"]=
+	"ขอบคุณสำหรับการชำระใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ <b>[AMOUNT]</b> บัตรเครดิต<br><br>
+	คุณจะได้รับสินค้าโดยเร็วที่สุดและเราจะแจ้งให้ทราบถึงสถานะสินค้าของคุณ<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (42) My Store Credits Payment - Message to ADMIN - mail_mystore_credits_payment_admin.tpl
+ **/
+
+$lang_mail["mystore_credits_payment_admin"]["subject"]	= "My Store Order #[ORDER_ID] has been paid with Credits";
+$lang_mail["mystore_credits_payment_admin"]["message"]	= "My Store Order #[ORDER_ID] has been paid with Credits.";
+$lang_mail["mystore_credits_payment_admin"]["order"]	= "Order:";
+$lang_mail["mystore_credits_payment_admin"]["amount"]	= "Amount:";
+$lang_mail["mystore_credits_payment_admin"]["sender"]	= "Sender:";
+$lang_mail["mystore_credits_payment_admin"]["recipient"]= "Recipient:";
+$lang_mail["mystore_credits_payment_admin"]["login"]	= "Username:";
+$lang_mail["mystore_credits_payment_admin"]["fname"]	= "First Name:";
+$lang_mail["mystore_credits_payment_admin"]["sname"]	= "Last Name:";
+$lang_mail["mystore_credits_payment_admin"]["email"]	= "Email:";
+
+/**
+ * (43) MyStore Offline Payment - Message to USER (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_offline_payment_e"]["subject"]=
+	"Your payment for MyStore Order #[ORDER_ID] on $SITE_NAME_SUBJECT has been recorded!";
+
+$lang_mail["mystore_offline_payment_e"]["message"]["atm_payment"]=
+	"Your ATM payment of <b>[AMOUNT]</b> for your MyStore Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> on $SITE_NAME has been recorded and is awaiting approval by our financel department.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_e"]["message"]["wire_transfer"]=
+	"Your Wire Transfer payment of <b>[AMOUNT]</b> for your MyStore Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> on $SITE_NAME has been recorded and is awaiting approval by our financel department.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_e"]["message"]["bank_cheque"]=
+	"Your Bank Cheque payment of <b>[AMOUNT]</b> for your MyStore Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> on $SITE_NAME has been recorded and is awaiting approval by our financel department.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (43) MyStore Offline Payment - Message to USER (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_offline_payment_t"]["subject"]=
+	"การชำระเงินกับใบสั่งซื้อสินค้าของคุณ #[ORDER_ID] กับ $SITE_NAME_SUBJECT ได้รับการบันทึกเรียบร้อยแล้ว!";
+
+$lang_mail["mystore_offline_payment_t"]["message"]["atm_payment"]=
+	"การชำระเงินด้วยบัตรธนาคาร <b>[AMOUNT]</b> กับใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ $SITE_NAME ได้รับการบันทึกและรอการตอบรับจากบัญชีของเรา.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_t"]["message"]["wire_transfer"]=
+	"การชำระเงินด้วยการโอนเงินผ่านธนาคาร <b>[AMOUNT]</b> กับใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ $SITE_NAME ได้รับการบันทึกและรอการตอบรับจากบัญชีของเรา.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_t"]["message"]["bank_cheque"]=
+	"การชำระเงินด้วยใบสั่งจ่ายเงิน <b>[AMOUNT]</b> กับใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ $SITE_NAME ได้รับการบันทึกและรอการตอบรับจากบัญชีของเรา.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (44) MyStore Offline Payment - Message to ADMIN - mail_mystore_offline_payment_admin.tpl
+ **/
+
+$lang_mail["mystore_offline_payment_admin"]["subject"]					= "Offline payment for My Store Order #[ORDER_ID] has been recorded!";
+$lang_mail["mystore_offline_payment_admin"]["message"]["atm_payment"]	= "ATM Payment of MyStore Order #[ORDER_ID] has been recorded and needs to be approved.";
+$lang_mail["mystore_offline_payment_admin"]["message"]["wire_transfer"]	= "Wire Transfer of MyStore Order #[ORDER_ID] has been recorded and needs to be approved.";
+$lang_mail["mystore_offline_payment_admin"]["message"]["bank_cheque"]	= "Bank Cheque Payment of MyStore Order #[ORDER_ID] has been recorded and needs to be approved.";
+$lang_mail["mystore_offline_payment_admin"]["order"]					= "Order:";
+$lang_mail["mystore_offline_payment_admin"]["amount"]					= "Amount:";
+$lang_mail["mystore_offline_payment_admin"]["sender"]					= "Sender:";
+$lang_mail["mystore_offline_payment_admin"]["recipient"]				= "Recipient:";
+$lang_mail["mystore_offline_payment_admin"]["login"]					= "Username:";
+$lang_mail["mystore_offline_payment_admin"]["fname"]					= "First Name:";
+$lang_mail["mystore_offline_payment_admin"]["sname"]					= "Last Name:";
+$lang_mail["mystore_offline_payment_admin"]["email"]					= "Email:";
+
+/**
+ * (45) MyStore Offline Payment Approval - Message to USER (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_offline_payment_approval_e"]["subject"]=
+	"Your payment on $SITE_NAME_SUBJECT for MyStore Order #[ORDER_ID] has been approved!";
+
+$lang_mail["mystore_offline_payment_approval_e"]["message"]["atm_payment"]=
+	"Good news.<br><br>
+	Your ATM payment of <b>[AMOUNT]</b> for your MyStore Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> on $SITE_NAME has been approved by our financial department.<br><br>
+	Your order will be deliverd as soon as possible and we will inform you about the order status.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_approval_e"]["message"]["wire_transfer"]=
+	"Good news.<br><br>
+	Your Wire Transfer payment of <b>[AMOUNT]</b> for your MyStore Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> on $SITE_NAME has been approved by our financial department.<br><br>
+	Your order will be deliverd as soon as possible and we will inform you about the order status.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_approval_e"]["message"]["bank_cheque"]=
+	"Good news.<br><br>
+	Your Bank Cheque payment of <b>[AMOUNT]</b> for your MyStore Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> on $SITE_NAME has been approved by our financial department.<br><br>
+	Your order will be deliverd as soon as possible and we will inform you about the order status.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (45) MyStore Offline Payment Approval - Message to USER (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_offline_payment_approval_t"]["subject"]=
+	"การชำระเงินของคุณกับ $SITE_NAME_SUBJECT สำหรับใบสั่งซื้อของฉัน #[ORDER_ID] ได้รับการอนุมัติ!";
+
+$lang_mail["mystore_offline_payment_approval_t"]["message"]["atm_payment"]=
+	"ข่าวดี.<br><br>
+	การชำระเงินด้วยบัตรธนาคารของคุณ <b>[AMOUNT]</b> กับใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ $SITE_NAME ได้รับการอนุมัติจากบัญชีของเรา.<br><br>
+	คุณจะได้รับสินค้าโดยเร็วที่สุดและเราจะแจ้งให้ทราบถึงสถานะสินค้าของคุณ.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_approval_t"]["message"]["wire_transfer"]=
+	"ข่าวดี.<br><br>
+	การชำระเงินด้วยการโอนเงินผ่านธนาคารของคุณ <b>[AMOUNT]</b> กับใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ $SITE_NAME ได้รับการอนุมัติจากบัญชีของเรา.<br><br>
+	คุณจะได้รับสินค้าโดยเร็วที่สุดและเราจะแจ้งให้ทราบถึงสถานะสินค้าของคุณ.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_offline_payment_approval_t"]["message"]["bank_cheque"]=
+	"ข่าวดี.<br><br>
+	การชำระเงินด้วยใบสั่งจ่ายเงิน <b>[AMOUNT]</b> กับใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ $SITE_NAME ได้รับการอนุมัติจากบัญชีของเรา.<br><br>
+	คุณจะได้รับสินค้าโดยเร็วที่สุดและเราจะแจ้งให้ทราบถึงสถานะสินค้าของคุณ.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (46) My Store Online Payment - Message to USER (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_online_payment_e"]["subject"]=
+	"My Store Order #[ORDER_ID] has been paid with PayPal on $SITE_NAME_SUBJECT";
+
+$lang_mail["mystore_online_payment_e"]["message"]=
+	"Thank you for paying your My Store Order #<b>[ORDER_ID]</b> to <b>[FNAME_TO]</b> of <b>[AMOUNT]</b> with PayPal.<br><br>
+	Your order will be deliverd as soon as possible and we will inform you about the order status.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (46) My Store Online Payment - Message to USER (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_online_payment_t"]["subject"]=
+	"ใบสั่งซื้อสินค้าของฉัน #[ORDER_ID] ได้รับการชำระเงินกับ PayPal $SITE_NAME_SUBJECT";
+
+$lang_mail["mystore_online_payment_t"]["message"]=
+	"ขอบคุณสำหรับการชำระใบสั่งซื้อสินค้า #<b>[ORDER_ID]</b> ของคุณ <b>[FNAME_TO]</b> กับ <b>[AMOUNT]</b> PayPal.<br><br>
+	คุณจะได้รับสินค้าโดยเร็วที่สุดและเราจะแจ้งให้ทราบถึงสถานะสินค้าของคุณ.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (47) My Store Online Payment - Message to ADMIN - mail_mystore_online_payment_admin.tpl
+ **/
+
+$lang_mail["mystore_online_payment_admin"]["subject"]	= "My Store Order #[ORDER_ID] has been paid with PayPal";
+$lang_mail["mystore_online_payment_admin"]["message"]	= "My Store Order #[ORDER_ID] has been paid with PayPal.";
+$lang_mail["mystore_online_payment_admin"]["order"]		= "Order:";
+$lang_mail["mystore_online_payment_admin"]["amount"]	= "Amount:";
+$lang_mail["mystore_online_payment_admin"]["sender"]	= "Sender:";
+$lang_mail["mystore_online_payment_admin"]["recipient"]	= "Recipient:";
+$lang_mail["mystore_online_payment_admin"]["login"]		= "Username:";
+$lang_mail["mystore_online_payment_admin"]["fname"]		= "First Name:";
+$lang_mail["mystore_online_payment_admin"]["sname"]		= "Last Name:";
+$lang_mail["mystore_online_payment_admin"]["email"]		= "Email:";
+
+/**
+ * (48) Order Status Changed - Message to Sender (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_order_status_sender_e"]["subject"]["procured"]	= "Your My Store order on $SITE_NAME_SUBJECT has been procured!";
+$lang_mail["mystore_order_status_sender_e"]["subject"]["shipped"]	= "Your My Store order on $SITE_NAME_SUBJECT has been shipped!";
+$lang_mail["mystore_order_status_sender_e"]["subject"]["delivery"]	= "Your My Store order on $SITE_NAME_SUBJECT has been delivered!";
+
+$lang_mail["mystore_order_status_sender_e"]["message"]["procured"]=
+	"Good news.<br><br>
+	Your My Store order on $SITE_NAME to <b>[FNAME_TO]</b> has been procured.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_sender_e"]["message"]["shipped"]=
+	"Good news.<br><br>
+	Your My Store order on $SITE_NAME has been shipped to <b>[FNAME_TO]</b>.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_sender_e"]["message"]["delivery"]=
+	"Good news.<br><br>
+	Your My Store order on $SITE_NAME has been delivered to <b>[FNAME_TO]</b>.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_FROM]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (48) Order Status Changed - Message to Sender (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_order_status_sender_t"]["subject"]["procured"]	= "ใบสั่งซื้อสินค้าของคุณกับ $SITE_NAME_SUBJECT ได้เตรียมจัดส่งแล้ว!";
+$lang_mail["mystore_order_status_sender_t"]["subject"]["shipped"]	= "ใบสั่งซื้อสินค้าของคุณกับ $SITE_NAME_SUBJECT ได้จัดส่งเรียบร้อยแล้ว!";
+$lang_mail["mystore_order_status_sender_t"]["subject"]["delivery"]	= "ใบสั่งซื้อสินค้าของคุณกับ $SITE_NAME_SUBJECT ได้ส่งถึงเรียบร้อยแล้ว!";
+
+$lang_mail["mystore_order_status_sender_t"]["message"]["procured"]=
+	"ข่าวดี.<br><br>
+	ใบสั่งซื้อสินค้ากับ $SITE_NAME ของคุณ <b>[FNAME_TO]</b> ได้เตรียมจัดส่งแล้ว.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_sender_t"]["message"]["shipped"]=
+	"ข่าวดี.<br><br>
+	ใบสั่งซื้อสินค้าของคุณกับ $SITE_NAME ได้จัดส่งเรียบร้อยแล้วถึง <b>[FNAME_TO]</b>.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_sender_t"]["message"]["delivery"]=
+	"ข่าวดี.<br><br>
+	ใบสั่งซื้อสินค้าของคุณกับ $SITE_NAME ได้ส่งถึงเรียบร้อยแล้วถึง <b>[FNAME_TO]</b>.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_FROM]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (49) Order Status Changed - Message to Recipient (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_order_status_recipient_e"]["subject"]["procured"]	= "A My Store order on $SITE_NAME_SUBJECT to you has been procured!";
+$lang_mail["mystore_order_status_recipient_e"]["subject"]["shipped"]	= "A My Store order on $SITE_NAME_SUBJECT has been shipped to you!";
+$lang_mail["mystore_order_status_recipient_e"]["subject"]["delivery"]	= "A My Store order on $SITE_NAME_SUBJECT has been delivered to you!";
+
+$lang_mail["mystore_order_status_recipient_e"]["message"]["procured"]=
+	"Good news.<br><br>
+	A My Store order on $SITE_NAME from <b>[FNAME_FROM]</b> to you has been procured.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_TO]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_recipient_e"]["message"]["shipped"]=
+	"Good news.<br><br>
+	A My Store order on $SITE_NAME from <b>[FNAME_FROM]</b> has been shipped to you.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_TO]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_recipient_e"]["message"]["delivery"]=
+	"Good news.<br><br>
+	A My Store order on $SITE_NAME from <b>[FNAME_FROM]</b> has been delivered to you.<br><br>
+	Your log in details again are:<br><br>
+	Username: <b>[LOGIN_TO]</b><br><br>
+	If you have any questions, please contact me here: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+/**
+ * (49) Order Status Changed - Message to Recipient (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["mystore_order_status_recipient_t"]["subject"]["procured"]	= "ใบสั่งซื้อสินค้าของฉันกับ $SITE_NAME_SUBJECT ได้เตรียมจัดส่งแล้ว!";
+$lang_mail["mystore_order_status_recipient_t"]["subject"]["shipped"]	= "ใบสั่งซื้อสินค้าของฉันกับ $SITE_NAME_SUBJECT ได้จัดส่งถึงคุณแล้ว!";
+$lang_mail["mystore_order_status_recipient_t"]["subject"]["delivery"]	= "ใบสั่งซื้อสินค้าของฉันกับ $SITE_NAME_SUBJECT ได้ส่งถึงคุณแล้ว!";
+
+$lang_mail["mystore_order_status_recipient_t"]["message"]["procured"]=
+	"ข่าวดี.<br><br>
+	ใบสั่งซื้อสินค้าของฉันกับ $SITE_NAME จาก <b>[FNAME_FROM]</b> ได้เตรียมจัดส่งถึงคุณแล้ว.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_TO]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_recipient_t"]["message"]["shipped"]=
+	"ข่าวดี.<br><br>
+	ใบสั่งซื้อสินค้าของฉันกับ $SITE_NAME จาก <b>[FNAME_FROM]</b> ได้จัดส่งถึงคุณแล้ว.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_TO]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+$lang_mail["mystore_order_status_recipient_t"]["message"]["delivery"]=
+	"ข่าวดี.<br><br>
+	ใบสั่งซื้อสินค้าของฉันกับ $SITE_NAME จาก <b>[FNAME_FROM]</b> ได้ส่งถึงคุณแล้ว.<br><br>
+	ชื่อในการเข้าใช้:<br><br>
+	รหัสเข้าใช้: <b>[LOGIN_TO]</b><br><br>
+	ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='$contact_url' target='_blank'>$contact_url</a>";
+
+#############################
+##                         ##
+## CRON MESSAGES           ##
+##                         ##
+#############################
+
+/**
+ * (50) Cron: Registration Complete - Message to USER (English) - mail_cron_registration_complete_user.tpl
+ *      REPLACED
+ **/
+
+$lang_mail["cron_registration_complete_e"]["subject"] = "Complete Your Registration With $SITE_NAME_SUBJECT...";
+
+$lang_mail["cron_registration_complete_e"]["message"] =
+	"Please contact us at anytime by clicking here, if you have any questions or concerns:<br>
+	<a href='".$contact_url."' target='_blank'>".$contact_url."</a><br><br>
+	We look forward to seeing you back soon.<br>
+	Not only us, but many wonderful, eligible and legitimate singles are hoping to see you soon also.";
+
+/**
+ * (50) Cron: Registration Complete - Message to USER (Thai) - mail_cron_registration_complete_user.tpl
+ *      REPLACED
+ **/
+
+$lang_mail["cron_registration_complete_t"]["subject"] = "การลงทะเบียนเสร็จสิ้นสมบรูณ์ใช้งานได้ทันที";
+
+$lang_mail["cron_registration_complete_t"]["message"] =
+	"การลงทะเบียนของคุณเสร็จสิ้นสมบรูณ์พร้อมใช้งานได้ทันที<br><br>
+	เรามุ่งเน้นให้สมาชิกหญิงได้พบและออกเดทกับชายชาติที่ผ่านการตรวจสอบประวัติ<br><br>
+	<b>ต้องการพบกับหญิงไทยเพื่อเป็นคู่ชีวิตและแต่งงานเท่านั้นเรารับรองความปลอดภัย100%</b><br><br>
+	คลิกรับสิทธิพิเศษโปรโมชั่นถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='blank'>Coupon-Regular.pdf</a><br><br>
+	คลิกรับข้อมูลและสิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกแบบรายเดือน: <a href='". $benifit_for_regular_lady ."' target='blank'>benefit-for-regular-lady.pdf</a><br><br>
+	คลิกรับข้อมูลและสิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='". $platinum_life_url ."' target='blank'>Platinum-life.pdf</a><br><br>
+	คลิกสำหรับสมาชิกหญิงระดับแพลทินัมต้องการต่ออายุการใช้งาน: <a href='".$url_coupon_platinum_lady_extend."' target='blank'>Coupon-Platinum-Extend.pdf</a><br><br>
+	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+
+##$lang_mail["cron_registration_complete_t"]["subject"] = "การลงทะเบียนของคุณเสร็จสิ้นสมบรูณ์..";
+##
+##$lang_mail["cron_registration_complete_t"]["message"] =
+##	"กรุณาติดต่อเราได้ตลอดเวลาโดยคลิกที่นี่หากคุณมีคำถามหรือข้อสงสัย:<br>
+##	<a href='".$contact_url."' target='_blank'>".$contact_url."</a><br><br>
+##	เราหวังที่จะพบคุณอีกครั้งในเร็วๆนี้.<br>
+##	การแนะนำและระบบบริการจัดเดทที่ประสบความสำเร็จอย่างดียิ่งก็ได้มาพร้อมกับการรับรองความพอใจแบบสองต่อที่เป็ นเอกลักษณ์เฉพาะของเราเท่าน้ันและเขารอที่จะทำความรู้จ ักและพบกับคุณอยู่ท ี่นี้!.";
+
+/**
+ * (51) Cron: become paid member - Message to USER (English) - mail_cron_become_paid_user.tpl
+ **/
+
+$lang_mail["cron_become_paid_e"]["subject"] = "Become paid member...";
+
+$lang_mail["cron_become_paid_e"]["message"] =
+	"Please become a paid member and get intrupted services.";
+
+/**
+ * (51) Cron: become paid member - Message to USER (Thai) - mail_cron_become_paid_user.tpl
+ **/
+
+$lang_mail["cron_become_paid_t"]["subject"] = "Become paid member..."; // THAI_TRANSLATION_PENDING
+
+$lang_mail["cron_become_paid_t"]["message"] =
+	"Please become a paid member and get intrupted services."; // THAI_TRANSLATION_PENDING
+
+/**
+ * (52) Cron: 7 days reminder - Message to USER (English) - mail_cron_one_week_user.tpl
+ **/
+
+$lang_mail["cron_one_week_e"]["subject"] = "Only 7 days remain on your account...";
+
+$lang_mail["cron_one_week_e"]["message"] =
+	"As a valued Member of <b>Meet Me Now Bangkok</b>, we're writing to advise that only 7 days remain on your account.<br><br>
+	Ensure your valuable connections and communications, both now and in the future, are safe guarded.<br><br>
+	Renewing your account is easy...<br><br>
+	Simply click the link below to log into your account and choose your preferred payment method.<br>
+	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	The time you add to your account today will be in addition to the days that are remaining.";
+
+/**
+ * (52) Cron: 7 days reminder - Message to USER (Thai) - mail_cron_one_week_user.tpl
+ **/
+$lang_mail["cron_one_week_t"]["subject"]	= " เหลือเพียง 7 วันโปรไฟล์หาคู่ต่างชาติจะหมดอายุการใช้งาน";
+$lang_mail["cron_one_week_t"]["message"]	=
+	"ท่านสมาชิกได้ทำการเชื่อมต่อกับสมาชิกชายท่านใดบ้างหรื่อยังค่ะ..?<br><br>
+	บริษัทหาคู่ต่างชาติ มีทมีนาวแบงค็อค Meet Me Now Bangkok<br><br>
+	เรามุ่งเน้นให้สมาชิกหญิงได้พบและออกเดทกับชายชาติที่ผ่านการตรวจสอบประวัติ<br><br>
+	ชายต่างชาติที่ต้องการพบกับหญิงไทยเพื่อเป็นคู่ชีวิตและแต่งงานเท่านั้น<br><br>
+	ทีมงานพร้อมให้คำปรึกษา-แนะนำชายต่างชาติเห็นว่าเหมาะสม<br><br>
+	และสมมีคุณสมบัติตามความต้องการของคุณเป็นการส่วนตัวอีกด้วย<br><br>
+	แจ้งความประสงค์\"ยืนยันที่จะยังคงเป็นสมาชิก\"ผ่านทางอีเมล์: <a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br><br>
+	คลิกรับสิทธิพิเศษโปรโมชั่นถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+	คลิกรับข้อมูลและสิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http://www.meetfarangmen.com/benefit-for-regular-lady' target='_blank'>www.meetfarangmen.com/benefit-for-regular-lady</a><br><br>
+	คลิกรับข้อมูลและสิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br><br>
+	คลิกสำหรับสมาชิกหญิงระดับแพลทินัมต้องการต่ออายุการใช้งาน: <a href='".$url_coupon_platinum_lady_extend."' target='_blank'>Coupon-Platinum-Extend.pdf</a><br><br>
+	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+
+##$lang_mail["cron_one_week_t"]["subject"]	= "เพียง 7 วันบัญชีของคุณยังคงสถานะไว้...";
+##$lang_mail["cron_one_week_t"]["message"]	=
+##	"ท่านขอเขาร่วมเป็ นสมาชิก <b>Meet Me NowBangkok</b>, เราขอแจ้งให้คุณได้ทราบว่ามีเพียง 7 วันยังคงอยู่ในบัญชีของคุณ.<br><br>
+##	ตรวจสอบการเชื่อมต่อของคุณและการสื่อสารท้ังในปัจจุบันและในอนาคตให้มีความปลอดภัย.<br><br>
+##	ต่ออายุบัญชีของคุณเป็ นเรื่องง่าย...<br><br>
+##	เพียงคลิกลิงก์ด้านล่างเพื่อเข้าสู่บัญชีของคุณและเลือกวิธีการชำระเงินที่ต้องการ.<br>
+##	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+##	ทุกครั้งที่คุณเพิ่มลงในบัญชีของคุณวันนี้จะอยู่ร ่วมจากวันที่เหลือ.";
+
+/**
+ * (53) Cron: 2 days reminder - Message to USER (English) - mail_cron_two_days_user.tpl
+ **/
+
+$lang_mail["cron_two_days_e"]["subject"] = "Urgent Action Required...";
+
+$lang_mail["cron_two_days_e"]["message"] =
+	"This is to advise that your account at Meet Me Now Bangkok is due to expire in 48 hours.<br><br>
+	Take action now and ensure your connection and communication with eligible and legitimate singles, continues now and in the future<br><br>
+	Simply click the link below and log into your account and choose your preferred payment method.<br>
+	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a>";
+										
+/**
+ * (53) Cron: 2 days reminder - Message to USER (Thai) - mail_cron_two_days_user.tpl
+ **/
+
+$lang_mail["cron_two_days_t"]["subject"] = "เหลือเพียง 2 วันโปรไฟล์หาคู่ต่างชาติจะหมดอายุการใช้งาน";
+$lang_mail["cron_two_days_t"]["message"] =
+	"ท่านสมาชิกได้ทำการเชื่อมต่อกับสมาชิกชายท่านใดบ้างหรื่อยังค่ะ..?<br>
+	เรามุ่งเน้นให้คุณได้พบและออกเดทกับชายชาติที่ผ่านการตรวจสอบประวัติ<br>
+	ชายต่างชาติที่ต้องการพบรักแท้กับหญิงไทยเพื่อเป็นคู่ชีวิตและแต่งงานเท่านั้น<br><br>
+	แจ้งความประสงค์\"ยืนยันที่จะยังคงเป็นสมาชิก\"ผ่านทางอีเมล์: <a href='mailto:admin@thailadydatefinder.com'>admin@thailadydatefinder.com</a><br><br>
+	คลิกรับสิทธิพิเศษโปรโมชั่นถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+	คลิกรับข้อมูลและสิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http://www.meetfarangmen.com/benefit-for-regular-lady' target='_blank'>www.meetfarangmen.com/benefit-for-regular-lady</a><br><br>
+	คลิกรับข้อมูลและสิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br><br>
+	คลิกสำหรับสมาชิกหญิงระดับแพลทินัมต้องการต่ออายุการใช้งาน: <a href='".$url_coupon_platinum_lady_extend."' target='_blank'>Coupon-Platinum-Extend.pdf</a><br><br>
+	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+
+##$lang_mail["cron_two_days_t"]["subject"] = "แจ้งเรื่องด่วนให้คุณทราบ...";
+##$lang_mail["cron_two_days_t"]["message"] =
+##	"ขอแจ้งให้คุณได้ทราบว่าบัญชีของคุณที่ Meet Me Now Bangkok จะหมดอายุในอีก 48 ชั่วโมง.<br><br>
+##	คุณสามารถดำเนินการได้ในขณะนี้และมั่นใจว่าการเชื่อมต่อและการสื่อสารของคุณจะต่อเนื่อง!<br><br>
+##	เพียงคลิกลิงก์ด้านล่างเพื่อเข้าสู่บัญชีของคุณและเลือกวิธีการชำระเงินที่ต้องการ.<br>
+##	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a>";
+			
+/**
+ * (54) Cron: last day reminder - Message to USER (English) - mail_cron_last_day_user.tpl
+ **/
+
+$lang_mail["cron_last_day_e"]["subject"] = "The End is Near...";
+$lang_mail["cron_last_day_e"]["message"] =
+	"This is to advise that your account at Meet Me Now Bangkok is due to expire in 24 hours.<br><br>
+	Take action now and ensure your connection and communication with eligible and legitimate singles, continues now and in the future.<br><br>
+	Simply click the link below and log into your account and choose your preferred payment method.<br>
+	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	Please contact us at anytime by clicking here, if you have any questions or concerns:<br>
+	<a href='".$contact_url."' target='_blank'>".$contact_url."</a>";
+										
+/**
+ * (54) Cron: last day reminder - Message to USER (Thai) - mail_cron_last_day_user.tpl
+ **/
+
+$lang_mail["cron_last_day_t"]["subject"] = "โปรไฟล์ของคุณหมดอายุการใช้งาน";
+$lang_mail["cron_last_day_t"]["message"] =
+	"ขอแจ้งให้คุณได้ทราบว่าโปรไฟล์หาคู่ต่างชาติ ".$SITE_NAME."<br><br>
+	สามารถติดต่อหรื่อส่งความสนใจให้กับสมาชิกชายต่างชาติที่เขามาใหม่ได้ในขณะนี้<br><br>
+	แต่โปรไฟล์ของคุณยังจะอยู่ในระบบสมาชิกของเราซึ่งคุณสามารถเข้าล๊อคอินเม่ือใดก็ได้<br><br>
+	การต่ออายุการใช้งานของโปรไฟล์คุณสามารถทำได้ทันที<br><br>
+	เข้าไปในส่วนของหน้าสมาชิกใส่ชื่อเข้าใช้-รหัสเข้าใช้โปรไฟล์ของคุณ<br><br>
+	<a href='{$login_url}' target='_blank'>{$login_url}</a><br><br>
+	สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http://www.meetfarangmen.com/benefit-for-regular-lady' target='_blank'>www.meetfarangmen.com/benefit-for-regular-lady</a><br><br>
+	พิเศษโปรโมชั่นถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+	สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br><br>
+	สมาชิกหญิงระดับแพลทินัมต้องการต่ออายุการใช้งาน: <a href='".$url_coupon_platinum_lady_extend."' target='_blank'>Coupon-Platinum-Extend.pdf</a><br><br>
+	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+
+##$lang_mail["cron_last_day_t"]["subject"] = "เวลาใกล้จะสิ้นสุด...";
+##$lang_mail["cron_last_day_t"]["message"] =
+##	"ขอแจ้งให้คุณได้ทราบว่าาบัญชีของคุณที่ Meet Me Now Bangkok จะหมดอายุในอีก 24 ชั่วโมง.<br><br>
+##	คุณสามารถดำเนินการได้ในขณะนี้และมั่นใจว่าการเชื่อมต่อและการสื่อสารของคุณจะต่อเนื่อง.<br><br>
+##	เพียงคลิกลิงก์ด้านล่างเพื่อเข้าสู่บัญชีของคุณและเลือกวิธีการที่ต้องการ.<br>
+##	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+##	กรุณาติดต่อเราได้ตลอดเวลาโดยคลิกที่นี่หากคุณมีคำถามหรือข้อสงสัย:<br>
+##	<a href='".$contact_url."' target='_blank'>".$contact_url."</a>";
+
+/**
+ * (55) Cron: expired - Message to USER (English) - mail_cron_expired_user.tpl
+ **/
+
+$lang_mail["cron_expired_e"]["subject"] = "We miss you...";
+$lang_mail["cron_expired_e"]["message"] =
+	"This is to let you know that your account at Meet Me Now Bangkok has expired.<br><br>
+	This is sad news for many eligible and legitimate singles who were hoping to connect with someone like you.<br><br>
+	But all is not lost.<br><br>
+	Reactivate your account today by following the link below and choosing your payment plan:<br><br>
+	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	Please contact us at anytime by clicking here, if you have any questions or concerns:<br>
+	<a href='".$contact_url."' target='_blank'>".$contact_url."</a><br><br>
+	We look forward to seeing you back soon.<br>
+	Not only us, but many wonderful, eligible and legitimate singles are hoping to see you soo also.";
+										
+/**
+ * (55) Cron: expired - Message to USER (Thai) - mail_cron_expired_user.tpl
+ **/
+
+$lang_mail["cron_expired_t"]["subject"] = "โอกาสดีๆที่จะได้พบรักแท้กับชายต่างชาติ";
+$lang_mail["cron_expired_t"]["message"] =
+	"ขอแจ้งให้คุณได้ทราบว่าโปรไฟล์หาคู่ต่างชาติ ".$SITE_NAME."<br><br>
+	ของคุณไม่สามารถต่อและสื่อสารกับสมาชิกชายต่างชาติที่เขามาใหม่ได้ในขณะนี้<br><br>
+	แต่โปรไฟล์ของคุณยังจะอยู่ในระบบสมาชิกซึ่งคุณสามารถเข้าล๊อคอินเม่ือใดก็ได้<br><br>
+	การต่ออายุการใช้งานของโปรไฟล์คุณสามารถทำได้ทันที<br><br>
+	เข้าไปในส่วนของหน้าสมาชิกและใส่ชื่อเข้าใช้-รหัสเข้าใช้โปรไฟล์ของคุณ<br><br>
+	<a href='{$login_url}' target='_blank'>{$login_url}</a><br><br>
+	สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http://www.meetfarangmen.com/benefit-for-regular-lady' target='_blank'>www.meetfarangmen.com/benefit-for-regular-lady</a><br><br>
+	พิเศษโปรโมชั่นถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+	สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br><br>
+	สมาชิกหญิงระดับแพลทินัมต้องการต่ออายุการใช้งาน: <a href='".$url_coupon_platinum_lady_extend."' target='_blank'>Coupon-Platinum-Extend.pdf</a><br><br>
+	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.";
+
+##$lang_mail["cron_expired_t"]["subject"] = "พวกเราคิดถึงคุณ...";
+##$lang_mail["cron_expired_t"]["message"] =
+##	"ขอแจ้งให้คุณได้ทราบว่าาบัญชีของคุณที่ Meet Me Now Bangkok หมดอายุเวลาการใช้งาน<br><br>
+##	นี้เป็ นข่าวเศร้าสำหรับผู้ที่ทำการเชื่อมต่อและสื่อสารของคุณกับสมาชิกอย่างต่อเนื่องต้องหยุดไป.<br><br>
+##	แต่ไม่ต้องกังวล.<br><br>
+##	เปิดใช้งานบัญชีของคุณในวันนี้โดยไปที่ลิงก์ด้านล่างและเลือกแผนการชำระเงินของคุณ:<br><br>
+##	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+##	กรุณาติดต่อเราได้ตลอดเวลาโดยคลิกที่นี่หากคุณมีคำถามหรือข้อสงสัย:<br>
+##	<a href='".$contact_url."' target='_blank'>".$contact_url."</a><br><br>
+##	เราหวังที่จะพบคุณอีกครั้งในเร็วๆนี้.<br>
+##	การแนะนำและระบบบริการจัดเดทที่ประสบความสำเร็จอย่างดียิ่งก็ได้มาพร้อมกับการรับรองความพอใจแบบสองต่อที่เป็ นเอกลักษณ์เฉพาะของเราเท่านั้นเขาและรอที่จะทำความรู้จ ักและพบกับคุณอยู่ที่นี้!.";
+
+/**
+ * (56) Cron: Rejoin Us - Message to USER (English) - mail_cron_rejoin_user.tpl
+ **/
+
+$lang_mail["cron_rejoin_e"]["subject"] = "Reactivate Your $SITE_NAME_SUBJECT Account Today...";
+$lang_mail["cron_rejoin_e"]["message"] =
+	"Reactivate your $SITE_NAME account today by following the link below and choosing your payment plan:<br><br>
+	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	Please contact us at anytime by clicking here, if you have any questions or concerns:<br>
+	<a href='".$contact_url."' target='_blank'>".$contact_url."</a><br><br>
+	We look forward to seeing you back soon.<br>
+	Not only us, but many wonderful, eligible and legitimate singles are hoping to see you soon also.";
+										
+/**
+ * (56) Cron: Rejoin Us - Message to USER (Thai) - mail_cron_rejoin_user.tpl
+ **/
+
+$lang_mail["cron_rejoin_t"]["subject"] = "ชายต่างชาติที่ดีพร้อมรอคุณอยู่ที่นี้";
+$lang_mail["cron_rejoin_t"]["message"] =
+	"ขอแจ้งให้คุณได้ทราบว่าโปรไฟล์หาคู่ต่างชาติ ".$SITE_NAME."<br><br>
+	ไม่สามารถติดต่อหรื่อส่งความสนใจให้กับสมาชิกชายต่างชาติที่เขามาใหม่ได้ในขณะนี้<br><br>
+	แต่โปรไฟล์ของคุณยังจะอยู่ในระบบสมาชิกของเราซึ่งคุณสามารถเข้าล๊อคอินเม่ือใดก็ได้<br><br>
+	การต่ออายุการใช้งานของโปรไฟล์คุณสามารถทำได้ทันที<br><br>
+	เข้าไปในส่วนของหน้าสมาชิกใส่ชื่อเข้าใช้-รหัสเข้าใช้โปรไฟล์ของคุณ<br><br>
+	<a href='{$login_url}' target='_blank'>{$login_url}</a><br><br>
+	สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.<br><br>
+	สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกแบบรายเดือน: <a href='http:www.meetfarangmen.com/benefit-for-regular-lady' target='_blank'>www.meetfarangmen.com/benefit-for-regular-lady</a><br><br>
+	พิเศษโปรโมชั่นถ่ายรูปทำประวัติภาษาอังกฤษฟรี: <a href='".$url_coupon_regular_lady."' target='_blank'>Coupon-Regular.pdf</a><br><br>
+	สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัม: <a href='http://www.meetfarangmen.com/platinum-matching' target='_blank'>www.meetfarangmen.com/platinum-matching</a><br><br>
+	สมาชิกหญิงระดับแพลทินัมต้องการต่ออายุการใช้งาน: <a href='".$url_coupon_platinum_lady_extend."' target='_blank'>Coupon-Platinum-Extend.pdf</a>";
+
+##$lang_mail["cron_rejoin_t"]["subject"] = "แจ้งเตือนบัญชีของคุณวันนี้...";
+##$lang_mail["cron_rejoin_t"]["message"] =
+##	"เปิดใช้งานบัญชีของคุณในวันนี้โดยไปที่ลิงก์ด้านล่างและเลือกแผนการชำระเงินของคุณ:<br><br>
+##	<a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+##	กรุณาติดต่อเราได้ตลอดเวลาโดยคลิกที่นี่หากคุณมีคำถามหรือข้อสงสัย:<br>
+##	<a href='".$contact_url."' target='_blank'>".$contact_url."</a><br><br>
+##	เราหวังที่จะพบคุณอีกครั้งในเร็วๆนี้.<br>
+##	การแนะนำและระบบบริการจัดเดทที่ประสบความสำเร็จอย่างดียิ่งก็ได้มาพร้อมกับการรับรองความพอใจแบบสองต่อที่เป็ นเอกลักษณ์เฉพาะของเราเท่านั้นและรอที่จะทำความรู้จ ักและพบกับคุณอยู่ที่นี้.";
+
+/**
+ * (57) Cron: approve user reminder - Message to ADMIN (English) - mail_cron_approve_user_admin.tpl
+ **/
+
+$lang_mail["cron_approve_user_admin"]["subject"] = "User waiting for your Approval...";
+$lang_mail["cron_approve_user_admin"]["message"] = "New user completed the registration and waiting for approval from Admin.";
+
+$lang_mail["cron_approve_user_admin"]["fname"]	= "First Name";
+$lang_mail["cron_approve_user_admin"]["sname"]	= "Last Name";
+$lang_mail["cron_approve_user_admin"]["login"]	= "Username";
+$lang_mail["cron_approve_user_admin"]["email"]	= "Email";
+
+/**
+ * (58) Cron: platinum application reminder - Message to ADMIN (English) - mail_cron_platinum_applied_admin.tpl
+ **/
+
+$lang_mail["cron_platinum_applied_admin"]["subject"] = "User waiting for Platinum Verification...";
+$lang_mail["cron_platinum_applied_admin"]["message"] = "User waiting for Platinum Verification from Admin.";
+
+$lang_mail["cron_platinum_applied_admin"]["fname"]	= "First Name";
+$lang_mail["cron_platinum_applied_admin"]["sname"]	= "Last Name";
+$lang_mail["cron_platinum_applied_admin"]["login"]	= "Username";
+$lang_mail["cron_platinum_applied_admin"]["email"]	= "Email";
+
+/**
+ * (59) Profile Viewed - Message to USER (English) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["profile_viewed_e"]["subject"]		= "Your Profile On $SITE_NAME_SUBJECT Was Viewed At [DATE]";
+$lang_mail["profile_viewed_e"]["subject_2"]		= "Your Profile Was Viewed";
+
+$lang_mail["profile_viewed_e"]["message"]		=
+	"Great going!<br><br>
+	<b>[SENDER_NAME]</b> was just browsing the Site and viewed your profile.<br><br>
+	Click the link below right now and check out <b>[SENDER_NAME]</b>'s profile and show some interest of your own.";
+
+$lang_mail["profile_viewed_e"]["message_sub"]	= "";
+
+/**
+ * (59) Profile Viewed - Message to USER (Thai) - mail_noti_generic_user.tpl
+ **/
+
+$lang_mail["profile_viewed_t"]["subject"]		= "มีชายหนุ่มเข้ามาอ่านโปรไฟล์ของคุณ";
+$lang_mail["profile_viewed_t"]["subject_2"]		= "มีชายหนุ่มเข้ามาอ่านโปรไฟล์ของคุณ";
+
+$lang_mail["profile_viewed_t"]["message"]		=
+	"โปรไฟล์ของคุณได้รับความสนใจจาก<br><br>
+	<b>[SENDER_NAME]</b> ชายหนุ่มท่านนี้ได้ให้ความสนใจในรูปภาพและประวัติของคุณเป็นพิเศษ<br><br>
+	แล้วคุณล่ะมีความสนใจ <b>[SENDER_NAME]</b> ด้วยเช่นกันหรื่อเปล่า..??<br><br>
+	รีบเข้าไปอ่านประวัติและรูปภาพของเขา<br><br>
+	ขอเชื่อมต่อทันทีโดยกด Invite To Connect With Me<br><br>
+	*แต่ถ้าเขาไม่ใช่คนที่คุณต้องการทำความรู้จักหรื่อเชื่อมต่อด้วยคุณไม่ต้องทำอะไรทั้งสิ้นคะ* ";
+
+$lang_mail["profile_viewed_t"]["message_sub"]	=
+	"เข้าไปในส่วนของหน้าสมาชิกและใส่ชื่อเข้าใช้-รหัสเข้าใช้โปรไฟล์ของคุณ<br><br>
+	<a href='{$login_url}' target='_blank'>{$login_url}</a>";
+
+/**
+ * (xx) User Profile Viewed - Message to USER (English) - mail_visits_mypage_user.tpl
+ *      REPLACED with profile_viewed
+ **/
+
+$lang_mail["visits_mypage_e"]["subject"]			= "Your profile on $SITE_NAME_SUBJECT was viewed at [date]";
+$lang_mail["visits_mypage_e"]["viewdate"]			= "View Date";
+
+/**
+ * (xx) User Profile Viewed - Message to USER (Thai) - mail_visits_mypage_user.tpl
+ *      REPLACED with profile_viewed
+ **/
+
+$lang_mail["visits_mypage_t"]["subject"]			= "Your profile on $SITE_NAME_SUBJECT was viewed at [date]";
+$lang_mail["visits_mypage_t"]["viewdate"]			= "View Date";
+
+/**
+ * (60) Approve Upload - Message to USER (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["approve_upload_e"]["subject"]	= "Your uploaded file(s) have been approved on $SITE_NAME_SUBJECT site";
+$lang_mail["approve_upload_e"]["message"]	= "Your uploaded file(s) have just been approved by administrator on $SITE_NAME site.";
+
+/**
+ * (60) Approve Upload - Message to USER (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["approve_upload_t"]["subject"]	= "การเพิ่มรูปภาพ,เพิ่มวีดีโอส่วนตัวของคุณเรียบร้อยแล้ว";
+$lang_mail["approve_upload_t"]["message"]	= "การเพิ่มรูปภาพ,เพิ่มวีดีโอส่วนตัวของคุณเรียบร้อยแล้ว";
+
+/**
+ * (61) Admin Communicate - Message to USER (English) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["admin_communicate_e"]["subject"]			= "Message From $SITE_NAME_SUBJECT Site Administrator";
+$lang_mail["admin_communicate_e"]["subject_internal"]	= "Message From Site Administrator";
+$lang_mail["admin_communicate_e"]["subject_alert"]		= "Admin Notice";
+
+/**
+ * (61) Admin Communicate - Message to USER (Thai) - mail_noti_simple_generic_user.tpl
+ **/
+
+$lang_mail["admin_communicate_t"]["subject"]			= "Message From $SITE_NAME_SUBJECT Site Administrator";
+$lang_mail["admin_communicate_t"]["subject_internal"]	= "Message From Site Administrator";
+$lang_mail["admin_communicate_t"]["subject_alert"]		= "Admin Notice";
+
+/**
+ * (62/63) New Message in Mailbox - Message to USER (English) - mail_mailbox_subscr_user.tpl
+ **/
+
+$lang_mail["mailbox_subscribe_e"]["subject"]		= "You have received new mail on $SITE_NAME_SUBJECT";
+$lang_mail["mailbox_subscribe_e"]["message"]		= "You have received new mail on $SITE_NAME from below user:";
+$lang_mail["mailbox_subscribe_e"]["read"]			= "Read mail";
+
+/**
+ * (62/63) New Message in Mailbox - Message to USER (Thai) - mail_mailbox_subscr_user.tpl
+ **/
+
+$lang_mail["mailbox_subscribe_t"]["subject"]		= "You have received new mail on $SITE_NAME_SUBJECT";			// THAI_TRANSLATION_PENDING
+$lang_mail["mailbox_subscribe_t"]["message"]		= "You have received new mail on $SITE_NAME from below user:";	// THAI_TRANSLATION_PENDING
+$lang_mail["mailbox_subscribe_t"]["read"]			= "Read mail";													// THAI_TRANSLATION_PENDING
+
+/**
+ * Cron User Matches (NOT IN USE) - Message to USER (English) - mail_cron_user_match.tpl
+ **/
+
+$lang_mail["cron_user_match_e"]["subject"]		= "Your New $SITE_NAME_SUBJECT Matches!";
+
+$lang_mail["cron_user_match_e"]["message"] =
+	"Here are your latest matches on <a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	These members are all recently active and have matched your desired criteria on <a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	Why not show interest or send them a message?";
+
+$lang_mail["cron_user_match_e"]["message_2"] =
+	"If you would like a more tailored match alert list, be sure to update your match information.<br><br>
+	Login now to browse many more new profiles on <a href='".$site_url."' target='_blank'>".$SITE_NAME."</a>";
+
+/**
+ * Cron User Matches (NOT IN USE) - Message to USER (Thai) - mail_cron_user_match.tpl
+ **/
+
+$lang_mail["cron_user_match_t"]["subject"]		= "Your New $SITE_NAME_SUBJECT Matches!";	// THAI_TRANSLATION_PENDING
+
+$lang_mail["cron_user_match_t"]["message"] =
+	"Here are your latest matches on <a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	These members are all recently active and have matched your desired criteria on <a href='".$site_url."' target='_blank'>".$SITE_NAME."</a><br><br>
+	Why not show interest or send them a message?";
+
+$lang_mail["cron_user_match_t"]["message_2"] =
+	"If you would like a more tailored match alert list, be sure to update your match information.<br><br>
+	Login now to browse many more new profiles on <a href='".$site_url."' target='_blank'>".$SITE_NAME."</a>";
+
+
+/**
+ * Request Information Pack (NOT IN USE) - Message to ADMIN - mail_request_info_pack_admin.tpl
+ **/
+
+$lang_mail["request_info_pack_admin"]["subject"]	= "Request Information Pack";
+$lang_mail["request_info_pack_admin"]["message"]	= "New request received for Request Information Pack.";
+$lang_mail["request_info_pack_admin"]["name"]		= "Name";
+$lang_mail["request_info_pack_admin"]["phone"]		= "Phone Number";
+$lang_mail["request_info_pack_admin"]["email"]		= "E-Mail";
+$lang_mail["request_info_pack_admin"]["address"]	= "Physical Address";
+
+/**
+ * Book Dating Event (NOT IN USE) - Message to ADMIN - mail_events_booking_admin.tpl
+ **/
+
+$lang_mail["events_booking_admin"]["subject"]		= "Express Interest Request";
+
+$lang_mail["events_booking_admin"]["message"]		=
+	"I'm Interested In Coming To Bangkok And Finding Someone Absolutely Sensational Through My Own Personalized Thai Lady Dating Events&trade; Program.<br><br>
+	My details are below:";
+
+$lang_mail["events_booking_admin"]["login"]			= "Username";
+$lang_mail["events_booking_admin"]["fname"]			= "First Name";
+$lang_mail["events_booking_admin"]["sname"]			= "Last Name";
+$lang_mail["events_booking_admin"]["contact"]		= "Phone No";
+$lang_mail["events_booking_admin"]["message_2"]		= "Here's The Time I Want To Be There And Here's The Ladies I Would Like To Meet:";
+$lang_mail["events_booking_admin"]["expected_dates"]= "I Expect To Be In Bangkok Between Dates";
+$lang_mail["events_booking_admin"]["date_from"]		= "From";
+$lang_mail["events_booking_admin"]["date_to"]		= "To";
+$lang_mail["events_booking_admin"]["data"]			= "The Ladies I Want To Meet With Are:";
+$lang_mail["events_booking_admin"]["user_id"]		= "User Id";
+$lang_mail["events_booking_admin"]["user_nick"]		= "Nick Name";
+$lang_mail["events_booking_admin"]["user_age"]		= "Age";
+$lang_mail["events_booking_admin"]["other_ladies"]	= "I Also Want To Meet Additional Ladies That You Know Match My Preferences.";
+$lang_mail["events_booking_admin"]["like_to_know"]	= "Here's What I Would Like To Know Or Discuss Further About This Program.";
+$lang_mail["events_booking_admin"]["best_number"]	= "The Best Number To Call Me On Is";
+$lang_mail["events_booking_admin"]["best_time"]		= "The Best Time To Call Me Is";
+$lang_mail["events_booking_admin"]["send_info"]		= "Send Information About Thai Lady Dating Events To My Address On File";
+
+/**
+ * User Added by Administrator (NOT IN USE) - Message to USER (English) - mail_admin_registration_for_user.tpl
+ **/
+
+$lang_mail["admin_registration_e"]["subject"]	= "New User Registration";
+$lang_mail["admin_registration_e"]["message"]	= "You have just been registered on $SITE_NAME site.";
+$lang_mail["admin_registration_e"]["details"]	= "Your registration data is";
+$lang_mail["admin_registration_e"]["fname"]		= "First Name";
+$lang_mail["admin_registration_e"]["sname"]		= "Last Name";
+$lang_mail["admin_registration_e"]["login"]		= "Username";
+$lang_mail["admin_registration_e"]["password"]	= "Password";
+$lang_mail["admin_registration_e"]["email"]		= "Registration E-Mail";
+
+/**
+ * User Added by Administrator (NOT IN USE) - Message to USER (Thai) - mail_admin_registration_for_user.tpl
+ **/
+
+$lang_mail["admin_registration_t"]["subject"]	= "New User Registration";
+$lang_mail["admin_registration_t"]["message"]	= "You have just been registered on $SITE_NAME site.";
+$lang_mail["admin_registration_t"]["details"]	= "Your registration data is";
+$lang_mail["admin_registration_t"]["fname"]		= "First Name";
+$lang_mail["admin_registration_t"]["sname"]		= "Last Name";
+$lang_mail["admin_registration_t"]["login"]		= "Username";
+$lang_mail["admin_registration_t"]["password"]	= "Password";
+$lang_mail["admin_registration_t"]["email"]		= "Registration E-Mail";
+
+/**
+ * User Registration Changed - Message to USER (English) - mail_profile_update_user.tpl
+ **/
+
+$lang_mail["profile_update_e"]["subject"]			= "Your registration data was changed on $SITE_NAME_SUBJECT site";
+$lang_mail["profile_update_e"]["message"]			= "Your registration data was changed on $SITE_NAME site";
+$lang_mail["profile_update_e"]["details"]			= "Your new registration information is";
+$lang_mail["profile_update_e"]["fname"]				= "First Name";
+$lang_mail["profile_update_e"]["sname"]				= "Last Name";
+$lang_mail["profile_update_e"]["login"]				= "Username";
+$lang_mail["profile_update_e"]["email"]				= "Email";
+
+/**
+ * User Registration Changed - Message to USER (Thai) - mail_profile_update_user.tpl
+ **/
+
+$lang_mail["profile_update_t"]["subject"]			= "Your registration data was changed on $SITE_NAME_SUBJECT site";	// THAI_TRANSLATION_PENDING
+$lang_mail["profile_update_t"]["message"]			= "Your registration data was changed on $SITE_NAME site";
+$lang_mail["profile_update_t"]["details"]			= "Your new registration information is";
+$lang_mail["profile_update_t"]["fname"]				= "First Name";
+$lang_mail["profile_update_t"]["sname"]				= "Last Name";
+$lang_mail["profile_update_t"]["login"]				= "Username";
+$lang_mail["profile_update_t"]["email"]				= "Email";
+
+/**
+ * Web-site currency change - Message to USER (English) - mail_change_currency_user.tpl
+ **/
+
+$lang_mail["change_curr_e"]["subject"]		= "Web-site $SITE_NAME_SUBJECT currency change";
+
+$lang_mail["change_curr_e"]["message"]		=
+	"Site Currency has been changed on $SITE_NAME.<br><br>
+	Your Account amounts have been recounted according to exchange rate: 1 [curr1] = [rate] [curr2].<br><br>
+	We are sorry for inconvenience. Please contact us if you have any questions.";
+
+/**
+ * Web-site currency change - Message to USER (Thai) - mail_change_currency_user.tpl
+ **/
+
+$lang_mail["change_curr_t"]["subject"]		= "Web-site $SITE_NAME_SUBJECT currency change";
+
+$lang_mail["change_curr_t"]["message"]		=
+	"Site Currency has been changed on $SITE_NAME.<br><br>
+	Your Account amounts have been recounted according to exchange rate: 1 [curr1] = [rate] [curr2].<br><br>
+	We are sorry for inconvenience. Please contact us if you have any questions.";
+
+/**
+ * Banner Approve Alert - Message to USER (English) - mail_banner_aproved.tpl
+ **/
+ 
+$lang_mail["banner_aprove"]["subject"]	= "Banner Approve Alert";
+
+$lang_mail["banner_aprove"]["content"]	=
+	"Dear [username],<br /><br />
+	Thank you for using our services!<br />
+	Your banner [banner_name] has been approved and now may be activated at [banner_page_link] page!<br /><br />
+	Best regards,<br />
+	Site Administrator.";
+
+/**
+ * Cron: Birthday Reminder (NOT IN USE) - Message to USER (English) - mail_cron_birthday.tpl
+ **/
+
+$lang_mail["cron_birthday_e"]["subject"]	= "Your friends birthday on $SITE_NAME_SUBJECT [date]";
+$lang_mail["cron_birthday_e"]["message"]	= "Don't forget about your friends' birthdays";
+
+/**
+ * Cron: Birthday Reminder (NOT IN USE) - Message to USER (Thai) - mail_cron_birthday.tpl
+ **/
+
+$lang_mail["cron_birthday_t"]["subject"]	= "Your friends birthday on $SITE_NAME_SUBJECT [date]";
+$lang_mail["cron_birthday_t"]["message"]	= "Don't forget about your friends' birthdays";
+
+/**
+ * Cron: Perfect Match (NOT IN USE) - Message to USER (English) - mail_cron_perfect.tpl
+ **/
+
+$lang_mail["cron_perfect"]["subject"]				= "New perfect match user registration on $SITE_NAME_SUBJECT [date]";
+$lang_mail["cron_perfect"]["regdate"]				= "Registration date";
+
+/**
+ * Cron: News (NOT IN USE) - Message to USER (English) - mail_cron_news.tpl
+ **/
+
+$lang_mail["cron_news_e"]["subject"]				= "News on $SITE_NAME_SUBJECT [date]";
+$lang_mail["cron_news_e"]["read_more"]				= "Read more";
+
+/**
+ * Cron: News (NOT IN USE) - Message to USER (Thai) - mail_cron_news.tpl
+ **/
+
+$lang_mail["cron_news_t"]["subject"]				= "News on $SITE_NAME_SUBJECT [date]";
+$lang_mail["cron_news_t"]["read_more"]				= "Read more";
+
+/**
+ * Cron: New User Registered (NOT IN USE) - Message to USER (English) - mail_cron_new_users.tpl
+ **/
+
+$lang_mail["cron_new_users_e"]["subject"]				= "New user registration on $SITE_NAME_SUBJECT [date]";
+$lang_mail["cron_new_users_e"]["regdate"]				= "Registration date";
+
+/**
+ * Cron: New User Registered (NOT IN USE) - Message to USER (Thai) - mail_cron_new_user.tpl
+ **/
+
+$lang_mail["cron_new_users_t"]["subject"]				= "New user registration on $SITE_NAME_SUBJECT [date]";
+$lang_mail["cron_new_users_t"]["regdate"]				= "Registration date";
+
+
+/**
+ * Cron: 68  - Platinum 2nd Installment Expires In 7 Days (English) - mail_cron_expires_1st_inst_7days.tpl
+ * English Subjects only
+ **/
+$lang_mail["cron_2nd_ins_expires_t"]["message"] ='';
+$lang_mail['cron_2nd_ins_expires_e']['subject'] = "Platinum 2nd Installment Expires in [x] days";
+
+/**
+ * Cron: 68,69,70  - Platinum 2nd Installment Expires In 7 Days (Thai) - mail_cron_expires_1st_inst_7days.tpl
+ **/
+
+
+$lang_mail["cron_2nd_ins_expires_t"]["subject"] = "อีก [x] วันถึงกำหนดชำระเงินสมาชิกระดับแพลทินัมงวดที่: 2";
+$lang_mail["cron_2nd_ins_expires_t"]["message"] =
+"ขณะนี้คุณเป็นสมาชิกระดับแพลทินัมโปรโมชั่นพิเศษแบบผ่อนชำระ<br/><br/>
+
+อีก[x] วันถึงกำหนดการชำระเงินสมาชิกระดับแพลทินัมตลอดชีพงวดที่: 2<br/><br/>
+
+ยอดเงินชำระงวดที่ 2 : 3,333 (สามพันสามร้อยสามสิบสามบาทถ้วน)<br/><br/>
+
+สามารถโอนเงินผ่านธนาคารหรื่อตู้เอทีเอ็ม<br/><br/>
+
+รายละเอียดชำระเงิน: ธนาคารกสิกรไทย<br/><br/>
+
+บัญชี: ออมทรัพย์<br/><br/>
+
+ชื่อบัญชี: บจก.มีทมีนาวแบงค็อค<br/><br/>
+
+เลขที่บัญชี: 608-2-04363-0<br/><br/>
+
+หลังจากชำระเงินเรียบร้อยแล้วโทรแจ้งพร้อมส่งหลักฐาน<br/><br/>
+
+โทรแจ้งที่เบอร์: 02 667-0068<br/><br/>
+
+แฟกซ์อัตโนมัตเบอร์: 02-667-0069<br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/><br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='". $contact_url ."'>Contact</a>
+";
+
+/**
+ *  Expires in week.
+ */
+
+$lang_mail['cron_2nd_ins_expires_week_e']['message'] = ''; // Expires in a week
+
+/**
+ * Cron: 71  - Platinum 2nd Installment Expires today(English) - mail_cron_expires_1st_inst_7days.tpl
+ * English Subject only
+ **/
+$lang_mail['cron_2nd_ins_expires_today_e']['message'] = '';
+$lang_mail['cron_2nd_ins_expires_today_e']['subject'] = "Platinum 2nd Installment Expires";
+
+/**
+ * Cron: 71  - Platinum 2nd Installment Expires today (Thai) - mail_cron_expires_1st_inst_7days.tpl
+ **/
+
+
+$lang_mail["cron_2nd_ins_expires_today_t"]["subject"] = "สมาชิกระดับแพลทินัมของคุณหมดอายุการใช้งาน";
+$lang_mail["cron_2nd_ins_expires_today_t"]["message"] =
+"ขอแจ้งให้คุณได้ทราบว่าโปรไฟล์หาคู่ต่างชาติ Thai Lady Date Finder<br/><br/>
+
+ไม่สามารถติดต่อหรื่อส่งความสนใจให้กับสมาชิกชายต่างชาติที่เขามาใหม่ได้ในขณะนี้<br/><br/>
+
+แต่โปรไฟล์ของคุณยังจะอยู่ในระบบของเราซื่งคุณสามารถเข้าล๊อคอินเมือใดก็ได้<br/><br/>
+
+หากคุณต้องการต่ออายุการใช้งานสมาชิกระดับแพลทินัมของคุณ<br/><br/>
+
+สามาถชำระเงินเพื่อต่ออายุการใช้งานงวดที่: 2<br/><br/>
+
+ยอดเงินชำระงวดที่ 2 : 3,333 (สามพันสามร้อยสามสิบสามบาทถ้วน)<br/><br/>
+
+สามารถโอนเงินผ่านธนาคารหรื่อตู้เอทีเอ็ม<br/><br/>
+
+รายละเอียดชำระเงิน : ธนาคารกสิกรไทย<br/><br/>
+
+บัญชี: ออมทรัพย์<br/><br/>
+
+ชื่อบัญชี : บจก.มีทมีนาวแบงค็อค<br/><br/>
+
+เลขที่บัญชี: 608-2-04363-0<br/><br/>
+
+หลังจากชำระเงินเรียบร้อยแล้วโทรแจ้งพร้อมส่งหลักฐาน<br/><br/>
+
+โทรแจ้งที่เบอร์: 02 667-0068<br/><br/>
+
+แฟกซ์อัตโนมัตเบอร์: 02-667-0069<br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/><br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='".$contact_url."'>Contact</a>
+
+";
+//3rd installment
+
+/**
+ * Cron: 72  - Platinum 3rd Installment Expires In 7 Days (English) - mail_cron_expires_1st_inst_7days.tpl
+ * English Subjects only
+ **/
+$lang_mail["cron_3rd_ins_expires_e"]["message"] ='';
+$lang_mail['cron_3rd_ins_expires_e']['subject'] = "Platinum 3rd Installment Expires in [x] days";
+
+/**
+ * Cron: 73,74,75  - Platinum 3rd Installment Expires In 7 Days (Thai) - mail_cron_expires_1st_inst_7days.tpl
+ **/
+
+
+$lang_mail["cron_3rd_ins_expires_t"]["subject"] = "อีก [x] วันถึงกำหนดชำระเงินสมาชิกระดับแพลทินัมงวดสุดท้าย";
+$lang_mail["cron_3rd_ins_expires_t"]["message"] =
+"ขณะนี้คุณเป็นสมาชิกระดับแพลทินัมโปรโมชั่นพิเศษแบบผ่อนชำระ<br/><br/>
+ 
+พบและออกเดทกับชายต่างชาติที่ผ่านการตรวจสอบประวัติ<br/>
+แนะนำชายต่างชาติให้กับคุณเป็นการส่วนตัว<br/>
+ออกเดทไม่จำกัดจำนวนและไม่เสียค่าใช้จ่ายใดๆทั้งสิ้น<br/>
+ไม่สิ้นสุดระยะเวลาการเป็นสมาชิกจนกว่าคุณจะขอยกเลิกการใช้งาน<br/><br/>
+
+ชำระงวดสุดท้ายงวดที่ 3 : 3,333 (สามพันสามร้อยสามสิบสามบาทถ้วน)<br/><br/>
+
+สามารถโอนเงินผ่านธนาคารหรื่อตู้เอทีเอ็ม<br/><br/>
+
+รายละเอียดชำระเงิน: ธนาคารกสิกรไทย<br/><br/>
+
+บัญชี: ออมทรัพย์<br/><br/>
+
+ชื่อบัญชี: บจก.มีทมีนาวแบงค็อค<br/><br/>
+
+เลขที่บัญชี: 608-2-04363-0<br/><br/>
+
+หลังจากชำระเงินเรียบร้อยแล้วโทรแจ้งพร้อมส่งหลักฐาน<br/><br/>
+
+โทรแจ้งที่เบอร์: 02 667-0068<br/><br/>
+
+แฟกซ์อัตโนมัตเบอร์: 02-667-0069<br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/><br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='".$contact_url."'>Contact</a>
+";
+
+/**
+ * Cron: 76  - Platinum 3rd Installment Expires today(English) - mail_cron_expires_1st_inst_7days.tpl
+ * English Subject only
+ **/
+
+$lang_mail['cron_3rd_ins_expires_today_e']['message'] = '';
+$lang_mail['cron_3rd_ins_expires_today_e']['subject'] = "Platinum 3rd Installment Expires";
+
+/**
+ * Cron: 77  - Platinum 3rd Installment Expires today (Thai) - mail_cron_expires_1st_inst_7days.tpl
+ **/
+
+
+$lang_mail["cron_3rd_ins_expires_today_t"]["subject"] = "สมาชิกระดับแพลทินัมของคุณหมดอายุการใช้งาน";
+$lang_mail["cron_3rd_ins_expires_today_t"]["message"] =
+"ขอแจ้งให้คุณได้ทราบว่าโปรไฟล์หาคู่ต่างชาติ Thai Lady Date Finder<br/><br/>
+
+ไม่สามารถติดต่อหรื่อส่งความสนใจให้กับสมาชิกชายต่างชาติที่เขามาใหม่ได้ในขณะนี้<br/><br/>
+
+แต่โปรไฟล์ของคุณยังจะอยู่ในระบบของเราซื่งคุณสามารถเข้าล๊อคอินเมือใดก็ได้<br/><br/>
+
+หากคุณต้องการต่ออายุการใช้งานสมาชิกระดับแพลทินัมของคุณ<br/><br/>
+
+สามาถชำระเงินเพื่อต่ออายุการใช้งานงวดที่: 2<br/><br/>
+
+ยอดเงินชำระงวดที่ 2 : 3,333 (สามพันสามร้อยสามสิบสามบาทถ้วน)<br/><br/>
+
+สามารถโอนเงินผ่านธนาคารหรื่อตู้เอทีเอ็ม<br/><br/>
+
+รายละเอียดชำระเงิน : ธนาคารกสิกรไทย<br/><br/>
+
+บัญชี: ออมทรัพย์<br/><br/>
+
+ชื่อบัญชี : บจก.มีทมีนาวแบงค็อค<br/><br/>
+
+เลขที่บัญชี: 608-2-04363-0<br/><br/>
+
+หลังจากชำระเงินเรียบร้อยแล้วโทรแจ้งพร้อมส่งหลักฐาน<br/><br/>
+
+โทรแจ้งที่เบอร์: 02 667-0068<br/><br/>
+
+แฟกซ์อัตโนมัตเบอร์: 02-667-0069<br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/><br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='".$contact_url."'>Contact</a>
+
+";
+
+$lang_mail["cron_record_atm_pay_e"]["subject"] = "Your payment 9,997 has been recorded!";
+$lang_mail["cron_approve_atm_pay_e"]["subject"] = "Your payment 9,997 has been approved!";
+$lang_mail["cron_record_wire_pay_e"]["subject"] = "Your payment 9,997 has been recorded!";
+$lang_mail["cron_approve_wire_pay_e"]["subject"] = "Your payment 9,997 has been approved!";
+
+//Thai mail content for offline Payment for Platinum lady
+
+$lang_mail["cron_record_atm_pay_t"]["subject"] = "การชำระเงิน 9,997 แพลทินัมตลอดชีพได้รับการบันทึก";
+$lang_mail["cron_record_atm_pay_t"]["message"] =
+"
+
+
+
+การชำระเงินของคุณจำนวน THB 9997<br/><br/>
+
+สมาชิกระดับแพลทินัมตลอดชีพ<br/><br/>
+
+Platinum Lady Life<br/><br/>
+
+แบบผ่านตู้ ATM ให้กับ Thai Lady Date Finder™ ได้รับการบันทึกเป็นที่เรียบร้อยแล้ว<br/><br/>
+
+กรุณารอการตรวจสอบและอนุมัติโดยแผนกการเงินของเรา<br/>
+
+เมือขั้นตอนเสร็จสมบรูณ์คุณจะเป็นสมาชิกระดับแพลทินัมตลอดชีพ<br/>
+
+ไม่สิ้นสุดระยะเวลาการเป็นสมาชิกจนกว่าคุณจะขอยกเลิกการใช้งาน<br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='".$contact_url."'>Contact</a><br/>
+
+
+";
+
+
+$lang_mail["cron_approve_atm_pay_t"]["subject"] = "การชำระเงิน 9,997 แพลทินัมตลอดชีพได้รับการอนุมัติ";
+$lang_mail["cron_approve_atm_pay_t"]["message"] =
+"
+
+
+
+การชำระเงินของคุณจำนวน THB 9997<br/><br/>
+
+สมาชิกระดับแพลทินัมตลอดชีพ<br/><br/>
+
+Platinum Lady Life<br/><br/>
+
+แบบผ่านตู้ ATM ให้กับ Thai Lady Date Finder™ได้รับการอนุมัติเป็นที่เรียบร้อยแล้ว<br/><br/>
+
+ทีมงานจะจัดทำเวลานัดหมายเพื่อพบและสัมภาษณ์เป็นการส่วนตัวแบบสบายๆ<br/>
+เราจะสอบถามถึงชายต่างชาติแบบใดที่คุณต้องการมาเป็นคู่ชีวิต<br/>
+และจัดให้คุณได้พบกับชายต่างชาติที่เหมาะสมและคู่ควรกับคุณเท่านั้น<br/>
+พร้อมถ่ายรูป+ทำวีดีโอแนะนำตัวเองเป็นภาษาอังกฤษเพื่อจัดทำโปรไฟล์ให้เป็นที่สะดุดตา<br/><br/>
+
+ตอนนี้คุณเป็นสมาชิกระดับสุงสุด-สมาชิกระดับแพลทินัมตลอดชีพ<br/>
+
+ไม่สิ้นสุดระยะเวลาการเป็นสมาชิกจนกว่าคุณจะขอยกเลิกการใช้งาน<br/><br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/>
+
+สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.<br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='".$contact_url."'>Contact</a><br/>
+";
+
+
+$lang_mail["cron_record_wire_pay_t"]["subject"] = "การชำระเงิน 9,997 แพลทินัมตลอดชีพได้รับการบันทึก";
+$lang_mail["cron_record_wire_pay_t"]["message"] =
+"
+
+
+การชำระเงินของคุณจำนวน THB 9997<br/><br/>
+
+สมาชิกระดับแพลทินัมตลอดชีพ<br/><br/>
+
+Platinum Lady Life<br/><br/>
+
+แบบโอนผ่านธนาคารสาขา ให้กับ Thai Lady Date Finder™ ได้รับการบันทึกเป็นที่เรียบร้อยแล้ว<br/><br/>
+
+กรุณารอการตรวจสอบและอนุมัติโดยแผนกการเงินของเรา<br/>
+
+เมือขั้นตอนเสร็จสมบรูณ์คุณจะเป็นสมาชิกระดับแพลทินัมตลอดชีพ<br/>
+
+ไม่สิ้นสุดระยะเวลาการเป็นสมาชิกจนกว่าคุณจะขอยกเลิกการใช้งาน<br/><br/>	
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='".$contact_url."'>Contact</a><br/>
+";
+
+
+$lang_mail["cron_approve_wire_pay_t"]["subject"] = "การชำระเงิน 9,997 แพลทินัมตลอดชีพได้รับการอนุมัติ";
+$lang_mail["cron_approve_wire_pay_t"]["message"] =
+"
+
+การชำระเงินของคุณจำนวน THB 9997<br/><br/>
+
+สมาชิกระดับแพลทินัมตลอดชีพ<br/><br/>
+
+Platinum Lady Life<br/><br/>
+
+แบบโอนผ่านธนาคารสาขา ให้กับ Thai Lady Date Finder™ได้รับการอนุมัติเป็นที่เรียบร้อยแล้ว<br/><br/>
+
+ทีมงานจะจัดทำเวลานัดหมายเพื่อพบและสัมภาษณ์เป็นการส่วนตัวแบบสบายๆ<br/>
+เราจะสอบถามถึงชายต่างชาติแบบใดที่คุณต้องการมาเป็นคู่ชีวิต<br/>
+และจัดให้คุณได้พบกับชายต่างชาติที่เหมาะสมและคู่ควรกับคุณเท่านั้น<br/>
+พร้อมถ่ายรูป+ทำวีดีโอแนะนำตัวเองเป็นภาษาอังกฤษเพื่อจัดทำโปรไฟล์ให้เป็นที่สะดุดตา<br/><br/>
+
+ตอนนี้คุณเป็นสมาชิกระดับสุงสุด-สมาชิกระดับแพลทินัมตลอดชีพ<br/>
+
+ไม่สิ้นสุดระยะเวลาการเป็นสมาชิกจนกว่าคุณจะขอยกเลิกการใช้งาน<br/><br/><br/>
+
+สิ่งที่คุณจะได้รับเมื่อเป็นสมาชิกระดับแพลทินัมตลอดชีพ:<a href='". $platinum_life_url ."' target='_blank'>Platinum-live.pdf</a><br/>
+
+สามารถสอบข้อมูลพร้อมทำวันนัดหมายที่หมายเลข 02 667 0068 มือถือ 083 099 2448.<br/>
+
+ถ้าคุณมีคำถามหรื่อข้อสงสัยใดๆโปรดติดต่อเราได้ทันที: <a href='".$contact_url."'>Contact</a><br/>
+";
+
+?>

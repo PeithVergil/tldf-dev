@@ -1,0 +1,184 @@
+<?php
+global $lang_poll, $weekday_poll, $months_poll, $color_array_poll;
+# Advanced Poll Language File (Admin) #
+# Arabic translation by Ahmad Rawass
+# E-mail: algarya@algarya.net
+# WebSite: www.algarya.net
+
+/* Charset */
+$lang_poll["charset"]   = "windows-1256";
+
+/* General */
+$lang_poll["Logout"]    = "ÎÑæÌ";
+$lang_poll["FormUndo"]  = "ÊÑÇÌÚ Úä ÇáÊÛíÑÇÊ";
+$lang_poll["FromClear"] = "ÊÑÇÌÚ";
+$lang_poll["FormEnter"] = "ÇáÑÌÇÁ ÅÏÎÇá ÇáÅÓã æßáãÉ ÇáÓÑ ÇáÕÍíÍÊíä";
+$lang_poll["FormWrong"] = "ÇÓã ãÓÊÎÏã Ãæ ßáãÉ ÓÑ ÎÇØÆÉ";
+$lang_poll["FormOK"]    = "ãæÇÝÞ";
+$lang_poll["Updated"]   = "áÞÏ Êã ÇáÊÍÏíË!";
+$lang_poll["NoUpdate"]  = "æÌÏ ÎØÃ..áã íÊã ÊÛííÑ ÔÆ Ýí ÇáÎíÇÑÇÊ!";
+$lang_poll["Confirm"]   = "åá ÃäÊ ãÊÃßÏ¿";
+$lang_poll["NavNext"]   = "ÇáÕÝÍÉ ÇáÊÇáíÉ";
+$lang_poll["NavPrev"]   = "ÇáÕÝÍÉ ÇáÓÇÈÞÉ";
+$lang_poll["License"]   = "ÔÑæØ ÇáÊÑÎíÕ";
+$lang_poll["ScrollTxt"] = "ÇáÑÌÇÁ ÞÑÇÁÉ ÌãíÚ ÔÑæØ ÇáÊÑÎíÕ.";
+
+/* Templates */
+$lang_poll["Templates"]  = "ÇáÞæÇáÈ";
+$lang_poll["tpl_exist"]  = "ÇÓã ÇáÞÇáÈ ãæÌæÏ ãÓÈÞÇð.";
+$lang_poll["tpl_new"]    = "ÇÖÇÝÉ ÞÇáÊ ÌÏíÏ.";
+$lang_poll["tpl_succes"] = "Êã ÇáÊÚÏíá ÈäÌÇÍ!"; 
+$lang_poll["tpl_bad"]    = "ÇÓã ÇáÞÇáÈ ÛíÑ ÕÍíÍ!";
+$lang_poll["tpl_save"]   = "ÍÝÙ";
+$lang_poll["preview"]    = "ÚÑÖ";
+$lang_poll["newtpl"]     = "ÞÇáÈ ÌÏíÏ";
+
+/* Poll List */
+$lang_poll["IndexTitle"]  = "ÞÇÆãÉ ÇáÅÓÊÝÊÇÁÇÊ";
+$lang_poll["IndexQuest"]  = "ÇáÓÄÇá";
+$lang_poll["IndexID"]     = "ÑÞã ÇáÅÓÊÝÊÇÁ";
+$lang_poll["IndexDate"]   = "ÇáÊÇÑíÎ";
+$lang_poll["IndexDays"]   = "ÇáÃíÇã";
+$lang_poll["IndexExp"]    = "ÊÇÑíÎ ÇáÅäÊåÇÁ";
+$lang_poll["IndexExpire"] = "ãäÊåí";
+$lang_poll["IndexNever"]  = "áÇíäÊåí ÃÈÏÇð";
+$lang_poll["IndexStat"]   = "ÅÍÕÇÆíÇÊ";
+$lang_poll["IndexCom"]    = "ÊÚáíÞÇÊ";
+$lang_poll["IndexAct"]    = "ÍÝÙ";
+$lang_poll["IndexDel"]    = "ãÓÍ";
+
+/* Create A New Poll */
+$lang_poll["NewTitle"]  = "ÅäÔÇÁ ÇÓÊÝÊÇÁ ÌÏíÏ";
+$lang_poll["NewOption"] = "ÇáÎíÇÑ";
+$lang_poll["NewNoQue"]  = "áÞÏ äÓíÊ ÊÚÈÆÉ ÎÇäÉ ÇáÓÄÇá";
+$lang_poll["NewNoOpt"]  = "áÞÏ äÓíÊ ÊÚÈÆÉ ÎÇäå ÇáÎíÇÑÇÊ";
+
+/* Poll Edit */
+$lang_poll["EditStat"]  = "ÇÍÕÇÆíÇÊ";
+$lang_poll["EditText"]  = "ÊÚÏíá åÐÇ ÇáÅÓÊÝÊÇÁ";
+$lang_poll["EditReset"] = "ÊÑÇÌÚ Úä ÇáÊÚÏíá";
+$lang_poll["EditOn"]    = "ãÓãæÍ";
+$lang_poll["EditOff"]   = "ÛíÑ ãÓãæÍ";
+$lang_poll["EditHide"]  = "ãÎÝí";
+$lang_poll["EditLgOff"] = "ÊÚØíá ÇáÊÓÌíá";
+$lang_poll["EditLgOn"]  = "ÊÔÛíá ÇáÊÓÌíá";
+$lang_poll["EditAdd"]   = "ÃÖÝ ÇáÎíÇÑÇÊ";
+$lang_poll["EditNo"]    = "áã íÊã ÅÖÇÝÉ Ãí ÎíÇÑÇÊ ÌÏíÏÉ!";
+$lang_poll["EditOk"]    = "Êã ÅÖÇÝÉ ÇáÎíÇÑÇÊ!";
+$lang_poll["EditSave"]  = "ÍÝÙ ÇáÊÛíÑÇÊ";
+$lang_poll["EditOp"]    = "áÇÈÏ ãä æÌæÏ ÎíÇÑíä Úáì ÇáÃÞá!";
+$lang_poll["EditMis"]   = "áã íÊã ÊÍÏíÏ ÇáÓÄÇá æÇáÎíÇÑÇÊ!";
+$lang_poll["EditDel"]   = "áãÓÍ Ãí ãä ÇáÎíÇÑÇÊ Þã ÈÌÚá ÇáÍÞá ÝÇÑÛÇð";
+$lang_poll["EditCom"]   = "ÇáÓãÇÍ ááÊÚáíÞÇÊ";
+
+/* General Settings */
+$lang_poll["SetTitle"]   = "ÎíÇÑÇÊ ÖÈØ ÇáÈÑäÇãÌ";
+$lang_poll["SetOption"]  = "ÇÎÊíÇÑÇÊ ÇáÍÏæÏ æÇáÃáæÇä æäæÚ ÇáÃÍÑÝ";
+$lang_poll["SetMisc"]    = "ÇáãÌãæÚ";
+$lang_poll["SetText"]    = "ÊÚÏíá ÎíÇÑÇÊ ÖÈØ ÇáÈÑäÇãÌ";
+$lang_poll["SetURL"]     = "ÚäæÇä ãÌáÏ ÇáÕæÑ";
+$lang_poll["SetBURL"]    = "ÚäæÇä ãÌáÏ ÇáãáÝÇÊ";
+$lang_poll["SetNo"]      = "áÇ ÊÖÚ ÚáÇãÉ ÇáÓáÇÔ";
+$lang_poll["SetLang"]    = "ÇááÛÉ";
+$lang_poll["SetPoll"]    = "ÚäæÇä ÇáÊÕæíÊ";
+$lang_poll["SetButton"]  = "ÒÑ ÇáÊÕæíÊ";
+$lang_poll["SetResult"]  = "æÕáÉ ÇáäÊÇÆÌ";
+$lang_poll["SetVoted"]   = "áÞÏ ÞãÊ ÈÇáÊÕæíÊ ãä ÞÈá";
+$lang_poll["SetComment"] = "ÃÖÝ ÊÚáíÞß";
+$lang_poll["SetTab"]     = "ÚÑÖ ÇáÌÏæá";
+$lang_poll["SetBarh"]    = "ÇÑÊÝÇÚ ÇáÍÇÌÒ";
+$lang_poll["SetBarMax"]  = "ÃÞÕì ÍÏ ááÍÇÌÒ";
+$lang_poll["SetTabBg"]   = "áæä ÎáÝíÉ ÇáÅØÇÑ";
+$lang_poll["SetFrmCol"]  = "áæä ÇáÍÏæÏ";
+$lang_poll["SetFontCol"] = "áæä ÇáÎØ";
+$lang_poll["SetFace"]    = "äæÚ ÇáÎØ";
+$lang_poll["SetShow"]    = "ØÑíÞÉ ÇáÚÑÖ";
+$lang_poll["SetPerc"]    = "ÈÇáäÓÈÉ ÇáãÆæíÉ";
+$lang_poll["SetVotes"]   = "ÈÇáÊÕæíÊÇÊ";
+$lang_poll["SetCheck"]   = "ÇáÖÈØ";
+$lang_poll["SetNoCheck"] = "áÇ íÍÊÇÌ áÖÈØ";
+$lang_poll["SetIP"]      = "ÑÞã ÇáÂíÈí";
+$lang_poll["CheckIP"]       = "Check IP";
+$lang_poll["CheckUsername"] = "Check username";
+$lang_poll["SetTime"]    = "ÇáæÞÊ ÇáãÍÏÏ ááÊÕæíÊ";
+$lang_poll["SetHours"]   = "ÓÇÚÇÊ";
+$lang_poll["SetOffset"]  = "ÇáæÞÊ Ýí ÇáÓíÑÝÑ";
+$lang_poll["SetEntry"]   = "ÚÏÏ ÇáÊÚáíÞÇÊ Ýí ßá ÕÝÍÉ";
+$lang_poll["SetSubmit"]  = "ÚÏá ÇáÎíÇÑÇÊ";
+$lang_poll["SetEmpty"]   = "ÎØÃ!";
+$lang_poll["SetSort"]    = "ØÑíÞÉ ÇáÚÑÖ";
+$lang_poll["SetAsc"]     = "ÊÕÇÚÏí";
+$lang_poll["SetDesc"]    = "ÊäÇÒáí";
+$lang_poll["Setusort"]   = "ÈÏæä ÝÑÒ";
+$lang_poll["SetOptions"] = "ÇáÎíÇÑÇÊ ÇáãÓãæÍÉ Ýí ÇáÅÓÊÝÊÇÁÇÊ ÇáÌÏíÏÉ";
+$lang_poll["SetPolls"]   = "ÚÏÏ ÇáÅÓÊÝÊÇÁÇÊ Ýí ßá ÕÝÍÉ";
+
+/* Change Password */
+$lang_poll["PwdTitle"] = "ÊÛííÑ ßáãÉ ÇáÓÑ";
+$lang_poll["PwdText"]  = "ÊÛíÑ ÇáÅÓã Ãæ ßáãÉ ÇáÓÑ";
+$lang_poll["PwdUser"]  = "ÇÓã ÇáãÓÊÎÏã";
+$lang_poll["PwdPass"]  = "ßáãÉ ÇáÓÑ";
+$lang_poll["PwdConf"]  = "ÊÃßíÏ ßáãÉ ÇáÓÑ";
+$lang_poll["PwdNoUsr"] = "áÞÏ äÓíÊ ÊÚÈÆÉ ÍÞá ÇÓã ÇáãÓÊÎÏã";
+$lang_poll["PwdNoPwd"] = "áÞÏ äÓíÊ ÊÚÈÆÉ ÍÞá ßáãÉ ÇáÓÑ";
+$lang_poll["PwdBad"]   = "ßáãÊÇ ÇáÓÑ áÇ ÊÊØÇÈÞÇ";
+
+/* Poll Stats */
+$lang_poll["StatCrea"]  = "ÊãÊ ÇáÅÖÇÝÉ";
+$lang_poll["StatAct"]   = "ÊÔÛíá";
+$lang_poll["StatReset"] = "ÊÚÏíá ÇÅÍÕÇÆíÇÊ";
+$lang_poll["StatDis"]   = "ÇáÊÓÌíá ÛíÑ ãÓãæÍ Ýí åÐÇ ÇáÅÓÊÝÊÇÁ";
+$lang_poll["StatTotal"] = "ãÌãæÚ ÇáÃÕæÇÊ";
+$lang_poll["StatDay"]   = "ÚÏÏ ÇáÃÕæÇÊ Ýí ßá ÕÝÉ";
+
+/* Poll Comments */
+$lang_poll["ComTotal"]  = "ãÌãæÚ áÊÚáíÞÇÊ";
+$lang_poll["ComName"]   = "ÇáÅÓã";
+$lang_poll["ComPost"]   = "ÊÇÑíÎ ÇáÅÖÇÝÉ";
+$lang_poll["ComDel"]    = "åá ÃäÊ ãÊÃßÏ Ãäß ÊÑíÏ ãÓÍ åÐå ÇáÑÓÇáÉ¿";
+
+/* Help */
+$lang_poll["Help"]       = "ãÓÇÚÏÉ";
+$lang_poll["HelpPoll"]   = "áÅÖÇÝÉ ÇáÅÓÊÝÊÇÁÇÊ Åáì ÕÝÍÉ ÅäÊÑäÊ ÇÎÊÑ ÃÍÏ ÇáÇßæÇÏ ÇáÊÇáíÉ";
+$lang_poll["HelpRand"]   = "ÙåæÑ ÇáÇÓÊÝÊÇÁÇÊ ÈÔßá ÚÔæÇÆí";
+$lang_poll["HelpNew"]    = "ÙåæÑ ÃÎÑ ÇáÅÓÊÝÊÇÁÇÊ ÇáÊí Êã ÅÖÇÝÊåÇ";
+$lang_poll["HelpSyntax"] = "Syntax";
+
+/* Days */
+$weekday_poll[0] = "ÇáÃÍÏ";
+$weekday_poll[1] = "ÇáÅËäíä";
+$weekday_poll[2] = "ÇáËáÇËÇÁ";
+$weekday_poll[3] = "ÇáÃÑÈÚÇÁ";
+$weekday_poll[4] = "ÇáÎãíÓ";
+$weekday_poll[5] = "ÇáÌãÚÉ";
+$weekday_poll[6] = "ÇáÓÈÊ";
+
+/* Months */
+$months_poll[0]  = "íäÇíÑ";
+$months_poll[1]  = "ÞÈÑÇíÑ";
+$months_poll[2]  = "ãÇÑÓ";
+$months_poll[3]  = "ÃÈÑíá";
+$months_poll[4]  = "ãÇíæ";
+$months_poll[5]  = "íæäíæ";
+$months_poll[6]  = "íæáíæ";
+$months_poll[7]  = "ÃÛÓØÓ";
+$months_poll[8]  = "ÓÈÊãÈÑ";
+$months_poll[9]  = "ÃßÊæÈÑ";
+$months_poll[10] = "äæÝãíÑ";
+$months_poll[11] = "ÏíÓãÈÑ";
+
+/* Colors */
+$color_array_poll[0]  = "ÃÒÑÞ ÝÇÊÍ";
+$color_array_poll[1]  = "ÃÒÑÞ";
+$color_array_poll[2]  = "ÃÏÚã";
+$color_array_poll[3]  = "ÃÎÖÑ ÛÇãÞ";
+$color_array_poll[4]  = "ÐåÈí";
+$color_array_poll[5]  = "ÃÎÖÑ";
+$color_array_poll[6]  = "ÑãÇÏí";
+$color_array_poll[7]  = "ÈÑÊÞÇáí";
+$color_array_poll[8]  = "æÑÏí";
+$color_array_poll[9]  = "ÈäÝÓÌí";
+$color_array_poll[10] = "ÃÍãÑ";
+$color_array_poll[11] = "ÃÕÝÑ";
+
+?>

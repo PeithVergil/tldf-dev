@@ -1,0 +1,12 @@
+<ResellerCall xmlns="http://www.jajah.com/">
+	<apiUserName>[apiusername]</apiUserName>
+	<apiPassword>[apipassword]</apiPassword>
+	<payingUserName>[payingusername]</payingUserName>
+	<payingPassword>[payingpassword]</payingPassword>
+	<FromNumber>[fromnumber]</FromNumber>
+	<ToNumbers>[tonumbers]</ToNumbers>
+	<privateMode>[privatemode]</privateMode>
+	<affiliateId>[affiliateid]</affiliateId>
+	<CallBackUrl>[callbackurl]</CallBackUrl>
+	<audioFile>[audiofile]</audioFile>
+</ResellerCall>

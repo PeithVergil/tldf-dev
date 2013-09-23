@@ -1,0 +1,13 @@
+<BusinessRegistration1 xmlns="http://www.jajah.com/">
+	<userName>[username]</userName>
+	<email>[email]</email>
+	<password>[password]</password>
+	<firstName>[firstname]</firstName>
+	<lastName>[lastname]</lastName>
+	<landline>[landline]</landline>
+	<office>[office]</office>
+	<mobile>[mobile]</mobile>
+	<limit>[limit]</limit>
+	<admin>[admin]</admin>
+	<adminPassword>[adminpassword]</adminPassword>
+</BusinessRegistration1>

@@ -1,0 +1,51 @@
+#popup_container {
+	/* font-family: hn; */
+	font-family: Helvetica, Arial;
+	color: #ED145B;
+    font-size:15px;
+	padding:20px 45px 20px 25px;
+	background:#ffffcc;
+	border:1px solid #EBD085;
+	border-radius:5px;
+ 	min-width: 300px;
+	max-width: 600px;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: .5s;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: .5s;
+	transition-property: opacity;
+	transition-duration: .5s;
+	/* opacity: .9; */
+	/* text-transform:capitalize; */
+	font-weight: normal;
+}
+/*#popup_container:hover { opacity: .97; }*/
+
+#popup_container a { color:#6e57d2; text-decoration:underline; }
+#popup_container a:hover { text-decoration:none; }
+
+#popup_title {
+	/* font-family: hn; */
+	font-family: Helvetica, Arial;
+	color: #ED145B;
+    font-size:18px;
+	font-weight: bold;
+	text-align: center;
+	padding:0px;
+	padding:5px 0px;
+	margin:0px;
+	border-bottom:#EBD085 1px solid;
+	text-transform:capitalize;
+	font-weight: normal;
+}
+
+#popup_content { padding:10px; margin:0px; /* text-transform:capitalize; */ }
+/*
+#popup_content.alert { text-transform:capitalize; }
+#popup_content.confirm { text-transform:capitalize; }
+#popup_content.prompt { text-transform:capitalize; }
+#popup_message { text-transform:capitalize; }
+*/
+#popup_panel { text-align: center; margin: 1em 0em 0em 0em; /* text-transform:capitalize; */ }
+#popup_panel input { cursor:pointer; /* text-transform:capitalize; */ }
+#popup_prompt { margin: .5em 0em; /* text-transform:capitalize; */ }

@@ -1,0 +1,709 @@
+/* stylesheets from alucio technologies */
+/* www.alucio.com*/
+
+/* css reset  */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+    font-family: helvetica, arial;
+}
+@font-face { font-family: helr67w; src: url("../fonts/helr67w.eot");}
+
+@font-face { font-family: helr67w; src: url("../fonts/helr67wx.ttf");}
+@font-face { font-family: hv; src: url("../fonts/LindenHill.otf");}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select,textarea {
+    vertical-align:middle;
+    border-radius: 3px;    
+    border: 1px solid #D5D6D6;
+    outline: none;
+}
+
+/* TLDF css styling */
+
+html{
+    font-family: sans-serif;
+}
+body{
+    background-color: #fff;
+   
+
+}
+::selection{
+    color: #fff;
+    background-color: #EC864C;
+}
+input{
+    outline: none;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    border: 1px solid rgba(182, 186, 192, 0) ;
+}
+input:focus {
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+    border: #35A5E5 1px solid !important;
+    outline: none;
+}
+
+ul{list-style: none;}
+a{text-decoration: none;}
+.fl{float: left;}
+.fr{float: right;}
+.header{
+   height: 100px;
+padding: 10px;
+background: #ffffff;
+background: -moz-linear-gradient(top, #ffffff 0%, #fcfbfb 51%, #f6f6f6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(51%,#fcfbfb), color-stop(100%,#f6f6f6));
+background: -webkit-linear-gradient(top, #ffffff 0%,#fcfbfb 51%,#f6f6f6 100%);
+background: -o-linear-gradient(top, #ffffff 0%,#fcfbfb 51%,#f6f6f6 100%);
+background: -ms-linear-gradient(top, #ffffff 0%,#fcfbfb 51%,#f6f6f6 100%);
+background: linear-gradient(to bottom, #ffffff 0%,#fcfbfb 51%,#f6f6f6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+}
+.wrapper{width: 1024px;margin: 0 auto;}
+.logo{float: left;}
+.header-right{float: right;}
+.header-right li{margin: 10px 0 22px;}
+.contact-phone a{color: #E23E8D;font-size: 30px;font-weight: bold;}
+.login-header span{
+    color: #777;
+    padding: 0 14px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+.login-header a{
+   padding: 5px 13px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #6D58C8;
+    box-shadow: 0px 2px 3px #333;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.featurebox{
+    width: 100%;
+    background: url("../imgs/new_img/background-featurebox.png") no-repeat top center;
+	background-size:1024px 600px;
+    height: 637px;
+    position: relative;
+}
+.membership-form{
+    height: 522px;
+    background: #FFF;
+    width: 432px;
+    position: absolute;
+    right: 60px;
+    top: 28px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px;
+    
+}
+.feature-showcase{height: 425px; background: url("../imgs/new_img/shadow-bottom.png") no-repeat bottom;}
+.feature-video, .feature-text{width: 483px; margin: 10px;}
+.feature-video h2{
+    font-size: 25px;
+    font-weight: normal;
+    padding: 2px 0px 15px;
+}
+.content-wrapper{height: 870px;}
+.blog-post-list{width: 700px;}
+.featured-users{
+    width: 280px;
+    
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+        background: #E3E4E8;
+border: 2px solid #FFF;
+
+box-shadow: 0 0 3px #8C8989;
+padding: 15px;
+
+
+}
+.blog-post-list ul li{
+   border-bottom: 1px solid #ccc;
+height: 160px;
+padding: 25px 0;
+}
+.membership-form  h3{
+   font-size: 50px;
+font-family: LindenHill;
+font-weight: normal;
+}
+.joinFreeImg{
+    float: right;
+margin-top: -44px;
+margin-right: -54px;
+}
+.loginForm{
+  padding: 10px 25px 0 25px;
+}
+.loginForm input{
+ margin: 9px 0; 
+}
+.loginForm  .title{
+    width: 92px;
+/* display: block;
+float: left; */
+font-size: 16px;
+margin: 10px 0;
+}
+.loginForm input{
+    border: 1px solid #ccc;
+border-radius: 5px;
+padding: 6px 10px;
+width: 18px;
+margin: 8px 5px;
+
+}
+.loginFormP{
+    color: #797979 !important;
+    }
+    .loginFormP a{
+        color: #797979 !important;
+    }
+    .loginFormP a:hover{
+        color: #525151 !important;
+    }
+.gTitle{
+    margin-right: 18px;
+}
+.gender{
+    font-size: 15px;
+    padding-right: 10px;
+}
+.loginForm ul li input[type='radio']{
+    margin-top: -2px;
+margin-right: 6px;
+}
+
+.featurebox a{
+    text-decoration: underline;
+    color: #3e3f3b;
+}
+.featurebox p{
+    color: #3e3f3b;
+font-size: 13px;
+width: 265px;
+text-align: center;
+margin: 15px auto;
+line-height: 19px;
+}
+.startnowBtn{
+    margin: 20px auto;
+width: 229px;
+}
+
+.startnowBtn a{
+   background-image: url('../imgs/new_img/startBtn.png');
+background-repeat: no-repeat;
+display: block;
+width: 228px;
+height: 60px;
+}
+.startnowBtn a:hover{
+     background-image: url('../imgs/new_img/startBtnHover.png');
+}
+
+.featuer-boxText{
+    width: 304px;
+float: right;
+margin-left: 12px;
+}
+.blog-boxText{
+    width: 511px;
+float: right;
+margin: 0 12px;
+}
+.feature-img, .blog-img{
+    float: left;
+}
+.featuer-boxText h2{
+    font-size: 32px;
+font-weight: 300;
+color: #252525;
+padding-top: 0;
+margin-top: 0;
+margin-bottom: 0;
+padding-bottom: 10px;
+}
+.featuer-boxText p, .blog-boxText p{
+    line-height: 22px;
+color: #343434;
+font-size: 15px;
+padding-right: 0px;
+padding-top: 0;
+margin-top: 0;
+}
+.featuer-boxText i{
+    color: #898989;
+font-size: 14px;
+margin: 15px 0;
+display: block;
+font-style: normal;
+}
+.feature-text ul li{
+ margin: 0 0 30px 0;
+float: left;
+    
+}
+.feature-showcase h2{
+  /*font-family: hn;*/
+}
+.blog-boxText ul li{
+    margin: 24px 0;
+float: left;
+}
+.review-img{
+   float: left;
+margin: 0 25px;
+}
+.review-img a{
+    display: block;
+margin: 0 auto;
+padding: 4px;
+border: solid 1px #CCC;
+box-shadow: 0px 0 2px #ccc;
+border-radius: 4px;
+margin-top: 5px;
+}
+.blog-img a{
+   border: #dadada 1px solid;
+padding: 2px 4px;
+margin: 2px 4px 10px 0px;
+display: block;
+}
+.blog-boxText span{
+    font-size: 20px;
+margin-bottom: 15px;
+display: block;
+}
+.blog-boxText .readmore{
+    text-align: right;
+font-size: 12px;
+}
+.readmore a{
+    color: #523fa3;
+}
+.alink{
+    color: #523fa3;
+}
+.alink:hover{
+    color: #816dd8;
+}
+.featured-users h2{
+    padding: 0px;
+font-size: 28px;
+/*font-family: hn;*/
+line-height: 28px;
+font-weight: 300;
+}
+.list-item{
+   float: left;
+width: 126px;
+text-align: center;
+margin: 10px 7px 10px 7px;
+}
+.list-item ul li span{
+    display: block;
+margin-bottom: 7px;
+}
+.list-item a{
+  width: 116px;
+height: 146px;
+border: solid 4px #ffffff;
+border-radius: 4px;
+box-shadow: 0 0 3px #8c8989;
+display: block;
+overflow: hidden;
+}
+.box-frame2{
+    width: 285px;
+    float: left;
+    background: #e3e4e8;
+border: 2px solid #FFFFFF;
+border-radius: 5px;
+box-shadow: 0 0 3px #8C8989;
+padding: 15px;
+min-height: 225px;
+}
+.box-frame2 a{
+    font-size: 12px;
+}
+#bottom-widget div:first-child div+div{
+    /*margin: 0px 11px;*/
+}
+.middleFrame{
+    margin: 0 32px;
+}
+#bottom-widget .home-contact{
+    font-weight: normal;
+color: #252525;
+}
+.hdrFrame{
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-family: hn;
+}
+#bottom-widget .home-contact p{
+    margin: 0px;
+padding: 0px;
+padding-top: 15px;
+font-size: 13px;
+line-height: 16px;
+}
+#bottom-widget{
+    min-height: 280px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*footer start*/
+footer{
+    background: #000;
+color: #fff;
+height: 108px;
+}
+.footerWrap{
+    margin: 0 auto;
+    width: 960px;
+ padding: 25px 0;
+    height: 20px;
+}
+.copyRight{
+    font-size: 12px;
+margin: 0px auto;
+float: left;
+color: #575757;
+padding: 5px 0;
+width: 100%;
+}
+.copyRight p{
+    font-size: 15px;
+color: #858484;
+margin: 0;
+padding: 10px 0;
+text-align: center;
+}
+.footerWrap .secNav{
+    float: right;
+}
+.footerWrap .secNav ul li{
+    float: left;
+   }
+.footerWrap .secNav ul li a{
+   font-size: 15px;
+color: #fff;
+padding: 0 10px;
+}
+.footerWrap .secNav span{
+    color: #fff;
+}
+.footerWrap .secNav ul li a:hover{
+    text-decoration: underline;
+}
+
+/*
+ * START: JQUERY TOOLTIP
+ */
+#tooltip {
+	display: none;
+	position: absolute;
+	z-index: 3000;
+	padding:4px 7px;
+	border:1px solid #EBD085;
+	border-radius:5px;
+ 	background:#ffffcc;
+	font-family: hn;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: .5s;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: .5s;
+	transition-property: opacity;
+	transition-duration: .5s;
+	/*opacity: .9;*/
+	opacity: 1;
+	z-index:1000;
+}
+#tooltip h3, #tooltip div { margin:0px; font-size:14px; color: #ED145B; font-weight:bold; font-family: hn; }
+#tool_tip label { cursor: help; }
+#tool_tip { display: inline; }
+#tool_tip_2 label { cursor: help; }
+#tool_tip_2 { display: inline; }
+#tool_tip_3 label { cursor: help; }
+#tool_tip_3 { display: inline; }
+#tool_tip_4 label { cursor: help; }
+#tool_tip_4 { display: inline; }
+#tool_tip_5 label { cursor: help; }
+#tool_tip_5 { display: inline; }
+#tool_tip_6 label { cursor: help; }
+#tool_tip_6 { display: inline; }
+#tool_tip_7 label { cursor: help; }
+#tool_tip_7 { display: inline;}
+label {cursor: help;}
+
+/*
+ * END: JQUERY TOOLTIP
+ */
+
+/*
+ * START: colorbox.css
+ */
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(colorbox-images/overlay.png) repeat 0 0;}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:21px; height:21px; background:url(colorbox-images/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(colorbox-images/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(colorbox-images/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(colorbox-images/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(colorbox-images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(colorbox-images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(colorbox-images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(colorbox-images/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxLoadingOverlay{background:url(colorbox-images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(colorbox-images/loading.gif) no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(colorbox-images/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(colorbox-images/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(colorbox-images/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+  Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+.cboxIE6 #cboxTopLeft{background:url(colorbox-images/ie6/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(colorbox-images/ie6/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(colorbox-images/ie6/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(colorbox-images/ie6/borderBottomLeft.png);}
+.cboxIE6 #cboxBottomCenter{background:url(colorbox-images/ie6/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(colorbox-images/ie6/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(colorbox-images/ie6/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(colorbox-images/ie6/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+/*
+ * END: colorbox.css
+ */
+
+/*
+ * START: colorbox overrides and wrappers on profile page for pictures and video
+ */
+#colorbox-wrap { width:354px; height:96px; margin:0px auto; padding:2px 36px; border:#CCCCCC 1px solid; }
+#colorbox-wrap .colorbox_list { margin:0px; padding:0px; list-style:none; }
+#colorbox-wrap .colorbox_list li { float:left; width:69px; height:92px; margin:2px 4px 2px 0px; border:1px double #BCBCBC; overflow:hidden; }
+#colorbox-wrap .colorbox_list li img { /*width:70px; height:80px;*/ }
+
+#colorbox-wrap-video { width:354px; height:76px; margin:0px auto; padding:2px 36px; border:#CCCCCC 1px solid; }
+#colorbox-wrap-video .video-slider { margin:0px; padding:0px; list-style:none; }
+#colorbox-wrap-video .video-slider li { float:left; width:116px; height:72px; margin:2px 4px 2px 0px; border:1px double #BCBCBC; overflow:hidden; }
+
+/* colorbox override for close icon in top right corner */
+#cboxClose { top:0; bottom:auto; }
+#cboxLoadedContent {margin-top:28px; margin-bottom:0; }
+/*
+ * END: colorbox overrides and wrappers on profile page for pictures and video
+ */
+.error, .mandatory {color:#ff0000;}
+
+.error_msg {
+	padding:20px 25px 20px 25px;
+	border:1px solid #EBD085;
+	border-radius:5px;
+ 	background:#ffffcc url("../imgs/close.png") right -25px no-repeat;
+	display: none;
+	position:absolute;
+	top: -35px;
+	left: 0px;
+	max-width:400px;
+	min-width:300px;
+	min-height:100px;
+	cursor: pointer;
+	font-family: hn;
+	color: #ED145B;
+    font-size: 15px;
+	opacity: .9;
+	/*
+	-moz-transition-property: opacity;
+	-moz-transition-duration: .5s;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: .5s;
+	transition-property: opacity;
+	transition-duration: .5s;
+	*/
+	z-index:1000;
+	/* text-transform:capitalize; */
+	font-weight: normal;
+	margin-top:-9px;
+}
+.error_msg:hover { opacity: .97; }
+.error_msg a, .error_ajax a { color:#6e57d2; text-decoration:underline; }
+.error_msg a:hover, .error_ajax a:hover { text-decoration:none; }
+
+.error_ajax
+{
+	padding:8px 10px;
+	border:1px solid #EBD085;
+	border-radius:5px;
+	background-color:#ffffcc;
+ 	font-family: hn;
+	color: #ED145B;
+    font-size: 15px;
+	/* text-transform:capitalize; */
+	font-weight: normal;
+}
+.reg tr{
+	line-height: 3px;
+}

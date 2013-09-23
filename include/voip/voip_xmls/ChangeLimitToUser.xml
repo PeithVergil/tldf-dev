@@ -1,0 +1,7 @@
+<ChangeLimitToUser xmlns="http://www.jajah.com/">
+  <adminUserName>[adminusername]</adminUserName>
+  <adminPassword>[adminpassword]</adminPassword>
+  <accountId>[accountid]</accountId>
+  <memberEmail>[membername]</memberEmail>
+  <newLimit>[newlimit]</newLimit>
+</ChangeLimitToUser>

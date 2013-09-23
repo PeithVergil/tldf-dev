@@ -1,0 +1,9 @@
+<option value="arial">{$font.arial}</option>
+<option value="arial black">{$font.arial_black}</option>
+<option value="arial narrow">{$font.arial_narrow}</option>
+<option value="comic sans ms">{$font.comic_sans_ms}</option>
+<option value="courier">{$font.courier}</option>
+<option value="courier new">{$font.courier_new}</option>
+<option value="lucida console">{$font.lucida_console}</option>
+<option value="tahoma">{$font.tahoma}</option>
+<option value="verdana">{$font.verdana}</option>

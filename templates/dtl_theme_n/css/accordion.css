@@ -1,0 +1,7 @@
+.accordionWrapper { display:block; }
+/*.accordionWrapper img{vertical-align:top; border:0; margin:0; padding:0}*/
+.accordionWrapper div { display:block; /*float:left;*/ }
+.accordionWrapper div.title { cursor:pointer; }
+.accordionWrapper div.content { display:none; margin:0px; padding:0px 0px 10px 15px; }
+
+/*#accordion3 .title { color:#0066cc; font-size:11px; }*/

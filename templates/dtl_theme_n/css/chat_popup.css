@@ -1,0 +1,24 @@
+body{margin:0px; padding:0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#000000;}
+.main_cntr{margin:0 auto; width:650px; background:url(../images/logo_bg_popup.jpg) repeat-x; height:200px;}
+.logo_cntr{float:left; width:100%;}
+.logo_cntr a:link, .logo_cntr a:hover, .logo_cntr a:visited
+{ color:#555555; display:block; background:url(../images/popup_logo.jpg) 8px top no-repeat; width:650px; height:45px; }
+.slogan {color:#333333;float:left;font-weight:bold;margin-top:24px;padding-left:60px;}
+.text_chat_applet, .friend_profile_age, .own_chat_links, .chat_cntr{float:left; width:100%;}
+.own_chat_applet_cntr{float:left; width:250px;}
+.frined_chat_applet_title, .own_chat_applet_title{float:left; width:100%; background:#FF9D33; font-weight:bold; font-size:14px; color:#FFFFFF; text-align:center; padding-bottom:2px; padding-top:2px;}
+.frined_chat_applet_title{margin-left:30px;width:320px;}
+.own_chat_applet{float:left; width:100%; height:560px;}
+
+.friend_chat_applet_cntr{float:left; width:380px; margin-left:20px;}
+.friend_chat_applet{float:left;margin-left:30px;width:320px;}
+.friend_info_cntr{border:1px solid #CCCCCC;float:left;margin-bottom:5px;padding:1%;width:98%;}
+.friend_profile_img{float:left; width:60px;}
+.friend_profile_info_cntr{float:left; width:60%;margin-left:5px;}
+.friend_profile_name{float:left;font-size:12px;font-weight:bold;margin-bottom:3px;width:100%;}
+.friend_profile_city_cntry{float:left; width:100%; margin-bottom:3px;}
+
+.friend_profile_links_cntr{float:left; width:20%; margin-top:20px;}
+.own_chat_links a:link, .own_chat_links a:hover,  .own_chat_links a:visited,
+.friend_profile_links_cntr a:link, .friend_profile_links_cntr a:hover,  .friend_profile_links_cntr a:visited
+{color:#000099; text-decoration:none; }

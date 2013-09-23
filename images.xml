@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- 
+PAUSE:
+set default pause in milliseconds
+
+TRANSITION:
+set transition number from 1 to 9
+set transition number to 0 for random effect
+
+ALT_PAUSE
+if set, in milliseconds, determine the pause before showing next image
+if not set, the pause will be the default pause
+
+ -->
+<RSS PAUSE="3000">
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Warisa" AGE="30 Years" DEGI="Flight Attendant" >uploades/home_flash/images/user_022.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Jutamas" AGE="33 Years" DEGI="Small Local Products Shop" >uploades/home_flash/images/user_025.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Amonrat" AGE="27 Years" DEGI="Endeavourer" >uploades/home_flash/images/user_026.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Thima" AGE="33 Years" DEGI="Spa Masseuse at Hotel" >uploades/home_flash/images/user_027.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Sakoontala" AGE="35 Years" DEGI="Dangerous Goods Instructor" >uploades/home_flash/images/user_030.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Tanaporn" AGE="34 Years" DEGI="Secretary to General Manager" >uploades/home_flash/images/user_036.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Tanravee" AGE="37 Years" DEGI="Marketing Officer" >uploades/home_flash/images/user_043.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Nida" AGE="32 Years" DEGI="Salesperson at KP Group" >uploades/home_flash/images/user_051.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Sukritta" AGE="31 Years" DEGI="Sales and Import Documents" >uploades/home_flash/images/user_074.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Molvadee" AGE="25 Years" DEGI="Computer Accessory Shop" >uploades/home_flash/images/user_090.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Thippapha" AGE="32 Years" DEGI="Beauty Salon for Bridges" >uploades/home_flash/images/user_176.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Waranya" AGE="24 Years" DEGI="Bank Employee" >uploades/home_flash/images/user_203.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Sasithorn" AGE="35 Years" DEGI="Make Up and Hair Artist" >uploades/home_flash/images/user_216.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Chonyaluck" AGE="27 Years" DEGI="Outsource Company Employee" >uploades/home_flash/images/user_218.jpg</IMAGE>
+	<IMAGE TRANSITION="0" ALT_PAUSE = "7000" NAM="Thitipun" AGE="37 Years" DEGI="Hemodialysis Physician" >uploades/home_flash/images/user_237.jpg</IMAGE>
+</RSS>

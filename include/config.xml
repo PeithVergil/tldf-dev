@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<config>
+        <server>http://www.dev.thailadydatefinder.com</server>
+        <site_root></site_root>
+        <site_path>/vagrant/www</site_path>
+        <useoledb>1</useoledb>
+        <dbtype>mysql</dbtype>
+        <dbhost>localhost</dbhost>
+        <dbuname>devtldf_social</dbuname>
+        <dbpass>ladies123!!!</dbpass>
+        <dbname>devtldf_socialnetwork</dbname>
+        <table_prefix></table_prefix>
+        <social>1</social>
+</config>

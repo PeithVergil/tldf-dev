@@ -1,0 +1,7 @@
+<GetRate xmlns="http://www.jajah.com/">
+	<userName>[username]</userName>
+	<password>[password]</password>
+	<source>[source]</source>
+	<destinations>[destinations]</destinations>
+	<serviceType>[servicetype]</serviceType>
+</GetRate>

@@ -1,0 +1,124 @@
+<?php
+/// Mail Subjects
+$lang_mail["subjects"]["admin_user_add"]="New User Registration";
+$lang_mail["subjects"]["index_user_add"]="New User Registration";
+$lang_mail["subjects"]["admin_user_change"]="Your registration data on <[site]> have been changed";
+$lang_mail["subjects"]["index_user_change"]="Your registration data on <[site]> have been changed";
+$lang_mail["subjects"]["index_password_changed"]="Your password on <[site]> has been changed";
+$lang_mail["subjects"]["index_password_changed_mailbox"]="Your password has been changed";
+$lang_mail["subjects"]["default_subject_post"]="Message from site administrator";
+$lang_mail["subjects"]["default_subject_email"]="Message from site administrator <[site]>";
+$lang_mail["subjects"]["default_subject_alert"]="Admin notice";
+$lang_mail["subjects"]["subscribe_news"]="Site news";
+$lang_mail["subjects"]["news_cron_subscribe"]="News on [site] [date]";
+$lang_mail["subjects"]["newusers_cron_subscribe"]="New user registration on [site] [date]";
+$lang_mail["subjects"]["visited_subscribe"]="Your profile on [site] was viewed at [date]";
+$lang_mail["subjects"]["mailbox_subscribe"]="You have just received new mail on [site] [date]";
+$lang_mail["subjects"]["newperfect_cron_subscribe"]="New perfect match user registration on [site] [date]";
+$lang_mail["subjects"]["birthday_cron_subscribe"]="Your friends birthday on [site] [date]";
+$lang_mail["subjects"]["new_ecard"]="New E-cards receieved on [site]";
+$lang_mail["subjects"]["your_card_was_viewed"]="Your card was viewed on [site]";
+/// Common
+$lang_mail["ans"]="years old";
+$lang_mail["subject"]="Subject";
+$lang_mail["viewprofile"]="View profile";
+/// User Registration Changed by Administrator
+$lang_mail["admin_changedata"]["hello"]="Hello";
+$lang_mail["admin_changedata"]["message"]="Your registration data was changed by the administrator on site";
+$lang_mail["admin_changedata"]["data"]="Your new registration information is";
+$lang_mail["admin_changedata"]["data_name"]="Name";
+$lang_mail["admin_changedata"]["data_surname"]="Surname";
+$lang_mail["admin_changedata"]["data_login"]="Login";
+$lang_mail["admin_changedata"]["data_password"]="Password";
+$lang_mail["admin_changedata"]["data_email"]="Registration E-Mail";
+$lang_mail["admin_changedata"]["regards"]="Best regards";
+/// User Added by Administrator
+$lang_mail["admin_registration"]["hello"]="Hello";
+$lang_mail["admin_registration"]["message"]="You have just been registered on a site";
+$lang_mail["admin_registration"]["data"]="Your registration data is";
+$lang_mail["admin_registration"]["data_name"]="Name";
+$lang_mail["admin_registration"]["data_surname"]="Surname";
+$lang_mail["admin_registration"]["data_login"]="Login";
+$lang_mail["admin_registration"]["data_password"]="Password";
+$lang_mail["admin_registration"]["data_email"]="Registration E-Mail";
+$lang_mail["admin_registration"]["regards"]="Best regards";
+/// Approve Upload
+$lang_mail["approve_upload"]["hello"]="Hello";
+$lang_mail["approve_upload"]["message"]="Your uploaded file(s) have just been approved by administrator on site";
+$lang_mail["approve_upload"]["regards"]="Best regards";
+/// Birthday
+$lang_mail["birthday"]["message"]="Don't forget about your friends' birthdays";
+/// New Message in Mailbox
+$lang_mail["mailbox"]["read"]="Read mail";
+/// New Perfect
+$lang_mail["newperfect"]["regdate"]="Registration date";
+/// News Added
+$lang_mail["news"]["read"]="Read more";
+/// New User Registered
+$lang_mail["newuser"]["regdate"]="Registration date";
+/// Password Changed
+$lang_mail["pass_changed"]["hello"]="Hello";
+$lang_mail["pass_changed"]["message"]="Your password have just been changed";
+$lang_mail["pass_changed"]["data"]="Your registration data is";
+$lang_mail["pass_changed"]["data_login"]="Login";
+$lang_mail["pass_changed"]["data_password"]="Password";
+$lang_mail["pass_changed"]["data_email"]="Registration E-Mail";
+$lang_mail["pass_changed"]["regards"]="Best regards";
+/// User Registration Changed
+$lang_mail["changedata"]["hello"]="Hello";
+$lang_mail["changedata"]["message"]="Your registration data was changed on site";
+$lang_mail["changedata"]["data"]="Your new registration information is";
+$lang_mail["changedata"]["data_name"]="Name";
+$lang_mail["changedata"]["data_surname"]="Surname";
+$lang_mail["changedata"]["data_login"]="Login";
+$lang_mail["changedata"]["data_email"]="Registration E-Mail";
+$lang_mail["changedata"]["regards"]="Best regards";
+/// User Registration to Admin
+$lang_mail["registration_admin"]["message"]="New user registered on your site";
+$lang_mail["registration_admin"]["approved"]="Please check his account and approve if necessary";
+$lang_mail["registration_admin"]["data"]="User's registration data is";
+$lang_mail["registration_admin"]["data_name"]="Name";
+$lang_mail["registration_admin"]["data_surname"]="Surname";
+$lang_mail["registration_admin"]["data_login"]="Login";
+$lang_mail["registration_admin"]["data_email"]="Registration E-Mail";
+/// User Registration to User
+$lang_mail["registration"]["hello"]="Hello";
+$lang_mail["registration"]["message"]="You have just been registered on a site";
+$lang_mail["registration"]["approved"]="Your account not approved by administrator, please wait for approve confirmation e-mail";
+$lang_mail["registration"]["data"]="Your registration data is";
+$lang_mail["registration"]["data_name"]="Name";
+$lang_mail["registration"]["data_surname"]="Surname";
+$lang_mail["registration"]["data_login"]="Login";
+$lang_mail["registration"]["data_password"]="Password";
+$lang_mail["registration"]["data_email"]="Registration E-Mail";
+$lang_mail["registration"]["confirm"]="Click this link, to confirm your registration";
+$lang_mail["registration"]["regards"]="Best regards";
+/// User Status Approved or Banned
+$lang_mail["set_status"]["hello"]="Hello";
+$lang_mail["set_status"]["approved"]="Your account have just been approved by administrator on site";
+$lang_mail["set_status"]["banned"]="Your account have just been banned by administrator on site";
+$lang_mail["set_status"]["data"]="Your registration data is";
+$lang_mail["set_status"]["data_name"]="Name";
+$lang_mail["set_status"]["data_surname"]="Surname";
+$lang_mail["set_status"]["data_login"]="Login";
+$lang_mail["set_status"]["data_email"]="Registration E-Mail";
+$lang_mail["set_status"]["confirm"]="Click this link, to confirm your registration";
+$lang_mail["set_status"]["regards"]="Best regards";
+/// User Profile Viewed
+$lang_mail["profile_viewed"]["viewdate"]="View date";
+//JUL_2008_01
+$lang_mail["subjects"]["changing_currency"]="Web-site [site] currency change";
+/// Web-site currency change
+$lang_mail["change_curr"]["hello"]="Hello";
+$lang_mail["change_curr"]["message"]="Web-site currency changed on";
+$lang_mail["change_curr"]["curr_rate"]="Web-site currency changed on";
+$lang_mail["change_curr"]["data"]="Site Currency has been changed. Your Account amounts have been recounted according to exchange rate: 1 [curr1] = [rate] [curr2].<br>We're sorry for inconvenience. Please contact us if you have any questions!";
+$lang_mail["change_curr"]["regards"]="Best regards";
+///banner aprove alert
+$lang_mail["banner_aprove"]["subj"] = "Banner Approve Alert";
+$lang_mail["banner_aprove"]["content"] = "Dear [username],<br /><br />Thank you for using our services!<br />Your banner [banner_name] has been approved and now may be activated at [banner_page_link] page!<br /><br />Best regards,<br />Site Administrator.";
+//JAN_2009_01
+//ecards
+$lang_mail["cards"]["mail_recieve_text"] = "Dear [login],<br><br>You have got a new Greeting Сard on your mailbox at [site].<br><br>Login into your account to receive your Card!<br><br>Site Administration.";
+$lang_mail["cards"]["mail_view_text"] = "Dear [login],<br><br>Your Greeting Сard was viewed by [login2].<br><br>Best regards,<br>[site]<br><br>Site Administration.";
+?>

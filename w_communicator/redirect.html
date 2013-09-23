@@ -1,0 +1,44 @@
+<HTML>
+<BODY onLoad="Redirect()">
+<form name="RForm" method="post" action="index.php">
+  <input name="login_lg" type="hidden">
+  <input name="pass_lg"  type="hidden">
+</form>
+</BODY>
+
+<SCRIPT language="JavaScript">
+<!--
+var v_login_lg = "";
+var v_pass_lg  = "";
+
+function Redirect()
+{
+  v_login_lg = GetURLParam("login_lg");
+  v_pass_lg = GetURLParam("pass_lg");
+  RForm.login_lg.value  = v_login_lg;
+  RForm.pass_lg.value   = v_pass_lg;
+  RForm.submit();
+}
+function GetURLParam(param_name)
+{
+  url = ""+document.location;
+  param_b = url.indexOf(param_name);
+  if (param_b==-1) return "";
+  param_b = param_b + param_name.length+1;
+  param_s = url.substring(param_b);
+  param_e = param_s.indexOf("%26");
+  if (param_e!=-1)
+     {  
+         param_s = param_s.substr(0,param_e);  
+   }
+   else 
+     {
+       param_e = param_s.indexOf("&");     
+       if (param_e!=-1) param_s = param_s.substr(0,param_e);  
+   }
+  return param_s;
+}
+//-->
+</SCRIPT>
+
+</HTML>

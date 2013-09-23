@@ -1,0 +1,17 @@
+/*Slider*/
+.slide-zone { height: 245px; /*background: url(../imgs/bg-slider.png) bottom center no-repeat;*/ }
+
+#slide-show { width: 980px; /*height: 400px;*/ margin: 0 auto; padding-bottom: 30px; padding-top: 20px; background: url(../imgs/transparent-line.png) 0 220px  no-repeat; position: relative;}
+#do-slide ul, #kelson-mobil li {margin:0; padding:0;	list-style:none;	}
+#do-slide li {	width:980px;	height:200px;	overflow:hidden; }	
+#do-slide li>div:first-child { width: 220px;}
+#do-slide li>div:first-child img {width: 270px;}
+#do-slide li>div:first-child+* { width: 720px; padding-left: 40px; margin: 0; padding-top: 5px;}
+#do-slide li > div:first-child + div > h3 {margin-top: 0}
+#do-slide li > div:first-child + div > h3 strong {font-size: 26px}
+#do-slide li > div:first-child + div > h3 em {font-size: 22px;}
+#do-slide li > div:first-child + div > h3 span { font-size: 18px;}
+#do-slide li>div:first-child+div>h3 a { width: 248px; height: 65px; background-position: 0 -43px; text-indent: -8888em; position: absolute; top: 40px; right: 40px}
+ol#controls {	margin: -20px 0 0 830px;}
+#slide-show #banner { padding-top: 0px;}
+#slide-show #banner * {font-size: 12px; padding-right: 20px;}

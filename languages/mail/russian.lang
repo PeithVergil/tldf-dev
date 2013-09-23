@@ -1,0 +1,145 @@
+<?php
+
+/// Mail Subjects
+$lang_mail["subjects"]["admin_user_add"] = "Новый пользователь";
+$lang_mail["subjects"]["index_user_add"] = "Новый пользователь";
+$lang_mail["subjects"]["admin_user_change"] = "Ваши регистрационные данные на сайте <[site]> были изменены";
+$lang_mail["subjects"]["index_user_change"] = "Ваши регистрационные данные на сайте <[site]> были изменены";
+$lang_mail["subjects"]["index_password_changed"] = "Ваш пароль на <[site]> был изменен";
+$lang_mail["subjects"]["index_password_changed_mailbox"] = "Ваш пароль был изменен";
+$lang_mail["subjects"]["default_subject_post"] = "Сообщение от администратора сайта";
+$lang_mail["subjects"]["default_subject_email"] = "Сообщение от администратора сайта <[site]>";
+$lang_mail["subjects"]["default_subject_alert"] = "Замечание от администратора сайта";
+$lang_mail["subjects"]["subscribe_news"] = "Новости сайта";
+$lang_mail["subjects"]["news_cron_subscribe"] = "Новости на [site] [date]";
+$lang_mail["subjects"]["newusers_cron_subscribe"] = "Регистрация пользователя на [site] [date]";
+$lang_mail["subjects"]["visited_subscribe"] = "Ваш профайл на [site] был просмотрен [date]";
+$lang_mail["subjects"]["mailbox_subscribe"] = "Вы только что получили новое письмо на [site] [date]";
+$lang_mail["subjects"]["newperfect_cron_subscribe"] = "Регистрация нового подходящего вам пользователя [site] [date]";
+$lang_mail["subjects"]["birthday_cron_subscribe"]="День рождения Ваших друзей на [site] [date]";
+$lang_mail["subjects"]["new_ecard"]="Новая открытка на [site]";
+$lang_mail["subjects"]["your_card_was_viewed"]="Ваша открытка была просмотрена на [site]";
+
+/// Common
+$lang_mail["ans"]="лет";
+$lang_mail["subject"]="Заголовок";
+$lang_mail["viewprofile"]="Просмотреть";
+
+/// User Registration Changed by Administrator
+$lang_mail["admin_changedata"]["hello"]="Привет";
+$lang_mail["admin_changedata"]["message"]="Ваши регистрационные данные на сайте были изменены администратором";
+$lang_mail["admin_changedata"]["data"]="Ваша новая регистрационная информация";
+$lang_mail["admin_changedata"]["data_name"]="Имя";
+$lang_mail["admin_changedata"]["data_surname"]="Фамилия";
+$lang_mail["admin_changedata"]["data_login"]="Логин";
+$lang_mail["admin_changedata"]["data_password"]="Пароль";
+$lang_mail["admin_changedata"]["data_email"]="Регистрационный E-Mail";
+$lang_mail["admin_changedata"]["regards"]="Всего наилучшего";
+
+/// User Added by Administrator
+$lang_mail["admin_registration"]["hello"]="Привет";
+$lang_mail["admin_registration"]["message"]="Вы только что были зарегистрированы на сайте";
+$lang_mail["admin_registration"]["data"]="Ваши регистрационные данные";
+$lang_mail["admin_registration"]["data_name"]="Имя";
+$lang_mail["admin_registration"]["data_surname"]="Фамилия";
+$lang_mail["admin_registration"]["data_login"]="Логин";
+$lang_mail["admin_registration"]["data_password"]="Пароль";
+$lang_mail["admin_registration"]["data_email"]="Регистрационный E-Mail";
+$lang_mail["admin_registration"]["regards"]="Всего наилучшего";
+
+/// Approve Upload
+$lang_mail["approve_upload"]["hello"]="Привет";
+$lang_mail["approve_upload"]["message"]="Загруженный вами файл на нашем сайте был разрешен к просмотру";
+$lang_mail["approve_upload"]["regards"]="Всего наилучшего";
+
+/// Birthday
+$lang_mail["birthday"]["message"]="Не забудьте о днях рождениях друзей";
+
+/// New Message in Mailbox
+$lang_mail["mailbox"]["read"]="Прочитать письмо";
+
+/// New Perfect
+$lang_mail["newperfect"]["regdate"]="Дата регистрации";
+
+/// News Added
+$lang_mail["news"]["read"]="Еще";
+
+/// New User Registered
+$lang_mail["newuser"]["regdate"]="Дата регистрации";
+
+/// Password Changed
+$lang_mail["pass_changed"]["hello"]="Привет";
+$lang_mail["pass_changed"]["message"]="Ваш пароль был изменен";
+$lang_mail["pass_changed"]["data"]="Ваши регистрационные данные";
+$lang_mail["pass_changed"]["data_login"]="Логин";
+$lang_mail["pass_changed"]["data_password"]="Пароль";
+$lang_mail["pass_changed"]["data_email"]="Регистрационный E-Mail";
+$lang_mail["pass_changed"]["regards"]="Всего наилучшего";
+
+/// User Registration Changed
+$lang_mail["changedata"]["hello"]="Привет";
+$lang_mail["changedata"]["message"]="Ваши регистрационные данные были изменены на";
+$lang_mail["changedata"]["data"]="Ваши новые регистрационные данные";
+$lang_mail["changedata"]["data_name"]="Имя";
+$lang_mail["changedata"]["data_surname"]="Фамилия";
+$lang_mail["changedata"]["data_login"]="Логин";
+$lang_mail["changedata"]["data_email"]="Регистрационный E-Mail";
+$lang_mail["changedata"]["regards"]="Всего наилучшего";
+
+/// User Registration to Admin
+$lang_mail["registration_admin"]["message"]="Новый пользователь на сайте";
+$lang_mail["registration_admin"]["approved"]="Проверьте его аккаунт и потвердите регистрацию";
+$lang_mail["registration_admin"]["data"]="Пользовательские данные при регистрации";
+$lang_mail["registration_admin"]["data_name"]="Имя";
+$lang_mail["registration_admin"]["data_surname"]="Фамилия";
+$lang_mail["registration_admin"]["data_login"]="Логин";
+$lang_mail["registration_admin"]["data_email"]="Регистрационный E-Mail";
+
+/// User Registration to User
+$lang_mail["registration"]["hello"]="Привет";
+$lang_mail["registration"]["message"]="Вы только что были зарегистрированы на сайте";
+$lang_mail["registration"]["approved"]="Ваша регистрация потверждена администратором, пожалуйста дождитесь письма с потверждением e-mail";
+$lang_mail["registration"]["data"]="Ваши регистрационные данные";
+$lang_mail["registration"]["data_name"]="Имя";
+$lang_mail["registration"]["data_surname"]="Фамилия";
+$lang_mail["registration"]["data_login"]="Логин";
+$lang_mail["registration"]["data_password"]="Пароль";
+$lang_mail["registration"]["data_email"]="Регистрационный E-Mail";
+$lang_mail["registration"]["confirm"]="Кликните, чтобы потвердить регистрацию";
+$lang_mail["registration"]["regards"]="Всего наилучшего";
+
+/// User Status Approved or Banned
+$lang_mail["set_status"]["hello"]="Привет";
+$lang_mail["set_status"]["approved"]="Ваша статус на сайте был потвержден администратором";
+$lang_mail["set_status"]["banned"]="Ваш аккаунт был приостановлен на сайте";
+$lang_mail["set_status"]["data"]="Ваши регистрационные данные";
+$lang_mail["set_status"]["data_name"]="Имя";
+$lang_mail["set_status"]["data_surname"]="Фамилия";
+$lang_mail["set_status"]["data_login"]="Логин";
+$lang_mail["set_status"]["data_email"]="Регистрационный E-Mail";
+$lang_mail["set_status"]["confirm"]="Кликните, чтобы потвердить регистрацию";
+$lang_mail["set_status"]["regards"]="Всего наилучшего";
+
+/// User Profile Viewed
+$lang_mail["profile_viewed"]["viewdate"]="Дата просмотра";
+
+//JUL_2008_01
+$lang_mail["subjects"]["changing_currency"]="Изменение валюты на сайте [site]";
+
+/// Web-site currency change
+$lang_mail["change_curr"]["hello"]="Привет";
+$lang_mail["change_curr"]["message"]="Была изменена валюта на";
+$lang_mail["change_curr"]["curr_rate"]="Была изменена валюта на";
+$lang_mail["change_curr"]["data"]="Валюта на сайте была изменена. Ваш счет был перерасчитан согласно курсу: 1 [curr1] = [rate] [curr2].<br>Извините за причиненные неудобства!";
+$lang_mail["change_curr"]["regards"]="Всего наилучшего";
+
+///banner aprove alert
+$lang_mail["banner_aprove"]["subj"] = "Потверждение на размещение баннера";
+$lang_mail["banner_aprove"]["content"] = "Дорогой [username],<br /><br />Благодарим за использование нашего сайта!<br />Ваш баннер [banner_name] был одобрен к размещениюю и может быть активирован на [banner_page_link]!<br /><br />Всего наилучшего,<br />Администратор.";
+
+//JAN_2009_01
+//ecards
+$lang_mail["cards"]["mail_recieve_text"] = "Дорогой [login],<br><br>Вы получили поздравительную открытку на сайте [site].<br><br>Залогиньтесь, чтобы посмотреть ее!<br><br>Администрация.";
+$lang_mail["cards"]["mail_view_text"] = "Дорогой [login],<br><br>Ваша открытка было просмотрена пользователем [login2].<br><br>Всего наилучшего,<br>[site]<br><br>Администрация.";
+
+?>

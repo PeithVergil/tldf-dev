@@ -1,0 +1,4 @@
+<GetMemberBalance xmlns="http://www.jajah.com/">
+	<userName>[username]</userName>
+	<password>[password]</password>
+</GetMemberBalance>

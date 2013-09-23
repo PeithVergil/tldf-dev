@@ -1,0 +1,9 @@
+								<option value="8">8pt</option>
+								<option value="9">9pt</option>
+								<option value="10">10pt</option>
+								<option value="11">11pt</option>
+								<option value="12">12pt</option>
+								<option value="14">14pt</option>
+								<option value="16">16pt</option>
+								<option value="18">18pt</option>
+								<option value="20">20pt</option>

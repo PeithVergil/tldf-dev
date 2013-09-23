@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<item name="chat" img="/images/menu/icons/chat.gif" href="/flash_chat/admin/msglist.php">
+	<subitem name="chat_messages" img="/images/menu/icons/chat_messages.gif" href="/flash_chat/admin/msglist.php" onclick="" />
+	<subitem name="chat_rooms" img="/images/menu/icons/chat_rooms.gif" href="/flash_chat/admin/roomlist.php" onclick="" />
+	<subitem name="chat_connections" img="/images/menu/icons/chat_connections.gif" href="/flash_chat/admin/connlist.php" onclick="" />
+	<subitem name="chat_bans" img="/images/menu/icons/chat_bans.gif" href="/flash_chat/admin/banlist.php" onclick="" />
+	<subitem name="chat_ignoring" img="/images/menu/icons/chat_ignoring.gif" href="/flash_chat/admin/ignorelist.php" onclick="" />
+	<subitem name="chat_bots" img="/images/menu/icons/chat_bots.gif" href="/flash_chat/admin/botlist.php" onclick="" />
+	<subitem name="chat_moderators" img="/images/menu/icons/chat_moderators.gif" href="/flash_chat/admin/modlist.php" onclick="" />
+	<subitem name="chat_modules" img="/images/menu/icons/chat_modules.gif" href="/flash_chat/admin/modules.php" onclick="" />
+	<subitem name="chat_login" img="/images/menu/icons/chat_login.gif" href="/flash_chat/flashchat.php" onclick="window.open('[href]','chat','menubar=0,resizable=1,scrollbars=0,status=0,toolbar=0,width=800,height=600');" />
+</item>

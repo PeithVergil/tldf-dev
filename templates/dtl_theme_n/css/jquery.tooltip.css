@@ -1,0 +1,35 @@
+#tooltip {
+	display: none;
+	position: absolute;
+	z-index: 3000;
+	padding:4px 7px;
+	border:1px solid #EBD085;
+	border-radius:5px;
+ 	background:#ffffcc;
+	font-family: hn;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: .5s;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: .5s;
+	transition-property: opacity;
+	transition-duration: .5s;
+	/*opacity: .9;*/
+	opacity: 1;
+	z-index:1000;
+}
+#tooltip h3, #tooltip div { margin:0px; font-size:14px; color: #ED145B; font-weight:bold; font-family: hn; }
+#tool_tip label { cursor: help; }
+#tool_tip { display: inline; }
+#tool_tip_2 label { cursor: help; }
+#tool_tip_2 { display: inline; }
+#tool_tip_3 label { cursor: help; }
+#tool_tip_3 { display: inline; }
+#tool_tip_4 label { cursor: help; }
+#tool_tip_4 { display: inline; }
+#tool_tip_5 label { cursor: help; }
+#tool_tip_5 { display: inline; }
+#tool_tip_6 label { cursor: help; }
+#tool_tip_6 { display: inline; }
+#tool_tip_7 label { cursor: help; }
+#tool_tip_7 { display: inline;}
+label {cursor: help;}

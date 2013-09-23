@@ -1,0 +1,2 @@
+# direct requests to files in this directory not allowed
+deny from all
