@@ -41,21 +41,23 @@ body { font-family: "Helvetica", sans-serif;font-size:14px;color:#000000; backgr
 /* Custom CSS */
 img { height: auto; max-width: 100%; }
 
-#logo{clear:both;/* background:url(../images/logo.png) no-repeat center; */margin-top: 43px;}
+/*#logo{clear:both; background:url(../images/logo.png) no-repeat center; margin-top: 43px;} */
 
 #logo h1 {
-	font-family: "Helvetica", sans-serif;
-	font-size: 5.3em; 
-	font-size: 504%;
-	line-height: 56px;
-	text-align: center;
-	font-weight: bold;
-	color: #910303;
-	border: 0;
-	letter-spacing: 1px;
-	text-shadow: 2px 1px 0px #fff, 5px 3px 0px rgba(0,0,0,0.15);
-	margin-bottom: 57px;
+    border: 0 none;
+    color: #910303;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 1px 0 #FFFFFF, 5px 3px 0 rgba(0, 0, 0, 0.15);
+    text-decoration: none;
 }
+
+#logo a, #logo a:hover, #logo a:focus{
+    text-decoration: none !important;
+}
+
 #header{clear:both;background:url(../images/header.jpg) no-repeat center; height:774px;}
 
 #signup{
@@ -406,19 +408,4 @@ img { height: auto; max-width: 100%; }
 #case_study h2 {
 	margin-bottom: 30px;
 	font-size: 200%;
-}
-
-
-#logo h1 {
-    border: 0 none;
-    color: #910303;
-    font-size: 70px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-align: center;
-    text-shadow: 2px 1px 0 #FFFFFF, 5px 3px 0 rgba(0, 0, 0, 0.15);
-}
-
-#logo a {
-    text-decoration: none;
 }

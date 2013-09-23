@@ -7,6 +7,7 @@
 <meta name="Keywords" content="{$lang.keywords}" />
 <title>{$lang.main_title}</title>
 <link rel="shortcut icon" href="{$site_root}{$template_root}/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/easySlider.css" media="only screen and (max-width: 1020px)" />
 <link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/style.css" />
 {if $tldf_offline}
@@ -15,6 +16,9 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 {/if}
     
+<script type="text/javascript" src="{$site_root}/javascript/jquery.tooltip.js?v=0000"></script>
+<script type="text/javascript" src="{$site_root}/javascript/easySlider1.7.js?v=0000"></script>
+<script type="text/javascript" src="{$site_root}/javascript/alertr.js?v=0000"></script>
 </head>
 {php}flush();{/php}
 <body>
@@ -53,7 +57,7 @@ d.write('<sc'+'ript src="'+
 
 <div class="container wrap">
     <div class="page-header">
-        <div id="logo" class="acenter"><a href="{$site_root}"><h1>Thai Lady Date Finder</h1></a></div>
+        <div id="logo" class="acenter"><a href="#"><h1>Thai Lady Date Finder</h1></a></div>
         
     </div>
 </div>
