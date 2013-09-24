@@ -41,7 +41,7 @@ body { font-family: "Helvetica", sans-serif;font-size:14px;color:#000000; backgr
 /* Custom CSS */
 img { height: auto; max-width: 100%; }
 
-#logo{clear:both;/* background:url(images/logo.png) no-repeat center; */margin-top: 43px;}
+#logo{clear:both;/* background:url(../images/logo.png) no-repeat center; */margin-top: 43px;}
 
 #logo h1 {
 	font-family: "Helvetica", sans-serif;
@@ -56,10 +56,10 @@ img { height: auto; max-width: 100%; }
 	text-shadow: 2px 1px 0px #fff, 5px 3px 0px rgba(0,0,0,0.15);
 	margin-bottom: 57px;
 }
-#header{clear:both;background:url(images/header.jpg) no-repeat center; height:774px;}
+#header{clear:both;background:url(../images/header.jpg) no-repeat center; height:774px;}
 
 #signup{
-	clear:both;background:url(images/bg-pink.png) #e88eb8 no-repeat fixed; min-height:619px;padding: 18px 17px;
+	clear:both;background:url(../images/bg-pink.png) #e88eb8 no-repeat fixed; min-height:619px;padding: 18px 17px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -67,7 +67,7 @@ img { height: auto; max-width: 100%; }
 }
 
 #signup .wrap {
-	background: transparent url(images/model.png) no-repeat left bottom;
+	background: transparent url(../images/model.png) no-repeat left bottom;
 	max-width:960px;
 }
 
@@ -123,7 +123,7 @@ img { height: auto; max-width: 100%; }
 }
 
 #fb_login {
-	background: url(images/fb_login.png) no-repeat;
+	background: url(../images/fb_login.png) no-repeat;
 	width: 257px;
 	height: 44px;
 	line-height: 30px;
@@ -133,7 +133,7 @@ img { height: auto; max-width: 100%; }
 }
 
 #button_start-now {
-	background: url(images/button_start-now.png) no-repeat;
+	background: url(../images/button_start-now.png) no-repeat;
 	width: 218px;
 	height: 56px;
 	text-indent: -999px;
@@ -146,7 +146,7 @@ img { height: auto; max-width: 100%; }
 /*text-shadow: -3px 3px 2px rgba(211, 197, 197, 0.76);*/
 
 #root-footer {
-    background: #1a5ca2 url("images/bg-root-footer.png") repeat-x;
+    background: #1a5ca2 url("../images/bg-root-footer.png") repeat-x;
     font-size: 85%;
     padding: 15px 0;
     color: #ffffff;
@@ -262,7 +262,7 @@ img { height: auto; max-width: 100%; }
 }
 
 #skype a {
-	background: transparent url("images/skype_icon.png") no-repeat;
+	background: transparent url("../images/skype_icon.png") no-repeat;
 	display: block;
 	height: 100%;
 	width: 100%;
@@ -406,4 +406,19 @@ img { height: auto; max-width: 100%; }
 #case_study h2 {
 	margin-bottom: 30px;
 	font-size: 200%;
+}
+
+
+#logo h1 {
+    border: 0 none;
+    color: #910303;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 1px 0 #FFFFFF, 5px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+#logo a {
+    text-decoration: none;
 }

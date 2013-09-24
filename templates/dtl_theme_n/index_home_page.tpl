@@ -7,7 +7,6 @@
 <meta name="Keywords" content="{$lang.keywords}" />
 <title>{$lang.main_title}</title>
 <link rel="shortcut icon" href="{$site_root}{$template_root}/images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/easySlider.css" media="only screen and (max-width: 1020px)" />
 <link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/style.css" />
 {if $tldf_offline}
@@ -15,41 +14,7 @@
 {else}
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 {/if}
-
-<script type="text/javascript" src="{$site_root}/javascript/jquery.tooltip.js?v=0000"></script>
-<script type="text/javascript" src="{$site_root}/javascript/easySlider1.7.js?v=0000"></script>
-<script type="text/javascript" src="{$site_root}/javascript/alertr.js?v=0000"></script>
-
-{if $script}
-    <script type="text/javascript" src="{$site_root}{$template_root}/js/{$script}.js"></script>
-{/if}
-<!--[if lt IE 9]>
-    <script type="text/javascript" src="{$site_root}{$template_root}/js/media_q.js"></script>
-<![endif]-->
-{literal}
-    <script type="text/javascript">
-    var sessEnable = navigator.cookieEnabled;
-    if (!sessEnable) {
-        alert({/literal}"{$lang.err.coockie_enabled}"{literal});
-    }
-    </script>
-{/literal}
-{* GOOGLE ANALYTICS TAG REPLACED WITH GOOGLE TAG MANAGER
-{if $smarty.const.IS_LIVE_SERVER}
-    {literal}
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-15603421-2']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        }) ();
-        </script>
-    {/literal}
-{/if}
-*}
+    
 </head>
 {php}flush();{/php}
 <body>
@@ -88,7 +53,7 @@ d.write('<sc'+'ript src="'+
 
 <div class="container wrap">
     <div class="page-header">
-        <div id="logo" class="acenter"><img src="{$site_root}{$template_root}/css/images/logo.png"></div>
+        <div id="logo" class="acenter"><a href="{$site_root}"><h1>Thai Lady Date Finder</h1></a></div>
         
     </div>
 </div>
@@ -174,7 +139,7 @@ d.write('<sc'+'ript src="'+
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12">
-                      <button type="submit" id="button_start-now">Sign in</button>
+                      <button type="submit" id="button_start-now"> </button>
                     </div>
                 </div>
             </form>
@@ -464,14 +429,36 @@ d.write('<sc'+'ript src="'+
 <footer id="root-footer">
     <div class="container wrap">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="copy">
-                    {$lang.copyright}
+                    Copyright &copy; 2013 Meet Me Now Bangkok Co. Ltd. All rights reserved.
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="links">
-                    {include file="$gentemplates/index_bottom_popup.tpl"}
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms and Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Site Map</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -488,14 +475,14 @@ $(function(){$('label').tooltip();});
 </script>
 <script type="text/javascript">
 function ZipCodeCheck(zip_value) {
-    if (zip_value == '') {
-        document.getElementById('within').disabled = false;
-        document.getElementById('search_type').value = 1;
-    } else {
-        document.getElementById('search_type').value = 2;
-        document.getElementById('within').disabled = true;
-    }
-    return;
+	if (zip_value == '') {
+		document.getElementById('within').disabled = false;
+		document.getElementById('search_type').value = 1;
+	} else {
+		document.getElementById('search_type').value = 2;
+		document.getElementById('within').disabled = true;
+	}
+	return;
 }
 
 var topuser_image = new Array();
@@ -505,55 +492,55 @@ var topuser_location = new Array();
 var topuser_link = new Array();
 {/literal}
 {foreach name=s key=key item=item from=$top_users}
-    topuser_image[{$key}] = '{$item.icon_path}';
-    topuser_name[{$key}] = '<a href={$item.link}><b>{$item.name}</b></a>';
-    topuser_age[{$key}] = '<span class="text_head">{$item.age} {$header.ans}</span>';
-    topuser_location[{$key}] = '<span class="text">{if $base_lang.city[$item.id_city]}{$base_lang.city[$item.id_city]}, {/if}{if $base_lang.region[$item.id_region]}{$base_lang.region[$item.id_region]}, {/if}{$base_lang.country[$item.id_country]}</span>';
-    topuser_link[{$key}] = '{$item.link}';
+	topuser_image[{$key}] = '{$item.icon_path}';
+	topuser_name[{$key}] = '<a href={$item.link}><b>{$item.name}</b></a>';
+	topuser_age[{$key}] = '<span class="text_head">{$item.age} {$header.ans}</span>';
+	topuser_location[{$key}] = '<span class="text">{if $base_lang.city[$item.id_city]}{$base_lang.city[$item.id_city]}, {/if}{if $base_lang.region[$item.id_region]}{$base_lang.region[$item.id_region]}, {/if}{$base_lang.country[$item.id_country]}</span>';
+	topuser_link[{$key}] = '{$item.link}';
 {/foreach}
 {literal}
 
 function ChangeTopUser(direct) {
-    user_image = document.getElementById('topuser_image');
-    user_name = document.getElementById('topuser_name');
-    user_age = document.getElementById('topuser_age');
-    user_location = document.getElementById('topuser_location');
-    user_link = document.getElementById('topuser_link');
-    hid = document.getElementById('topuser_hidden');
-    len = topuser_image.length;
-    
-    if ( (hid.value == '0' && direct == '1') || (hid.value == (len-1) && direct == '-1') ) {
-        num = hid.value;
-    } else {
-        num = eval(len)*1 + eval(hid.value)*1 + eval(direct)*(-1);
-        num = num%len;
-    }
-    
-    user_image.src = topuser_image[num];
-    user_name.innerHTML = topuser_name[num];
-    user_age.innerHTML = topuser_age[num];
-    user_location.innerHTML = topuser_location[num];
-    user_link.href = topuser_link[num];
-    
-    hid.value = num;
+	user_image = document.getElementById('topuser_image');
+	user_name = document.getElementById('topuser_name');
+	user_age = document.getElementById('topuser_age');
+	user_location = document.getElementById('topuser_location');
+	user_link = document.getElementById('topuser_link');
+	hid = document.getElementById('topuser_hidden');
+	len = topuser_image.length;
+	
+	if ( (hid.value == '0' && direct == '1') || (hid.value == (len-1) && direct == '-1') ) {
+		num = hid.value;
+	} else {
+		num = eval(len)*1 + eval(hid.value)*1 + eval(direct)*(-1);
+		num = num%len;
+	}
+	
+	user_image.src = topuser_image[num];
+	user_name.innerHTML = topuser_name[num];
+	user_age.innerHTML = topuser_age[num];
+	user_location.innerHTML = topuser_location[num];
+	user_link.href = topuser_link[num];
+	
+	hid.value = num;
 }
 {/literal}
 </script>
 <script type="text/javascript">
 {literal}
 $("#do-slide").easySlider({
-    auto: false,
-    pause: 3000,
-    speed: 800,
-    animateFade: true,
-    continuous: true,
-    numeric: true
+	auto: false,
+	pause: 3000,
+	speed: 800,
+	animateFade: true,
+	continuous: true,
+	numeric: true
 });
 $('.error_msg').alertr(0);
 {/literal}
 </script>
 {if $smarty.const.IS_LIVE_SERVER}
-    <script type="text/javascript" src="{$site_root}{$template_root}/js/google_analytics.js?v=0002"></script>
+	<script type="text/javascript" src="{$site_root}{$template_root}/js/google_analytics.js?v=0002"></script>
 {/if}
 </body>
 </html>

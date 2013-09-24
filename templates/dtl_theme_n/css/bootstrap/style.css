@@ -1,0 +1,148 @@
+body {
+    /*background: url("../images/TLDF-Register.png") no-repeat top center;*/
+}
+
+.container {
+    max-width: 966px;
+}
+
+#root-header {
+    border-bottom: 2px solid #c5c5c5;
+    background: transparent url("../images/bg-root-header.png") repeat-x;
+    padding: 13px 0;
+}
+
+#header-image {
+    background: transparent url("../images/register-header.png") center no-repeat;
+    height: 78px;
+}
+
+#register .content {
+    padding: 55px 0
+}
+
+#register .content .container {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: transparent url("../images/register_lady.png") left bottom no-repeat;
+    border: 1px solid #d9d9d9;
+}
+
+#register #contents {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#register #contents header {
+    font-size: 175%;
+    margin: 55px 0;
+}
+
+#register #contents .step {
+    padding: 28px 0 28px 55px;
+}
+
+#register #contents .step:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+#register #contents .step .step-icon {
+    background: transparent url("../images/register-sprite.png") no-repeat;
+    height: 75px;
+    width: 76px;
+    float: left;
+}
+
+#register #contents .step1 .step-icon {
+    background-position: 0 0;
+    
+}
+
+#register #contents .step2 .step-icon {
+    background-position: -76px 0;
+}
+
+#register #contents .step .wrap {
+    margin: 0 0 0 100px;
+}
+
+#register #contents .step .wrap ul,
+#register #contents .step .wrap li {
+    float: left;
+}
+
+#register #contents .step .wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#register #contents .step .wrap li {
+    font-size: 150%;
+}
+
+#register #contents .step .wrap li.text {
+    border-right: 2px solid #000;
+    margin-right: 18px;
+    font-size: 215%;
+    min-width: 225px;
+    padding: 10px 10px 10px 0;
+}
+
+#register #contents .step .wrap li.link {
+    margin: 15px 0;
+}
+
+#register #contents footer {
+    margin: 50px 0 30px;
+}
+
+#register #contents #link-enter {
+    background: transparent url("../images/btn_register_enter.png") no-repeat;
+    display: block;
+    margin: 0 auto;
+    height: 69px;
+    width: 314px;
+}
+
+#root-footer {
+    background: transparent url("../images/bg-root-footer.png") repeat-x;
+    font-size: 85%;
+    padding: 15px 0;
+    color: #ffffff;
+}
+
+#root-footer .copy {
+    float: left;
+}
+
+#root-footer .links {
+    float: right;
+}
+
+#root-footer .links ul,
+#root-footer .links li {
+    float: left;
+}
+
+#root-footer .links a {
+    color: #ffffff;
+}
+
+#root-footer .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#root-footer .links li {
+    border-left: 1px solid #ffffff;
+    padding: 0 5px;
+}
+
+#root-footer .links li:first-child {
+    border: none;
+}
