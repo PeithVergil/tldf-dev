@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="{$default_lang}">
+<head>
+<meta charset="{$charset}">
+<meta name="google-site-verification" content="c6DPqKAWOPU1EmSXqY4QFrQhaB9SjJvrZw3Kfyr8bjk" />
+<meta name="Description" content="{$lang.description}" />
+<meta name="Keywords" content="{$lang.keywords}" />
+<title>{$lang.main_title}</title>
+<link rel="shortcut icon" href="{$site_root}{$template_root}/images/favicon.ico" type="image/x-icon" />
+{*
+<link rel="stylesheet" type="text/css" href="{$site_root}/css.php" />
+*}
+<link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/tldf_new_style.css?v=0001" media="screen" />
+{*
+<link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/jquery.tooltip.css" media="screen" />
+*}
+<link rel="stylesheet" type="text/css" href="{$site_root}{$template_root}/css/easySlider.css" media="only screen and (max-width: 1020px)" />
+{if $tldf_offline}
+	<script type="text/javascript" src="{$site_root}/javascript/jquery-1.7.2.min.js"></script>
+{else}
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+{/if}
+<script type="text/javascript" src="{$site_root}/javascript/jslibrary.js?v=0001"></script>
+<script type="text/javascript" src="{$site_root}/javascript/validate/jquery.validate.min.js"></script>
+{*<link rel="stylesheet" type="text/css" media="screen" href="{$site_root}/javascript/validate/screen.css" />*}
+{*
+<script type="text/javascript" src="{$site_root}/javascript/location.js?v=0000"></script>
+<script type="text/javascript" src="{$site_root}/javascript/jquery.tooltip.js?v=0000"></script>
+<script type="text/javascript" src="{$site_root}/javascript/easySlider1.7.js?v=0000"></script>
+<script type="text/javascript" src="{$site_root}/javascript/alertr.js?v=0000"></script>
+*}
+{if $script}
+	<script type="text/javascript" src="{$site_root}{$template_root}/js/{$script}.js"></script>
+{/if}
+<!--[if lt IE 9]><script type="text/javascript" src="{$site_root}{$template_root}/js/media_q.js"></script><![endif]-->
+{literal}
+<script type="text/javascript">
+var sessEnable = navigator.cookieEnabled;
+if (!sessEnable) {
+	alert({/literal}"{$lang.err.coockie_enabled}"{literal});
+}
+</script>
+{/literal}
+{* GOOGLE ANALYTICS TAG REPLACED WITH GOOGLE TAG MANAGER
+{if $smarty.const.IS_LIVE_SERVER}
+{literal}
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-15603421-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+}) ();
+</script>
+{/literal}
+{/if}
+*}
+</head>
+{php}flush();{/php}
+<body>
+{if $smarty.const.IS_LIVE_SERVER && $smarty.const.GOOGLE_TAG_MANAGER}
+{literal}
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-JD9Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-JD9Z');</script>
+<!-- End Google Tag Manager -->
+{/literal}
+{/if}
+{if $smarty.const.IS_LIVE_SERVER && !$Version_B}
+{literal}
+<!-- Google Website Optimizer Control Script -->
+<script>
+function utmx_section(){}function utmx(){}
+(function(){var k='1218354454',d=document,l=d.location,c=d.cookie;function f(n){
+if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.indexOf(';',i);return c.substring(i+n.
+length+1,j<0?c.length:j)}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;
+d.write('<sc'+'ript src="'+
+'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com'
++'/siteopt.js?v=1&utmxkey='+k+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='
++new Date().valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"></sc'+'ript>')})();
+</script>
+<script>utmx("url",'A/B');</script>
+<!-- End of Google Website Optimizer Control Script -->
+{/literal}
+{/if}
+{strip}
+<div class="wrapper">
+	
+		<div class="header">            
+                <a class="logo" href="{$site_root}/index.php">
+                <img src="{$site_root}{$template_root}/imgs/new_img/logo-tldf.png"></a>
+                <ul class="header-right">
+                    <li class="contact-phone"><a href="#">+66 2 667 0068</a></li>
+                    <li class="login-header"><span>{$lang.already_member}</span><a href="{$form.login_link}">LogIn</a></li>
+                </ul>
+            </div><!-- end of header -->
+
+            <div class="featurebox">
+                <div class="feature-image-box fl">
+                    <img src="{$site_root}{$template_root}/imgs/new_img/model-thai.png">
+                </div>
+                <div class="membership-form fr">
+                    <div class="joinFreeImg">
+                        <img src="{$site_root}{$template_root}/imgs/new_img/join-free-btn.png">
+                    </div>
+                    <h3>Find Singles</h3>
+                    <h3>Safe & Easy</h3>
+                    {include file="$gentemplates/registration_form.tpl"}
+<!--                     <form class="loginForm" action="" method="post"> -->
+<!--                         <ul> -->
+<!--                             <li><label class="title">Username :</label><input type="text" name="username"></li> -->
+<!--                             <li><label class="title">Name :</label><input type="text" name="name"></li> -->
+<!--                             <li><label class="gTitle">Gender :</label> -->
+<!--                                 <input type="radio" name="gender" id="male" value="G-male"><label for="male" class="gender">Male</label> -->
+<!--                                 <input type="radio" name="gender" id="female" value="G-female"><label for="female" class="gender">Female</label> -->
+<!--                             </li> -->
+<!--                             <li><label class="title">Email :</label><input type="text" name="username"></li> -->
+<!--                             <li><label class="title">Password :</label><input type="text" name="username"></li> -->
+<!--                         </ul> -->
+<!--                     </form> -->
+                    
+                </div>
+
+            </div>
+            
+            <div class="feature-showcase">
+                <div class="feature-text fl">
+                    <ul>
+                        <li class="feature-box">
+                            <div class="feature-img">
+                                <a href="{$form.register_link}"><img src="{$site_root}{$template_root}/imgs/new_img/dtlteam.png" width="166px" height="95px"></a>
+                            </div>
+                            <div class="featuer-boxText">
+
+                                <h2>Dating Solutions</h2>
+                                <p>{$lang.index_page.home_nathan_intro}</p>
+
+                            </div>
+                        </li>
+                        <li class="feature-box">
+                            <div class="review-img">
+                                <a href="{$form.register_link}"><img src="{$site_root}{$template_root}/imgs/new_img/couple2.jpg"></a>
+                            </div>
+                            <div class="featuer-boxText">
+
+                                <h2>Reviews</h2>
+                                <p>"Yes, I was very skeptical and I thought there was no way this could be done. But I've gone from a very lonely life and met many fantastic girls and really found my dream girl here."</p>
+                                <i>Charles Mancawitz, 45 years, Perth, Australia</i>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="feature-video fr">
+                    <h2>Who is Nathamon?</h2>
+                   <iframe src="http://player.vimeo.com/video/49096354" width="489" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+                </div>
+
+            </div><!-- end of feature showcase -->
+				
+			  <div class="content-wrapper">
+			  <div>
+			  
+			  {if 1 || $news}
+                <div class="blog-post-list fl">
+                    <ul>
+                    {section name=s loop=$news}
+                        <li>
+                            <div class="blog-img">
+                               {if $news[s].image}<a href="{$news[s].link_read}"><img src="{$news[s].image}"></a>{/if}
+                            </div>
+                            <div class="blog-boxText">
+                            <span>{$news[s].title}</span>
+								<p>	{$news[s].news_small}</p>
+                              <p class="readmore">
+                                    <a href="{$news[s].link_read}">[ More About This Thai Lady Date Finder Feature ]</a>
+                                </p>
+                            </div>
+                        </li>
+                        {/section}
+                    </ul>
+                 </div>
+                <div class="featured-users fr">
+                	{include file="$gentemplates/index_right_widget.tpl"}
+                </div>
+                </div>
+                <div id="bottom-widget">
+                	{include file="$gentemplates/index_bottom_widget.tpl"}
+                </div>
+                
+			{else}
+				<div class="discover-section">
+					<div>
+						<div id="welcome">
+							<div id="home_discover">
+								<h2>{$lang.index_page.discover_diffrence}</h2>
+							</div>
+							<div id="join_options">
+								<h3>{$lang.index_page.join_us_now}</h3>
+								<ul>
+									<li>{$lang.index_page.join_us_option_1}</li>
+									<li>{$lang.index_page.join_us_option_2}</li>
+									<li>{$lang.index_page.join_us_option_3}</li>
+									<li>{$lang.index_page.join_us_option_4}</li>
+									<li>{$lang.index_page.join_us_option_5}</li>
+									<li>{$lang.index_page.join_us_option_6}</li>
+									<li>{$lang.index_page.join_us_option_7}</li>
+									<li>{$lang.index_page.join_us_option_8}</li>
+									<li>{$lang.index_page.join_us_option_9}</li>
+									<li>{$lang.index_page.join_us_option_10}</li>
+								</ul>
+							</div>
+							<p class="home-to-start"><a href="{$form.register_link}" title="Click to start Registration process">Get it Now</a>  </p>
+						</div>                                                               
+						<simple-labrl></simple-labrl><div id="home_note"><blockquote>{$lang.index_page.note}</blockquote></div>
+					</div>
+				</div>
+			{/if}
+            		
+	</div> <!--  End of wrapper -->
+	
+	 <footer>
+            <div class="footerWrap">
+                
+                <div class="secNav">
+					{include file="$gentemplates/index_bottom_popup.tpl"}	                    
+                </div>
+                <div class="copyRight">
+                    <p>{$lang.copyright}</p>
+                </div>
+            </div>
+
+        </footer>
+	
+	
+	{if $banner.bottom}
+		<div>{$banner.bottom}</div>
+	{/if}
+</div>
+{/strip}
+{literal}
+<script type="text/javascript">
+$(function(){$('label').tooltip();});
+</script>
+<script type="text/javascript">
+function ZipCodeCheck(zip_value) {
+	if (zip_value == '') {
+		document.getElementById('within').disabled = false;
+		document.getElementById('search_type').value = 1;
+	} else {
+		document.getElementById('search_type').value = 2;
+		document.getElementById('within').disabled = true;
+	}
+	return;
+}
+
+var topuser_image = new Array();
+var topuser_name = new Array();
+var topuser_age = new Array();
+var topuser_location = new Array();
+var topuser_link = new Array();
+{/literal}
+{foreach name=s key=key item=item from=$top_users}
+	topuser_image[{$key}] = '{$item.icon_path}';
+	topuser_name[{$key}] = '<a href={$item.link}><b>{$item.name}</b></a>';
+	topuser_age[{$key}] = '<span class="text_head">{$item.age} {$header.ans}</span>';
+	topuser_location[{$key}] = '<span class="text">{if $base_lang.city[$item.id_city]}{$base_lang.city[$item.id_city]}, {/if}{if $base_lang.region[$item.id_region]}{$base_lang.region[$item.id_region]}, {/if}{$base_lang.country[$item.id_country]}</span>';
+	topuser_link[{$key}] = '{$item.link}';
+{/foreach}
+{literal}
+
+function ChangeTopUser(direct) {
+	user_image = document.getElementById('topuser_image');
+	user_name = document.getElementById('topuser_name');
+	user_age = document.getElementById('topuser_age');
+	user_location = document.getElementById('topuser_location');
+	user_link = document.getElementById('topuser_link');
+	hid = document.getElementById('topuser_hidden');
+	len = topuser_image.length;
+	
+	if ( (hid.value == '0' && direct == '1') || (hid.value == (len-1) && direct == '-1') ) {
+		num = hid.value;
+	} else {
+		num = eval(len)*1 + eval(hid.value)*1 + eval(direct)*(-1);
+		num = num%len;
+	}
+	
+	user_image.src = topuser_image[num];
+	user_name.innerHTML = topuser_name[num];
+	user_age.innerHTML = topuser_age[num];
+	user_location.innerHTML = topuser_location[num];
+	user_link.href = topuser_link[num];
+	
+	hid.value = num;
+}
+{/literal}
+</script>
+<script type="text/javascript">
+{literal}
+$("#do-slide").easySlider({
+	auto: false,
+	pause: 3000,
+	speed: 800,
+	animateFade: true,
+	continuous: true,
+	numeric: true
+});
+$('.error_msg').alertr(0);
+{/literal}
+</script>
+{if $smarty.const.IS_LIVE_SERVER}
+	<script type="text/javascript" src="{$site_root}{$template_root}/js/google_analytics.js?v=0002"></script>
+{/if}
+</body>
+</html>
