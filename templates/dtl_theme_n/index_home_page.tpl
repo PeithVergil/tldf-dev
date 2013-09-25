@@ -66,87 +66,7 @@ d.write('<sc'+'ript src="'+
     <div class="container wrap">
         <div class="row">
           <div class="col-md-5 col-md-offset-7">
-            <form class="form-horizontal" role="form">
-                <h1>Try For Free</h1>
-                <a href="#"><img src="{$site_root}{$template_root}/css/images/fb_login.png" class="acenter"></a>
-                <p style="margin-bottom: 11px;">&mdash;&mdash;&mdash;&nbsp;or create an account&nbsp;&mdash;&mdash;&mdash;</p>
-
-                <div class="form-group">
-                    <label for="username" class="col-lg-3 control-label">Username</label>
-                    <div class="col-lg-9">
-                      <input type="text" class="form-control" id="username">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="name" class="col-lg-3 control-label">Name</label>
-                    <div class="col-lg-9">
-                      <input type="text" class="form-control" id="name">
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="name" class="col-lg-3 control-label">Gender</label>
-                    <div class="col-lg-9">
-                        <label class="radio-inline">
-                          <input type="radio" id="inlineCheckbox1" value="option1"> Male
-                        </label>
-                        <label class="radio-inline">
-                          <input type="radio" id="inlineCheckbox2" value="option2"> Female
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="name" class="col-lg-3 control-label">Date of Birth</label>
-                    <div class="col-lg-9">
-                      <input type="text" class="form-control" id="name">
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="name" class="col-lg-3 control-label">Looking for</label>
-                    <div class="col-lg-9">
-                        <label class="radio-inline">
-                          <input type="radio" id="looking_for" value="option1"> Male
-                        </label>
-                        <label class="radio-inline">
-                          <input type="radio" id="looking_for" value="option2"> Female
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="inputEmail1" class="col-lg-3 control-label">Email</label>
-                    <div class="col-lg-9">
-                      <input type="email" class="form-control" id="inputEmail1">
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="inputEmail1" class="col-lg-3 control-label">Verify Email</label>
-                    <div class="col-lg-9">
-                      <input type="email" class="form-control" id="inputEmail1">
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="inputPassword1" class="col-lg-3 control-label">Password</label>
-                    <div class="col-lg-9">
-                      <input type="password" class="form-control" id="inputPassword1">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-lg-12">
-                      <p style="font-size: 0.95em;">By clicking “Start Now!” you agree with the<br><a href="#">Terms amd Conditions</a> and <a href="#">Privacy Policy.</a></p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-lg-12">
-                      <button type="submit" id="button_start-now"> </button>
-                    </div>
-                </div>
-            </form>
+            {include file="$gentemplates/registration_form.tpl"}
           </div>
         </div>
     </div>
@@ -186,39 +106,9 @@ d.write('<sc'+'ript src="'+
           </div>
         </div>
         
-        <div class="row">
-            
-          <div class="col-md-12">
-            <h1>Featured Members</h1>
-            
-            <div class="featured">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-                <img src="{$site_root}{$template_root}/css/images/yes1.jpg">
-            </div>
-           </div>
-        </div>
-    
+        <!--Featured Users -->
+        {include file="$gentemplates/index_right_widget.tpl"}
+        <!--End of Featured Users -->
         
         <div id="discover-title" class="row options">
             <div class="col-md-12">
@@ -429,49 +319,9 @@ d.write('<sc'+'ript src="'+
     
 
 </div> <!-- container -->
-
-<footer id="root-footer">
-    <div class="container wrap">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="copy">
-                    Copyright &copy; 2013 Meet Me Now Bangkok Co. Ltd. All rights reserved.
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="links">
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms and Conditions</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#">Site Map</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-
-        
-    </div>
-</footer>
-
+<!-- Footer -->
+{include file="$gentemplates/index_bottom_popup.tpl"}
+<!--End of FOoter -->
 {/strip}
 {literal}
 <script type="text/javascript">
@@ -479,14 +329,14 @@ $(function(){$('label').tooltip();});
 </script>
 <script type="text/javascript">
 function ZipCodeCheck(zip_value) {
-	if (zip_value == '') {
-		document.getElementById('within').disabled = false;
-		document.getElementById('search_type').value = 1;
-	} else {
-		document.getElementById('search_type').value = 2;
-		document.getElementById('within').disabled = true;
-	}
-	return;
+    if (zip_value == '') {
+        document.getElementById('within').disabled = false;
+        document.getElementById('search_type').value = 1;
+    } else {
+        document.getElementById('search_type').value = 2;
+        document.getElementById('within').disabled = true;
+    }
+    return;
 }
 
 var topuser_image = new Array();
@@ -496,55 +346,55 @@ var topuser_location = new Array();
 var topuser_link = new Array();
 {/literal}
 {foreach name=s key=key item=item from=$top_users}
-	topuser_image[{$key}] = '{$item.icon_path}';
-	topuser_name[{$key}] = '<a href={$item.link}><b>{$item.name}</b></a>';
-	topuser_age[{$key}] = '<span class="text_head">{$item.age} {$header.ans}</span>';
-	topuser_location[{$key}] = '<span class="text">{if $base_lang.city[$item.id_city]}{$base_lang.city[$item.id_city]}, {/if}{if $base_lang.region[$item.id_region]}{$base_lang.region[$item.id_region]}, {/if}{$base_lang.country[$item.id_country]}</span>';
-	topuser_link[{$key}] = '{$item.link}';
+    topuser_image[{$key}] = '{$item.icon_path}';
+    topuser_name[{$key}] = '<a href={$item.link}><b>{$item.name}</b></a>';
+    topuser_age[{$key}] = '<span class="text_head">{$item.age} {$header.ans}</span>';
+    topuser_location[{$key}] = '<span class="text">{if $base_lang.city[$item.id_city]}{$base_lang.city[$item.id_city]}, {/if}{if $base_lang.region[$item.id_region]}{$base_lang.region[$item.id_region]}, {/if}{$base_lang.country[$item.id_country]}</span>';
+    topuser_link[{$key}] = '{$item.link}';
 {/foreach}
 {literal}
 
 function ChangeTopUser(direct) {
-	user_image = document.getElementById('topuser_image');
-	user_name = document.getElementById('topuser_name');
-	user_age = document.getElementById('topuser_age');
-	user_location = document.getElementById('topuser_location');
-	user_link = document.getElementById('topuser_link');
-	hid = document.getElementById('topuser_hidden');
-	len = topuser_image.length;
-	
-	if ( (hid.value == '0' && direct == '1') || (hid.value == (len-1) && direct == '-1') ) {
-		num = hid.value;
-	} else {
-		num = eval(len)*1 + eval(hid.value)*1 + eval(direct)*(-1);
-		num = num%len;
-	}
-	
-	user_image.src = topuser_image[num];
-	user_name.innerHTML = topuser_name[num];
-	user_age.innerHTML = topuser_age[num];
-	user_location.innerHTML = topuser_location[num];
-	user_link.href = topuser_link[num];
-	
-	hid.value = num;
+    user_image = document.getElementById('topuser_image');
+    user_name = document.getElementById('topuser_name');
+    user_age = document.getElementById('topuser_age');
+    user_location = document.getElementById('topuser_location');
+    user_link = document.getElementById('topuser_link');
+    hid = document.getElementById('topuser_hidden');
+    len = topuser_image.length;
+    
+    if ( (hid.value == '0' && direct == '1') || (hid.value == (len-1) && direct == '-1') ) {
+        num = hid.value;
+    } else {
+        num = eval(len)*1 + eval(hid.value)*1 + eval(direct)*(-1);
+        num = num%len;
+    }
+    
+    user_image.src = topuser_image[num];
+    user_name.innerHTML = topuser_name[num];
+    user_age.innerHTML = topuser_age[num];
+    user_location.innerHTML = topuser_location[num];
+    user_link.href = topuser_link[num];
+    
+    hid.value = num;
 }
 {/literal}
 </script>
 <script type="text/javascript">
 {literal}
 $("#do-slide").easySlider({
-	auto: false,
-	pause: 3000,
-	speed: 800,
-	animateFade: true,
-	continuous: true,
-	numeric: true
+    auto: false,
+    pause: 3000,
+    speed: 800,
+    animateFade: true,
+    continuous: true,
+    numeric: true
 });
 $('.error_msg').alertr(0);
 {/literal}
 </script>
 {if $smarty.const.IS_LIVE_SERVER}
-	<script type="text/javascript" src="{$site_root}{$template_root}/js/google_analytics.js?v=0002"></script>
+    <script type="text/javascript" src="{$site_root}{$template_root}/js/google_analytics.js?v=0002"></script>
 {/if}
 </body>
 </html>
