@@ -65,7 +65,7 @@ d.write('<sc'+'ript src="'+
 <div id="signup">
     <div class="container wrap">
         <div class="row">
-          <div class="col-md-5 col-md-offset-7">
+          <div class="col-md-5 col-md-offset-7 signup_form">
             {include file="$gentemplates/registration_form.tpl"}
           </div>
         </div>
@@ -74,36 +74,36 @@ d.write('<sc'+'ript src="'+
 
 <div class="container wrap">
     <div id="main">
-
         <div class="row">
-          <div class="col-md-12">
-          
             <div class="gray_box">
                 <div class="inner">
-                    <p id="finally">
-                        "Finally, a Dating site staffed by real people who are ready to help you find genuine ladies and lasting love."
-                    </p>
-
-                    <div id="nathamon">
-                        <a href="#">
-                            <img src="{$site_root}{$template_root}/css/images/nathamon.png">
-                        </a>
-                        <div class="name">
-                            Nathamon Madison
-                        </div>
-                        <div class="title">
-                            Owner - Thai Lady Date Finder
-                        </div>
-                    </div>
-
-                    <div id="skype">
-                        <a href="#">
-                        </a>
-                    </div>
+                      <div id="nathamon" class="col-md-6">
+                         <a href="#">
+                                <img src="{$site_root}{$template_root}/css/images/nathamon.png">
+                            </a>
+                            <div class="name">
+                                Nathamon Madison
+                            </div>
+                            <div class="title">
+                                Owner - Thai Lady Date Finder
+                            </div>
+                         
+                      </div>
+                      <div class="col-md-5 .col-md-offset-5" id="finally">
+                         <p id="">
+                            "Finally, a Dating site staffed by real people who are ready to help you find genuine ladies and lasting love."
+                        </p> 
+                           
+                      </div>
+                      <div class="col-md-3 .col-md-offset-3">
+                            <div id="skype">
+                                <a href="#">
+                                </a>
+                            </div>
+                      </div>
+                      <div class="clears"></div>
                 </div>
             </div>
-            
-          </div>
         </div>
         
         <!--Featured Users -->

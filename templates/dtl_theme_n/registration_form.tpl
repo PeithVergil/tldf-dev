@@ -97,7 +97,7 @@
 				{if $err_field.login}<span class="error">{/if}
 				{$lang.users.login}
 				{if $err_field.login}</span>{/if}
-				<span class="mandatory">*</span>:
+				:
 			</label>
 			 <div class="col-lg-9">		
 				<input type="text" name="login" id="login" maxlength="40" value="{$data.login}" {if $data.root == 1}disabled="disabled"{/if} class="form-control" onblur="if (CheckValue(this)) CheckLogin('mp', this.value, error_div);" />
@@ -112,8 +112,8 @@
             	{if $err_field.fname}<span class="error">{/if}
 					{*$lang.first_name_thai*}Name
 					{if $err_field.fname}</span>{/if}
-					{if $mandatory.fname & SB_REGISTRATION}<span class="mandatory">*</span>
-				{/if}:
+					{if $mandatory.fname & SB_REGISTRATION}
+				{/if}
             </label>
             <div class="col-lg-9">
               <input type="text" name="name" class="form-control" value="{$data.name}" {if $data.root == 1}disabled="disabled"{/if} onblur="CheckValue(this);" />
@@ -127,7 +127,7 @@
 					{if $err_field.mm_nickname}<span class="error">{/if}
 						{$lang.users.mm_nickname}
 						{if $err_field.mm_nickname}</span>{/if}
-						{if $mandatory.mm_nickname & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.mm_nickname & SB_REGISTRATION}{/if}
 					</label>
 				<div class="col-lg-9">
 					<input type="text" name="mm_nickname" class="form-control" value="{$data.mm_nickname}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -141,7 +141,7 @@
 	        	{if $err_field.gender}<span class="error">{/if}
 				{$lang.users.gender}
 				{if $err_field.gender}</span>{/if}
-				{if $mandatory.gender & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+				{if $mandatory.gender & SB_REGISTRATION}{/if}
 	        </label>
 	        <div class="col-lg-9">
 	            {foreach item=item from=$gender}
@@ -159,7 +159,7 @@
                 	{if $err_field.couple}<span class="error">{/if}
 					{$lang.users.single_couple}
 					{if $err_field.couple}</span>{/if}
-					{if $mandatory.couple & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+					{if $mandatory.couple & SB_REGISTRATION}{/if}
                 </label>
 					
 				 <div class="col-lg-9">
@@ -180,7 +180,7 @@
 					{if $err_field.mm_marital_status}<span class="error">{/if}
 					{$lang.users.mm_marital_status}
 					{if $err_field.mm_marital_status}</span>{/if}
-					{if $mandatory.mm_marital_status & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+					{if $mandatory.mm_marital_status & SB_REGISTRATION}{/if}
 				</label>
 			 <div class="col-lg-9">
 			 	{foreach item=item from=$mm_marital_status}
@@ -199,7 +199,7 @@
 				{if $err_field.date_birthday}<span class="error">{/if}
 				{$lang.users.date_birthday}
 				{if $err_field.date_birthday}</span>{/if}
-				{if $mandatory.date_birthday & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+				{if $mandatory.date_birthday & SB_REGISTRATION}{/if}
 			</label>
 			<div class="col-lg-9">
 					<input type="text" class="form-control" id="name">
@@ -228,7 +228,7 @@
 		{/if}
        	<div class="form-group">
 			<label class='col-lg-3 control-label'>
-				I'm looking for:
+				Looking for
 			</label>
 			 <div class="col-lg-9">
 				{foreach item=item from=$gender}
@@ -244,7 +244,7 @@
 					{if $err_field.mm_place_of_birth}<span class="error">{/if}
 					{$lang.users.mm_place_of_birth}
 					{if $err_field.mm_place_of_birth}</span>{/if}
-					{if $mandatory.mm_place_of_birth & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+					{if $mandatory.mm_place_of_birth & SB_REGISTRATION}{/if}
 				</label>
 				<div class="col-lg-9">
 					<input type="text" name="mm_place_of_birth" maxlength="25" value="{$data.mm_place_of_birth}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -257,7 +257,7 @@
 					{if $err_field.id_nationality}<span class="error">{/if}
 					{$lang.users.nationality}
 					{if $err_field.id_nationality}</span>{/if}
-					{if $mandatory.id_nationality & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+					{if $mandatory.id_nationality & SB_REGISTRATION}{/if}
 				</label>
 				<div class="col-lg-9">
 					<select name="id_nationality" {if $data.root == 1}disabled="disabled"{/if} style="width:200px">
@@ -275,7 +275,7 @@
 						{if $err_field.mm_id_number}<span class="error">{/if}
 						{$lang.users.mm_id_number}
 						{if $err_field.mm_id_number}</span>{/if}
-						{if $mandatory.mm_id_number & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.mm_id_number & SB_REGISTRATION}{/if}
 					</label>
 				<div class="form-group">
 					<input type="text" name="mm_id_number" maxlength="25" value="{$data.mm_id_number}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -295,7 +295,7 @@
 						{if $err_field.email}<span class="error">{/if}
 						{$lang.users.email}
 						{if $err_field.email}</span>{/if}
-						{if $mandatory.email & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.email & SB_REGISTRATION}{/if}
 					</label>
 				<div class="col-lg-9">
 					<input type="text" name="email" class="form-control" value="{$data.email}" {if $data.root == 1}disabled="disabled"{/if} onblur="CheckValue(this);" oncopy="return false" />
@@ -307,7 +307,7 @@
 					{if $err_field.reemail}<span class="error">{/if}
 					{$lang.users.reemail}
 					{if $err_field.reemail}</span>{/if}
-					<span class="mandatory">*</span>:
+					:
 				</label>
 			 <div class="col-lg-9">
 				<input type="text" name="reemail" class="form-control" value="{$data.reemail}" {if $data.root == 1}disabled="disabled"{/if} onblur="CheckValue(this);" oncopy="return false" ondrag="return false" ondrop="return false" onpaste="return false" autocomplete="off" />
@@ -319,7 +319,7 @@
 			{if $err_field.pass}<span class="error">{/if}
 			{$lang.users.pass}
 			{if $err_field.pass}</span>{/if}
-			<span class="mandatory">*</span>:
+			:
 			</label>
 			<div class="col-lg-9">
 			<input type="password" name="pass" class="form-control" value="{$data.pass}" {if $data.root == 1}disabled="disabled"{/if} onblur="CheckValue(this);" />
@@ -331,7 +331,7 @@
 						{if $err_field.mm_contact_phone_number}<span class="error">{/if}
 						{$lang.users.mm_contact_phone_number}
 						{if $err_field.mm_contact_phone_number}</span>{/if}
-						{if $mandatory.mm_contact_phone_number & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.mm_contact_phone_number & SB_REGISTRATION}{/if}
 					</label>
 				<div class="col-lg-9">
 					<input type="text" name="mm_contact_phone_number" class="form-control" value="{$data.mm_contact_phone_number}" {if $data.root == 1}disabled="disabled"{/if} />
@@ -347,7 +347,7 @@
 						{if $err_field.mm_contact_mobile_number}<span class="error">{/if}
 						{$lang.users.mm_contact_mobile_number}
 						{if $err_field.mm_contact_mobile_number}</span>{/if}
-						{if $mandatory.mm_contact_mobile_number & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.mm_contact_mobile_number & SB_REGISTRATION}{/if}
 					</label>
 				<div class="col-lg-9">
 					<input type="text" name="mm_contact_mobile_number" class="form-control" value="{$data.mm_contact_mobile_number}" {if $data.root == 1}disabled="disabled"{/if} />
@@ -378,7 +378,7 @@
 				<div class="form-group">
 						{if $err_field.gender_search}<span class="error">{/if}
 						{$lang.users.gender}
-						{if $err_field.gender_search}</span>{/if}:
+						{if $err_field.gender_search}</span>{/if}
 					<div class="col-lg-9">
 						{foreach item=item from=$gender}
 							<input type="radio" name="gender_search" value="{$item.id}" {if $item.sel_search}checked="checked"{/if} />
@@ -392,7 +392,7 @@
 						<label class='title'title="{$lang.age_range_thai}">
 						{if $err_field.age_min || $err_field.age_max}<span class="error">{/if}
 						{$lang.users.age_range}
-						{if $err_field.age_min || $err_field.age_max}</span>{/if}:
+						{if $err_field.age_min || $err_field.age_max}</span>{/if}
 						</label>
 					<div class="col-lg-9">
 						{if $use_field.age_min & SB_REGISTRATION}
@@ -422,7 +422,7 @@
 				<div class="form-group">
 						{if $err_field.couple_search}<span class="error">{/if}
 						{$lang.users.single_couple}
-						{if $err_field.couple_search}</span>{/if}:
+						{if $err_field.couple_search}</span>{/if}
 					<div class="col-lg-9">
 						<input type="radio" name="couple_search" value="0" {if !$data.couple_search}checked="checked"{/if} />
 						<label class='title'>
@@ -439,7 +439,7 @@
 				<div class="form-group">
 						{if $err_field.id_relationship}<span class="error">{/if}
 						{$lang.users.relationship}
-						{if $err_field.id_relationship}</span>{/if}:
+						{if $err_field.id_relationship}</span>{/if}
 					<div class="col-lg-9">
 						{if $relation_input_type == "select"}
 							<select name="relation[]" {if $data.root == 1}disabled="disabled"{/if} multiple style="width:150px; height:80px">
@@ -478,7 +478,7 @@
 						{if $err_field.id_country}<span class="error">{/if}
 						{$lang.users.country}
 						{if $err_field.id_country}</span>{/if}
-						{if $mandatory.id_country & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.id_country & SB_REGISTRATION}{/if}
 					</label>
 					<div class="col-lg-9">
 						<select name="id_country" {if $data.root == 1}disabled="disabled"{/if} onchange="SelectRegion('rp', this.value, document.getElementById('region_div'), document.getElementById('city_div'));">
@@ -495,7 +495,7 @@
 						{if $err_field.id_region}<span class="error">{/if}
 						{$lang.users.region}
 						{if $err_field.id_region}</span>{/if}
-						{if $mandatory.id_region & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.id_region & SB_REGISTRATION}{/if}
 					<div class="col-lg-9">
 							{if isset($region)}
 								<select name="id_region" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" onchange="SelectCity('rp', this.value, document.getElementById('city_div'));">
@@ -515,7 +515,7 @@
 							{if $err_field.id_city}<span class="error">{/if}
 							{$lang.users.city}
 							{if $err_field.id_city}</span>{/if}
-							{if $mandatory.id_city & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.id_city & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 							{if isset($city)}
@@ -536,7 +536,7 @@
 							{if $err_field.mm_city}<span class="error">{/if}
 							{$lang.users.city}
 							{if $err_field.mm_city}</span>{/if}
-							{if $mandatory.mm_city & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_city & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_city" maxlength="25" value="{$data.mm_city}" size="30" {if $data.root == 1}disabled="disabled"{/if} style="width: 150px" />
@@ -549,7 +549,7 @@
 							{if $err_field.zipcode}<span class="error">{/if}
 							{$lang.users.zipcode}
 							{if $err_field.zipcode}</span>{/if}
-							{if $mandatory.zipcode & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.zipcode & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="zipcode" maxlength="25" value="{$data.zipcode}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" maxlength="{$form.zip_count}" />
@@ -566,7 +566,7 @@
 							{if $err_field.mm_address_1}<span class="error">{/if}
 							{$lang.users.mm_address_1}
 							{if $err_field.mm_address_1}</span>{/if}
-							{if $mandatory.mm_address_1 & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_address_1 & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_address_1" maxlength="40" value="{$data.mm_address_1}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -582,7 +582,7 @@
 							{if $err_field.mm_address_2}<span class="error">{/if}
 							{$lang.users.mm_address_2}
 							{if $err_field.mm_address_2}</span>{/if}
-							{if $mandatory.mm_address_2 & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_address_2 & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_address_2" maxlength="40" value="{$data.mm_address_2}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -600,7 +600,7 @@
 							{if $err_field.id_language_1 || $err_field.id_language_2 || $err_field.id_language_3}<span class="error">{/if}
 							{$lang.users.language}
 							{if $err_field.id_language_1 || $err_field.id_language_2 || $err_field.id_language_3}</span>{/if}
-							{if $mandatory.id_language_1 & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.id_language_1 & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<select name="id_language_1" {if $data.root == 1}disabled="disabled"{/if} style="width:160px; margin-right:5px;">
@@ -630,7 +630,7 @@
 						{if $err_field.mm_level_of_english}<span class="error">{/if}
 						{$lang.users.mm_level_of_english}
 						{if $err_field.mm_level_of_english}</span>{/if}
-						{if $mandatory.mm_level_of_english & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.mm_level_of_english & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						{foreach item=item from=$mm_level_of_english}
@@ -647,7 +647,7 @@
 						{if $err_field.site_language}<span class="error">{/if}
 						{$lang.users.site_language}
 						{if $err_field.site_language}</span>{/if}
-						{if $mandatory.site_language & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+						{if $mandatory.site_language & SB_REGISTRATION}{/if}
 					<div class="col-lg-9">
 						<select name="site_language" style="width:200px">
 							{foreach from=$site_langs item=item}
@@ -671,7 +671,7 @@
 							{if $err_field.mm_employment_status || $err_field.mm_business_name || $err_field.mm_employer_name}<span class="error">{/if}
 							{$lang.users.mm_employment_status}
 							{if $err_field.mm_employment_status || $err_field.mm_business_name || $err_field.mm_employer_name}</span>{/if}
-							{if $mandatory.mm_employment_status & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_employment_status & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<table border="0" cellpadding="0" cellspacing="0">
@@ -692,7 +692,7 @@
 												<label class='title'title="{$lang.business_name_thai}">
 													{if $err_field.mm_business_name}<span class="error">{/if}
 													{$lang.users.mm_business_name}
-													{if $err_field.mm_business_name}</span>{/if}:
+													{if $err_field.mm_business_name}</span>{/if}
 												</label>
 											</td>
 											<td>
@@ -708,7 +708,7 @@
 												<label class='title'title="{$lang.employer_name_thai}">
 													{if $err_field.mm_employer_name}<span class="error">{/if}
 													{$lang.users.mm_employer_name}
-													{if $err_field.mm_employer_name}</span>{/if}:
+													{if $err_field.mm_employer_name}</span>{/if}
 												</label>
 											</td>
 											<td>
@@ -731,7 +731,7 @@
 							{if $err_field.mm_job_position}<span class="error">{/if}
 							{$lang.users.mm_job_position}
 							{if $err_field.mm_job_position}</span>{/if}
-							{if $mandatory.mm_job_position & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_job_position & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_job_position" maxlength="25" value="{$data.mm_job_position}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -744,7 +744,7 @@
 							{if $err_field.mm_work_address}<span class="error">{/if}
 							{$lang.users.mm_work_address}
 							{if $err_field.mm_work_address}</span>{/if}
-							{if $mandatory.mm_work_address & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_work_address & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_work_address" maxlength="40" value="{$data.mm_work_address}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -760,7 +760,7 @@
 							{if $err_field.mm_work_phone_number}<span class="error">{/if}
 							{$lang.users.mm_work_phone_number}
 							{if $err_field.mm_work_phone_number}</span>{/if}
-							{if $mandatory.mm_work_phone_number & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_work_phone_number & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_work_phone_number" maxlength="25" value="{$data.mm_work_phone_number}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -778,7 +778,7 @@
 							{if $err_field.mm_ref_1_first_name}<span class="error">{/if}
 							{$lang.users.fname}
 							{if $err_field.mm_ref_1_first_name}</span>{/if}
-							{if $mandatory.mm_ref_1_first_name & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_1_first_name & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_1_first_name" maxlength="25" value="{$data.mm_ref_1_first_name}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -794,7 +794,7 @@
 							{if $err_field.mm_ref_1_last_name}<span class="error">{/if}
 							{$lang.users.sname}
 							{if $err_field.mm_ref_1_last_name}</span>{/if}
-							{if $mandatory.mm_ref_1_last_name & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_1_last_name & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_1_last_name" maxlength="25" value="{$data.mm_ref_1_last_name}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -810,7 +810,7 @@
 							{if $err_field.mm_ref_1_relationship}<span class="error">{/if}
 							{$lang.users.mm_reference_relationship}
 							{if $err_field.mm_ref_1_relationship}</span>{/if}
-							{if $mandatory.mm_ref_1_relationship & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_1_relationship & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_1_relationship" maxlength="25" value="{$data.mm_ref_1_relationship}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -826,7 +826,7 @@
 							{if $err_field.mm_ref_1_phone_number}<span class="error">{/if}
 							{$lang.users.mm_reference_phone_number}
 							{if $err_field.mm_ref_1_phone_number}</span>{/if}
-							{if $mandatory.mm_ref_1_phone_number & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_1_phone_number & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_1_phone_number" maxlength="25" value="{$data.mm_ref_1_phone_number}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -844,7 +844,7 @@
 							{if $err_field.mm_ref_2_first_name}<span class="error">{/if}
 							Name{*$lang.first_name_thai*}
 							{if $err_field.mm_ref_2_first_name}</span>{/if}
-							{if $mandatory.mm_ref_2_first_name & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_2_first_name & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_2_first_name" maxlength="25" value="{$data.mm_ref_2_first_name}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -860,7 +860,7 @@
 							{if $err_field.mm_ref_2_last_name}<span class="error">{/if}
 							{$lang.users.sname}
 							{if $err_field.mm_ref_2_last_name}</span>{/if}
-							{if $mandatory.mm_ref_2_last_name & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_2_last_name & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_2_last_name" maxlength="25" value="{$data.mm_ref_2_last_name}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -876,7 +876,7 @@
 							{if $err_field.mm_ref_2_relationship}<span class="error">{/if}
 							{$lang.users.mm_reference_relationship}
 							{if $err_field.mm_ref_2_relationship}</span>{/if}
-							{if $mandatory.mm_ref_2_relationship & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_2_relationship & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_2_relationship" maxlength="25" value="{$data.mm_ref_2_relationship}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -892,7 +892,7 @@
 							{if $err_field.mm_ref_2_phone_number}<span class="error">{/if}
 							{$lang.users.mm_reference_phone_number}
 							{if $err_field.mm_ref_2_phone_number}</span>{/if}
-							{if $mandatory.mm_ref_2_phone_number & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+							{if $mandatory.mm_ref_2_phone_number & SB_REGISTRATION}{/if}
 						</label>
 					<div class="col-lg-9">
 						<input type="text" name="mm_ref_2_phone_number" maxlength="25" value="{$data.mm_ref_2_phone_number}" {if $data.root == 1}disabled="disabled"{/if} style="width:200px" />
@@ -909,7 +909,7 @@
 					{if $err_field.headline}<span class="error">{/if}
 					{$lang.users.headline}
 					{if $err_field.headline}</span>{/if}
-					{if $mandatory.headline & SB_REGISTRATION}<span class="mandatory">*</span>{/if}:
+					{if $mandatory.headline & SB_REGISTRATION}{/if}
 				</label>
 				<div class="col-lg-9">
 					<textarea name="headline" rows="5" cols="80" style="width:400px; height:50px;" {if $data.root == 1}disabled="disabled"{/if}>{$data.headline}</textarea>
