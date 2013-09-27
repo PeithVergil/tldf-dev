@@ -221,7 +221,7 @@ img { height: auto; max-width: 100%; }
 	text-align: center;
 	font-size: 170%;
 	max-width: 460px;
-	padding: 25px 0;
+	padding: 60px 0 0;
 	margin: 0 auto;
 }
 
@@ -262,6 +262,7 @@ img { height: auto; max-width: 100%; }
 	width: 137px;
 	bottom: 15px;
 	right: 10px;
+	padding: 30px 0 0;
 }
 
 #skype a {
