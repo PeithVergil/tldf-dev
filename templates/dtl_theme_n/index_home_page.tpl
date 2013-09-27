@@ -19,6 +19,38 @@
 <script type="text/javascript" src="{$site_root}/javascript/jquery.tooltip.js?v=0000"></script>
 <script type="text/javascript" src="{$site_root}/javascript/easySlider1.7.js?v=0000"></script>
 <script type="text/javascript" src="{$site_root}/javascript/alertr.js?v=0000"></script>
+
+{if $script}
+    <script type="text/javascript" src="{$site_root}{$template_root}/js/{$script}.js"></script>
+{/if}
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="{$site_root}{$template_root}/js/media_q.js"></script>
+<![endif]-->
+{literal}
+    <script type="text/javascript">
+    var sessEnable = navigator.cookieEnabled;
+    if (!sessEnable) {
+        alert({/literal}"{$lang.err.coockie_enabled}"{literal});
+    }
+    </script>
+{/literal}
+{* GOOGLE ANALYTICS TAG REPLACED WITH GOOGLE TAG MANAGER
+{if $smarty.const.IS_LIVE_SERVER}
+    {literal}
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15603421-2']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        }) ();
+        </script>
+    {/literal}
+{/if}
+*}
+
 </head>
 {php}flush();{/php}
 <body>
