@@ -214,6 +214,7 @@ img { height: auto; max-width: 100%; }
 
 .gray_box .inner {
 	position: relative;
+	min-height: 250px;
 }
 
 #finally {
