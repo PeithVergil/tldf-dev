@@ -161,17 +161,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 .featurebox{
     width: 100%;
-    background: url("../imgs/new_img/background-featurebox.png") no-repeat center center;
-    height: 565px;
+    background: url("../imgs/new_img/background-featurebox.png") no-repeat top center;
+	background-size:1024px 600px;
+    height: 637px;
     position: relative;
 }
 .membership-form{
-    height: 450px;
+    height: 522px;
     background: #FFF;
-    width: 362px;
+    width: 432px;
     position: absolute;
     right: 60px;
-    top: 45px;
+    top: 28px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;

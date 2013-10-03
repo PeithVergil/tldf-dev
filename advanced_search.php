@@ -181,7 +181,7 @@ switch ($sel) {
 
 exit;
 
-
+//initialize searchform
 function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsearch_load_id = '', $err = '')
 {
 	global $lang, $config, $smarty, $dbconn, $user;
@@ -198,7 +198,7 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 		'max_age_limit',
 		'min_age_limit',
 		'zip_letters',
-		'zip_count',
+		'zip_count'
 	));
 	
 	// multi-language tables
@@ -334,6 +334,9 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 	}
 	$smarty->assign('nation_match', $n_arr);
 	
+	//SH 2
+	//var_dump($_SESSION['n_arr']);
+	$_SESSION['n_arr'] = $n_arr;
 	// language select
 	$strSQL =
 		'SELECT DISTINCT a.id, b.'.$field_name.' AS name
@@ -358,6 +361,11 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 	if (!isset($data['id_lang']) || !is_array($data['id_lang']) || $data['id_lang'][0] == 0) {
 		$default['id_lang'] = 1;
 	}
+	//SH2
+	
+	$_SESSION['lang_sel_match'] = $lang_sel;
+	
+	
 	$smarty->assign('lang_sel_match', $lang_sel);
 	
 	$smarty->assign('default', $default);
@@ -384,7 +392,8 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 		$i++;
 	}
 	$smarty->assign('weight', $weight_arr);
-	
+	//SH2
+	$_SESSION['weight_arr'] = $weight_arr;
 	// height select
 	$strSQL =
 		'SELECT DISTINCT a.id, b.'.$field_name.' AS name
@@ -407,6 +416,8 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 		$i++;
 	}
 	$smarty->assign('height', $height_arr);
+	//SH2
+	$_SESSION['height_arr'] = $height_arr;
 	
 	// gender select
 	$gender_arr = array();
@@ -414,12 +425,12 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 	$gender_arr[0]['id'] = '1';
 	$gender_arr[0]['name'] = $lang['gender']['1'];
 	$gender_arr[0]['name_search'] = $lang['gender_search']['1'];
-@	$gender_arr[0]['sel_search'] = ($data['gender_2'] == 1) ? 1 : 0; //SH2
+	@$gender_arr[0]['sel_search'] = ($data['gender_2'] == 1) ? 1 : 0; //SH2
 	
 	$gender_arr[1]['id'] = '2';
 	$gender_arr[1]['name'] = $lang['gender']['2'];
 	$gender_arr[1]['name_search'] = $lang['gender_search']['2'];
-@	$gender_arr[1]['sel_search'] = ($data['gender_2'] == 2) ? 1 : 0;  //SH2
+	@$gender_arr[1]['sel_search'] = ($data['gender_2'] == 2) ? 1 : 0;  //SH2
 	
 	$smarty->assign('gender', $gender_arr);
 	
@@ -438,6 +449,11 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 	$smarty->assign('age_max', range($max_age, $min_age));
 	$smarty->assign('age_min', range($min_age, $max_age));
 	
+	//SH 2 Storing it into session to pass to the next function
+	
+	$_SESSION['age_max'] = range($max_age, $min_age);
+	$_SESSION['age_min'] = range($min_age, $max_age);
+	
 	// descr info from db
 	$sess_info = array();
 	
@@ -452,12 +468,15 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 		}
 	}
 	
-	// descr selects
+// descr selects
+	$table_key = $multi_lang->TableKey(DESCR_SPR_TABLE);
+	$table_key_val = $multi_lang->TableKey(DESCR_SPR_VALUE_TABLE);
+	
 	$strSQL =
 		'SELECT DISTINCT a.id, b.'.$field_name.' AS name
 		   FROM '.DESCR_SPR_TABLE.' a
-	  LEFT JOIN '.REFERENCE_LANG_TABLE.' b ON b.table_key = "'.$multi_lang->TableKey(DESCR_SPR_TABLE).'" AND b.id_reference = a.id
-	   ORDER BY a.sorter';
+	  LEFT JOIN '.REFERENCE_LANG_TABLE.' b ON b.table_key = "'.$table_key.'" AND b.id_reference = a.id
+		  ORDER BY a.sorter';
 	$rs = $dbconn->Execute($strSQL);
 	$i = 0;
 	while (!$rs->EOF) {
@@ -471,12 +490,11 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 		$strSQL_opt =
 			'SELECT DISTINCT a.id, b.'.$field_name.' AS name
 			   FROM '.DESCR_SPR_VALUE_TABLE.' a
-		  LEFT JOIN '.REFERENCE_LANG_TABLE.' b ON b.table_key = "'.$multi_lang->TableKey(DESCR_SPR_VALUE_TABLE).'" AND b.id_reference = a.id
-			  WHERE a.id_spr = ?
-		   ORDER BY name';
+		  LEFT JOIN '.REFERENCE_LANG_TABLE.' b ON b.table_key = "'.$table_key_val.'" AND b.id_reference = a.id
+			  WHERE a.id_spr = "'.$rs->fields[0].'"
+			  ORDER BY name';
 		
-		$rs_opt = $dbconn->Execute($strSQL_opt, array($rs->fields[0]));
-		$info = array();
+		$rs_opt = $dbconn->Execute($strSQL_opt);
 		$j = 0;
 		while (!$rs_opt ->EOF) {
 			$info[$in]['opt_value_'.$row][$j] = $rs_opt->fields[0];
@@ -501,8 +519,15 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 		$i++;
 	}
 	
-	$form['search_action'] = $file_name;
+
 	
+	$_SESSION['search_data'] = $info;
+	
+	
+
+
+	$form['search_action'] = $file_name;
+
 	$smarty->assign('id_err', $id_err);
 	$smarty->assign('section', $lang['subsection']);
 	$smarty->assign('err', $err);
@@ -520,8 +545,12 @@ function SearchForm($par = '', $customsearch_type = '', $id_err = '', $customsea
 
 function SearchTable($err = '', $sel = '')
 {
+	
+	
+	
 	global $lang, $config, $config_index, $smarty, $dbconn, $user;
 	
+
 	$debug = false;
 	
 	if ($debug) echo '<font color="red">';
@@ -596,6 +625,8 @@ function SearchTable($err = '', $sel = '')
 	}
 	
 	if ($debug) echo '$_SESSION[\'per_page_rec\']='.$_SESSION['per_page_rec'].'<br>';
+	
+	
 	
 	/*
 	// RS: in use_session test below we originally tested $id_arr but this does not make sense to me
@@ -979,7 +1010,7 @@ function SearchTable($err = '', $sel = '')
 			$search[$i]['number']		= ($_SESSION['search_page'] - 1) * $_SESSION['per_page_rec'] + $i + 1;
 			$search[$i]['name']			= stripslashes($row['fname']);
 			$search[$i]['gender']		= (int) $row['gender'];
-#			$search[$i]['phone']		= stripslashes($row['phone']);
+			#$search[$i]['phone']		= stripslashes($row['phone']);
 			$search[$i]['age']			= AgeFromBDate($row['date_birthday']);
 			$search[$i]['id_country']	= (int) $row['id_country'];
 			$search[$i]['id_region']	= (int) $row['id_region'];
@@ -1145,6 +1176,21 @@ function SearchTable($err = '', $sel = '')
 		$smarty->assign('base_lang', GetBaseLang($_LANG_NEED_ID));
 	}
 	
+	$data = $_GET;
+	
+	//var_dump($data);
+	
+	$smarty->assign('data',$data);
+	//SH2
+	
+	$smarty->assign('nation_match', $_SESSION['n_arr']);
+	$smarty->assign('height', $_SESSION['height_arr']);
+	$smarty->assign('weight', $_SESSION['weight_arr']);
+	$smarty->assign('lang_sel_match', $_SESSION['lang_sel_match']);
+	$smarty->assign('age_max', $_SESSION['age_max']);
+	$smarty->assign('age_min', $_SESSION['age_min']);
+	$smarty->assign('header_perfect', $lang['users']);
+	$smarty->assign('info', $_SESSION['search_data']);
 	$smarty->assign('section', $lang['subsection']);
 	$smarty->assign('header', $lang['homepage']);
 	$smarty->assign('header_s', $lang['search']);

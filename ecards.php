@@ -84,9 +84,11 @@ function MainTable()
 {
 	global $config, $smarty, $dbconn, $user;
 	
+	
+	
 	$id_user_to = isset($_GET['id_user_to']) ? (int) $_GET['id_user_to'] : 0;
 	$id_order = isset($_GET['id_order']) ? (int) $_GET['id_order'] : 0;
-	
+		
 	// get id_user_to and user_to_fname
 	//
 	$data = array();

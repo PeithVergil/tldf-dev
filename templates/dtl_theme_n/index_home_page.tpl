@@ -15,7 +15,7 @@
 {else}
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 {/if}
-    
+
 <script type="text/javascript" src="{$site_root}/javascript/jquery.tooltip.js?v=0000"></script>
 <script type="text/javascript" src="{$site_root}/javascript/easySlider1.7.js?v=0000"></script>
 <script type="text/javascript" src="{$site_root}/javascript/alertr.js?v=0000"></script>
@@ -50,7 +50,6 @@
     {/literal}
 {/if}
 *}
-
 </head>
 {php}flush();{/php}
 <body>
@@ -89,15 +88,16 @@ d.write('<sc'+'ript src="'+
 
 <div class="container wrap">
     <div class="page-header">
-        <div id="logo" class="acenter"><a href="#"><h1>Thai Lady Date Finder</h1></a></div>
-        
+        <div id="logo" class="acenter"><img src="{$site_root}{$template_root}/css/images/logo.png"></div>
+         <div class="login-header"><span>{$lang.already_member}</span><a href="{$form.login_link}">LogIn</a></div>
     </div>
+    
 </div>
 
 <div id="signup">
     <div class="container wrap">
         <div class="row">
-          <div class="col-md-5 col-md-offset-7 signup_form">
+          <div class="col-md-5 col-md-offset-7">
             {include file="$gentemplates/registration_form.tpl"}
           </div>
         </div>
@@ -351,9 +351,11 @@ d.write('<sc'+'ript src="'+
     
 
 </div> <!-- container -->
+
 <!-- Footer -->
 {include file="$gentemplates/index_bottom_popup.tpl"}
 <!--End of FOoter -->
+
 {/strip}
 {literal}
 <script type="text/javascript">
